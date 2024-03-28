@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Pariss";
+  src: url("../fonts/parisscript-regular.woff");
+}
+
+body {
+  color: #505050;
+  line-height: 1.75;
+  font-size: 14px;
+  font-family: var(--font-nunito);
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 1.3em;
+  font-weight: 400;
+  font-family: var(--font-old_standard);
+  color: #000;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.3em;
+    font-size: 36px;
+    font-weight: 400;
+    font-family: var(--font-old_standard);
+    color: #000;
+}
+
+/* paragraph */
+p {
+  margin: 0 0 15px;
+  color: #505050;
+  line-height: 1.75;
+  
+  font-size: 14px;
+  font-family: var(--font-nunito);
+  font-weight: 300;
+}
+
+/* ======= Line style ======= */
+hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.line-hr-left {
+  width: 60px;
+  border-top: 1px solid #dd888d;
+  margin: 0 0 20px 0;
+}
+
+.line-hr-center {
+  width: 120px;
+  border-top: 1px solid #dd888d;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* ======= About style ======= */
+
+.about-img {
+  position: relative;
+}
+.img {
+      padding: 0 15px 15px 0px;
+     position: relative;
+}
+.img img {
+  position: relative;
+  z-index: 2;
+}
+.img:before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  right: 0;
+  left: 15px;
+  bottom: 0;
+  border: 1px solid #dd888d;
+}
+
+
+
+    
+  .parallax_inner{
+      height:400px;
+      position: relative;         
+  }
+
+  .parallax_inner_title{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    font-size: 5rem;
+    font-weight: 100;
+    text-shadow: 0 0 5px #0000;
+    color: #ffff;
+    text-align: center;
+    z-index: 0;
+    text-transform: uppercase;
+  }
+   
+
+  /** Nav Bar **/
+
+ .fixedNav {
+  @apply fixed top-0 -translate-y-6 opacity-0;
+ }
+
+ .floatNav {
+  @apply z-50 fixed top-0 translate-y-0 opacity-100 ease-linear duration-300;
+ }
+
+.floatBtn {
+  @apply z-50 lg:translate-x-[94%] xl:translate-x-[96%] opacity-100 ease-linear duration-300;
+}
+ /** Animation */
+ .reveal {
+    @apply -translate-x-10 opacity-0;
+ }
+
+ .floatLeft{
+  @apply translate-x-10 opacity-100 ease-linear duration-300;
+ }
+
+ /** Swiper **/
+ .swiper{
+  @apply mx-auto px-3
+ }
+ .swiper-slide{
+  @apply bg-white w-full flex justify-center items-center;
+ }
