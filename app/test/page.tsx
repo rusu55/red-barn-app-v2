@@ -27,17 +27,17 @@ const Section = ({ children, className }: any) => {
 };
 
 const Test = () => {
-  console.log("refreshed");
+  
   const divRefs = useRef();
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
-    console.log("se reneder again");
+    
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const handleScroll = () => {
     const reveals = document.querySelectorAll(".reveal");
-    console.log('in test file')
+    
     for (let i = 0; i < reveals.length; i++) {
       let windowsHeight = window.innerHeight;
       let revealTop = reveals[i].getBoundingClientRect().top;

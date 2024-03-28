@@ -51,7 +51,7 @@ export const HomeSocialIcons = () => {
         >
           <SwiperSlide>
             <div className="w-full flex justify-center items-center">
-              <Link href={""}>
+              <Link href='https://www.theknot.com/marketplace/red-barn-wedding-studio-schaumburg-il-2027022'>
                 <Image
                   src={theKNot}
                   className="object-cover"
@@ -63,7 +63,7 @@ export const HomeSocialIcons = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div className="w-full flex justify-center items-center">
-              <Link href={""}>
+              <Link href='https://www.weddingwire.com/biz/red-barn-wedding-studio/776d90b9b48065a1.html'>
                 <Image
                   src={weddingwire}
                   alt=""
@@ -75,7 +75,7 @@ export const HomeSocialIcons = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div className="w-full flex justify-center items-center">
-              <Link href={""}>
+              <Link href='https://www.instagram.com/redbarnweddingstudio/'>
                 <Image
                   src={instagram}
                   alt=""
@@ -87,7 +87,7 @@ export const HomeSocialIcons = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div className="w-full flex justify-center items-center">
-              <Link href={""}>
+              <Link href='https://www.facebook.com/RedBarnWeddingStudio'>
                 <Image
                   src={facebook}
                   alt=""
@@ -99,14 +99,14 @@ export const HomeSocialIcons = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div className="w-full flex justify-center items-center">
-              <Link href={""}>
+              <Link href='https://vimeo.com/user81106458'>
                 <Image src={vimeo} alt="" width="180" className=" opacity-70" />
               </Link>
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="w-full flex justify-center items-center">
-              <Link href={""}>
+              <Link href='https://www.youtube.com/channel/UCnTzNTKip1rjTTzd5vqO5HA'>
                 <Image
                   src={youtube}
                   alt=""

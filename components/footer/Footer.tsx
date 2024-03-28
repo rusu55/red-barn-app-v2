@@ -13,22 +13,25 @@ const Footer = () => {
         <div className="mx-auto max-w-screen-xl mt-10">
           <div className="flex flex-col items-center space-y-12 md:flex-row md:justify-evenly py-20">
             <div>
-              <h6 className={"relative text-black"}>
+              <h6 className="relative text-lg font-semibold tracking-wide text-black">
                 <span className="relative z-20">Connect with Us</span>
                 <span className="absolute -bottom-1 left-0 z-10 h-[1px] w-full rounded-lg bg-neutral-300" />
               </h6>
               <ul className="mt-6 text-lg space-y-2 text-center md:text-right">
                 <li className="font-medium text-xs text-neutral-400 duration-300 ease-in-out hover:text-roze">
-                  <Link href={""}>FACEBOOK</Link>
+                  <Link href="https://www.facebook.com/RedBarnWeddingStudio">FACEBOOK</Link>
                 </li>
                 <li className="font-medium text-xs text-neutral-400 duration-300 ease-in-out hover:text-roze">
-                  <Link href={""}>INSTAGRAM</Link>
+                  <Link href="https://www.instagram.com/redbarnweddingstudio/">INSTAGRAM</Link>
                 </li>
                 <li className="font-medium text-xs text-neutral-400 duration-300 ease-in-out hover:text-roze">
-                  <Link href={""}>WEDDINGWIRE</Link>
+                  <Link href="https://www.weddingwire.com/biz/red-barn-wedding-studio/776d90b9b48065a1.html">WEDDINGWIRE</Link>
                 </li>
                 <li className="font-medium text-xs text-neutral-400 duration-300 ease-in-out hover:text-roze">
-                  <Link href={""}>THE KNOT</Link>
+                  <Link href="https://www.theknot.com/marketplace/red-barn-wedding-studio-schaumburg-il-2027022">THE KNOT</Link>
+                </li>
+                <li className="font-medium text-xs text-neutral-400 duration-300 ease-in-out hover:text-roze">
+                  <Link href="https://vimeo.com/user81106458">VIMEO</Link>
                 </li>
               </ul>
             </div>
@@ -46,20 +49,20 @@ const Footer = () => {
 
               <ul className="mt-6 text-lg space-y-2 text-center md:text-right">
                 <li className="font-medium text-xs text-neutral-400 duration-300 ease-in-out hover:text-roze">
-                  <Link href={""}>HOME</Link>
+                  <Link href="/">HOME</Link>
                 </li>
 
                 <li className="font-medium text-xs text-neutral-400 duration-300 ease-in-out hover:text-roze">
-                  <Link href={""}>ABOUT</Link>
+                  <Link href="/about">ABOUT</Link>
                 </li>
                 <li className="font-medium text-xs text-neutral-400 duration-300 ease-in-out hover:text-roze">
-                  <Link href={""}>CONTACT</Link>
+                  <Link href="/contact">CONTACT</Link>
                 </li>
                 <li className="font-medium text-xs text-neutral-400 duration-300 ease-in-out hover:text-roze">
-                  <Link href={""}>PORTFOLIO</Link>
+                  <Link href="/portfolio">PORTFOLIO</Link>
                 </li>
                 <li className="font-medium text-xs text-neutral-400 duration-300 ease-in-out hover:text-roze">
-                  <Link href={""}>BLOG</Link>
+                  <Link href="/blog">BLOG</Link>
                 </li>
               </ul>
             </div>

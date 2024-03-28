@@ -126,7 +126,7 @@ hr {
  }
 
 .floatBtn {
-  @apply z-50 lg:translate-x-[94%] xl:translate-x-[96%] opacity-100 ease-linear duration-300;
+  @apply z-50 right-20 opacity-100 ease-linear duration-300;
 }
  /** Animation */
  .reveal {
@@ -144,3 +144,6 @@ hr {
  .swiper-slide{
   @apply bg-white w-full flex justify-center items-center;
  }
+
+ /** Testimonials **/
+ 

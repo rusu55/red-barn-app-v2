@@ -11,7 +11,7 @@ import { MenuIcon } from "./MenuIcon";
 
 export const MobileNav = ({navigation} : any) => {
   const pathName = usePathname()
-  console.log(pathName)
+  
   return (
     <div className="block fixed h-full lg:hidden z-50">
          <Popover>           

@@ -28,7 +28,7 @@ export const DesktopNav = ({ logo, navigation }: any) => {
   }, []);
 
   const handleScroll = () => {
-    console.log("scroll");
+    
     const element: any = document.querySelector(".nav");
     const scrollBtn: any = document.querySelector(".scrollBtn");
     newValue = window.pageYOffset;
@@ -62,7 +62,7 @@ export const DesktopNav = ({ logo, navigation }: any) => {
   return (
     <>
       <div className="nav w-full bg-white shadow-md shadow-black/5">
-        <div className="hidden mx-auto max-w-screen-xl py-4 lg:flex items-center justify-between">
+        <div className="hidden mx-auto max-w-screen-xl py-2 lg:flex items-center justify-between">
           <Image src={logo} width={160} alt="" className=" pl-4" />
           <div className="flex gap-6 pr-12">
             {navigation.map((link: any, index: any) => (
@@ -169,7 +169,7 @@ export const DesktopNav = ({ logo, navigation }: any) => {
           </div>
         </div>
       </div>
-      <div className="w-full fixed top-3/4 translate-x-full opacity-0 scrollBtn z-50">
+      <div className="w-full fixed top-3/4 right-2 translate-x-full opacity-0 scrollBtn z-50">
         <Button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
           Top
         </Button>

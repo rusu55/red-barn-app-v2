@@ -1,5 +1,5 @@
 import {
-  IconCalendar,
+  IconCalendar,  
   IconCurrencyDollar,
   IconUser,
   IconBulb,
@@ -16,6 +16,7 @@ import {
   IconVirus,
   IconPhoto,
   IconArrowNarrowRight,
+  IconArrowLeft,
   IconChevronsRight,
   IconChevronRight,
   IconMapPin,
@@ -35,11 +36,14 @@ import {
   IconBrandLinkedin,
   IconArrowBack,
   IconSearch,
+  IconArrowRight,
 } from "@tabler/icons-react";
 
 const iconOptions: any = {
   arrowBack: IconArrowBack,
   calendar: IconCalendar,
+  arrowLeft: IconArrowLeft,
+  arrowRight: IconArrowRight,
   dollar: IconCurrencyDollar,
   user: IconUser,
   bulb: IconBulb,

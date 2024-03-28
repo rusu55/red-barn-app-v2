@@ -52,6 +52,7 @@ const Testimonials = () => {
   /* ---- arrows ---- */
 
   const prev = () => {
+    
     startSlideTimer();
     const index = currentSlide > 0 ? currentSlide - 1 : reviews.length - 1;
     setCurrentSlide(index);
@@ -70,8 +71,8 @@ const Testimonials = () => {
   };
 
   return (
-    <section className=" bg-white p-8 h-3/5 ">
-      <div className="max-w-2xl relative">
+    <section className=" bg-white p-8 h-3/5 relative ">
+      <div className="max-w-2xl">
         <div className=" overflow-hidden relative">
           {reviews.map((review: any, index: any) => (
             <TestimonialsItem

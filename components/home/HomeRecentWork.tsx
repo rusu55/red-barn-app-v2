@@ -36,7 +36,7 @@ export const HomeRecentWork = ({ highlights }: any) => {
 
   useEffect(() => {
     if (inView) {
-      console.log("In View");
+      
       controls.start("visible");
     }
   }, [inView, controls]);

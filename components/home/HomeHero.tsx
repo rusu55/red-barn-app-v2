@@ -16,6 +16,7 @@ export const HomeHero = () => {
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
+        loop={true}
         autoplay={{
           delay: 3500,
           disableOnInteraction: false,
@@ -24,14 +25,14 @@ export const HomeHero = () => {
           clickable: true,
         }}
         modules={[Autoplay, Pagination, Navigation]}
-        className="w-full max-h-[80vh]"
+        className="w-full h-[60vh] md:h-[85vh]"
       >
         {images.map((image, index) => (
           <SwiperSlide key={index}>
             <Image
               src={image.src}
               alt={image.alt}
-              className="block w-full h-full object-cover"
+              className="block w-full h-full object-cover object-center"
             />
           </SwiperSlide>
         ))}

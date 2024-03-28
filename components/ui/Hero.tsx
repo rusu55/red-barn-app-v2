@@ -7,7 +7,7 @@ interface Props{
 }
 
 export const Hero = ({image, title, description} : Props) => {
-  console.log(image)
+  
   return (
     <div className='w-full bg-center bg-cover' style={{backgroundImage: `url(${image.src})`}}>
       <div className='flex items-center justify-center w-full h-full bg-gray-900 bg-opacity-10 py-8 md:py-32'>

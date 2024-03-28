@@ -7,7 +7,7 @@ import { TagsComponent } from "@/components/blog/TagsComponent";
 
 const BlogPage = async () => {
   const blogs = await prisma.blog.findMany({});
-  console.log(blogs)
+  
   return (
     <>
       <Hero image={hero_img} title="" description="" />
