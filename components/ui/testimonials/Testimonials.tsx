@@ -8,19 +8,24 @@ import TestimonialsItem from "./TestimonialsItem";
 
 export const reviews = [
   {
-    name: "Bogdan Rusu",
+    name: "Lynda C",
     review:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, ratione, voluptatem cum molestiae hic nam neque culpa eveniet magnam consequatur vitae accusamus ducimus voluptates. Optio consequuntur ipsam autem officia itaque!",
+      "It was an absolute pleasure to have worked with Red barn! Photographers and videographer made me feel comfortable! They were all professional, personable and friendly! They helped make my wedding day even more amazing! Thank you so much! I'm so grateful to have found you!",
   },
   {
-    name: "Elena Rusu",
+    name: " Elli J",
     review:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, ratione, voluptatem cum molestiae hic nam neque culpa eveniet magnam consequatur vitae accusamus ducimus voluptates. Optio consequuntur ipsam autem officia itaque!",
+      "Red Barn did a fantastic job! Our wedding photos are so joyful and beautiful! The team of photographers were so wonderful to work with and since we spent the whole day with them, that was so important. They really helped us have fun and feel beautiful on our special day! ",
   },
   {
-    name: "Katerina Rusu",
+    name: "Morgan H",
     review:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, ratione, voluptatem cum molestiae hic nam neque culpa eveniet magnam consequatur vitae accusamus ducimus voluptates. Optio consequuntur ipsam autem officia itaque!",
+      "I just received my wedding photos. They're everything I wanted and more. We had a Christmas wedding.. Red Barn captured the beauty of Christmas into our photos.. BEAUTIFUL. I highly recommend Red Barn for your wedding.",
+  },
+  {
+    name: "Colleen M",
+    review:
+      "We had the best experience working with Red Barn. We were so happy with how our engagement and wedding photos turned out! I would recommend them to anyone. Very professional and easy to work with. Elena, Bogdan, and Max are all great : ) We loved working them!",
   },
 ];
 
@@ -52,7 +57,6 @@ const Testimonials = () => {
   /* ---- arrows ---- */
 
   const prev = () => {
-    
     startSlideTimer();
     const index = currentSlide > 0 ? currentSlide - 1 : reviews.length - 1;
     setCurrentSlide(index);
@@ -71,7 +75,7 @@ const Testimonials = () => {
   };
 
   return (
-    <section className=" bg-white p-8 h-3/5 relative ">
+    <section className=" bg-white p-8 h-3/5 md:h-1/2 relative ">
       <div className="max-w-2xl">
         <div className=" overflow-hidden relative">
           {reviews.map((review: any, index: any) => (

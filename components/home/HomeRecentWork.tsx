@@ -36,7 +36,6 @@ export const HomeRecentWork = ({ highlights }: any) => {
 
   useEffect(() => {
     if (inView) {
-      
       controls.start("visible");
     }
   }, [inView, controls]);
@@ -53,7 +52,7 @@ export const HomeRecentWork = ({ highlights }: any) => {
           {highlights.map((highlight: any, index: number) => (
             <div key={index} className="w-full md:w-1/3 px-4">
               <AnimeCard index={index}>
-                <div className="relative overflow-hidden h-[350px]">
+                <div className="relative overflow-hidden h-[480px]">
                   <Image
                     src={highlight.coverPhoto}
                     className="duration-500 ease-in-out hover:scale-110 object-cover"
