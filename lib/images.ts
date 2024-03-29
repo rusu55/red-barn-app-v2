@@ -9,6 +9,7 @@ import seven from '@/public/images/carousel-7.jpg'
 import eigth from '@/public/images/carousel-8.jpg'
 import nine from '@/public/images/carousel-9.jpg'
 import ten from '@/public/images/carousel-10.jpg'
+import eleven from '@/public/images/carousel-11.jpg'
 
 export const images = [
   { src: first, alt: 'Wedding Photography' },
@@ -21,4 +22,5 @@ export const images = [
   { src: eigth, alt: 'Wedding Photography' },
   { src: nine, alt: 'Wedding Photography' },
   { src: ten, alt: 'Wedding Photography' },
+  { src: eleven, alt: 'Wedding Photography' },
 ]
