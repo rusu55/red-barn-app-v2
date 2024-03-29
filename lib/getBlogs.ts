@@ -10,10 +10,16 @@ export const getBlogs = async ({
     }) =>{
         try{
             const skip = (page-1) * limit
-
+            console.log(query)
             const result = await prisma.blog.findMany({
                 skip: skip,
                 take: limit,
+                where:{                    
+                   // title: query != null ? query.toString() : undefined 
+                   title:{
+                    contains: query
+                   }
+                }
             })
 
             await new Promise(resolve => setTimeout(resolve, 300));
