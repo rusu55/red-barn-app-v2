@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 @font-face {
   font-family: "Pariss";
   src: url("../fonts/parisscript-regular.woff");

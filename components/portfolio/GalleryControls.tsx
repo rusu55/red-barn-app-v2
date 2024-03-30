@@ -32,6 +32,16 @@ export const GalleryControls = ({ onChange, active }: any) => {
       >
         Engagements
       </Button>
+      <Button
+        variant="secondary"
+        className={clsx(
+          "uppercase",
+          active === "Cinematography" && "bg-roze text-white"
+        )}
+        onClick={() => onChange("Cinematography")}
+      >
+        Cinematography
+      </Button>
     </div>
   );
 };
