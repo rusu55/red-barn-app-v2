@@ -6,7 +6,7 @@ import { ServiceForm } from "@/components/services/ServiceForm";
 
 const PhotographyPage = () => {
   return (
-    <div>
+    <div className="pt-20 md:pt-0">
       <Hero image={""} title={""} description={""} />
       <div className="mx-auto max-w-screen-xl mt-16 px-6">
         <ServiceIntro />

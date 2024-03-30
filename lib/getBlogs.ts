@@ -17,7 +17,7 @@ export const getBlogs = async ({
                 where:{                    
                    // title: query != null ? query.toString() : undefined 
                    title:{
-                    contains: query
+                    contains: query?.toString()
                    }
                 }
             })

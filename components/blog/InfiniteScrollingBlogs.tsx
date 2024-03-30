@@ -5,7 +5,8 @@ import { useInView } from "react-intersection-observer";
 import Link from "next/link";
 import Image from "next/image";
 import { format } from "date-fns";
-
+import { AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { fetchBlogs } from "@/app/blog/action";
 
 export const InfiniteScrollingBlogs = ({ initialBlogs }: any) => {
@@ -33,8 +34,15 @@ export const InfiniteScrollingBlogs = ({ initialBlogs }: any) => {
   }, [inView]);
   return (
     <>
+    <AnimatePresence>
       {blogs?.map((blog: any, index: number) => (
-        <div key={index} className="flex flex-col">
+        <motion.div key={index}
+          layout
+          initial={{ opacity: 0, y: 20}}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.3 }}
+          className="flex flex-col">
           <div className="relative overflow-hidden place-self-center">
             <Link href={`blog/${blog.id}`}>
               <Image
@@ -63,8 +71,9 @@ export const InfiniteScrollingBlogs = ({ initialBlogs }: any) => {
           <span className="text-right text-xs mb-12 pr-14">
             {format(blog.postDate, "MM/dd/yyyy")}
           </span>
-        </div>
+        </motion.div>
       ))}
+      </AnimatePresence>
       {/* loading spinner */}
       {!lastPage && (
         <div

@@ -6,11 +6,11 @@ import { ContactIntro } from "@/components/contact/ContactIntro";
 
 const Contact = () => {
   return (
-    <>
+    <div className="pt-20 md:pt-0">
       <Hero image={hero_img} title={""} description={""} />
       <ContactIntro />
       <ContactForm />
-    </>
+    </div>
   );
 };
 

@@ -15,7 +15,7 @@ const Portfolio = async () => {
   const portfolio = await prisma.portfolio.findMany({});
 
   return (
-    <>
+    <div className="pt-20 md:pt-0">
       <Hero image={""} title={""} description={""} />
       <div className="mx-auto max-w-screen-xl mt-16 px-6">
         <PortfolioIntro />
@@ -23,7 +23,7 @@ const Portfolio = async () => {
           <Gallery portfolio={portfolio} />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

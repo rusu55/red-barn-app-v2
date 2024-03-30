@@ -72,7 +72,7 @@ const Footer = () => {
       <div className="bg-neutral-200">
         <div className="mx-auto max-w-screen-xl text-center">
           <span className=" inline-block py-4">
-            2022 Caroline Karla | Wedding Photographer
+           Red Barn Wedding Studio | Wedding Photography
           </span>
         </div>
       </div>

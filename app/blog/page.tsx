@@ -16,16 +16,16 @@ const BlogPage = async ({
 }) => {
   const search =
     typeof searchParams.search === "string" ? searchParams.search : undefined;
-
+  console.log('Blog Page: ', search)
   const blogs = await fetchBlogs({ search });
   const recentBlogs = blogs.slice(0, 3);
 
   return (
-    <>
+    <div className="pt-20 md:pt-0">
       <Hero image={hero_img} title="" description="" />
       <div className="mx-auto max-w-screen-xl py-20 flex flex-wrap justify-center gap-4">
         {/** Left Section */}
-        <div className="w-full px-4 md:w-[60%]" key={uuid()}>
+        <div className="w-full px-4 md:w-[60%]"  key={uuid()} >
           <InfiniteScrollingBlogs search={search} initialBlogs={blogs} />
         </div>
         {/** Right Section */}
@@ -35,7 +35,7 @@ const BlogPage = async ({
           <TagsComponent />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

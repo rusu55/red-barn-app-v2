@@ -10,7 +10,11 @@ import logo from "/public/images/logo.jpg";
 const navigation = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  { label: "Services" },
+  { label: "Services", services:[
+        {label: 'Wedding Photography', href: "/wedding_photography"},
+        {label: 'Wedding Cinematography', href: "/wedding_cinematography"},
+        {label: 'Wedding Photobooth', href: "/wedding_photobooth"},
+  ]},
   { label: "Portfolio", href: "/portfolio" },
   { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
@@ -21,7 +25,7 @@ export const NavBar = () => {
   return (
     <>
       <DesktopNav logo={logo} navigation={navigation} />
-      <MobileNav navigation={navigation} />
+      <MobileNav logo={logo} navigation={navigation} />
     </>
   );
 };
