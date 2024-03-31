@@ -61,6 +61,7 @@ export const PortfolioGallery = ({ portfolio, tag }: any) => {
       <Lightbox
         index={index}
         slides={slides}
+        
         open={index >= 0}
         close={() => setIndex(-1)}
       />
