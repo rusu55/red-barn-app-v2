@@ -3,6 +3,7 @@ import React, { useState, useEffect, useCallback } from "react";
 import { GalleryControls } from "./GalleryControls";
 import { PortfolioGallery } from "./PortfolioGallery";
 import { VideoGallery } from "./VideoGallery";
+import { PortfolioPhotoIntro } from "@/components/portfolio/PortfolioPhotoIntro";
 
 export const Gallery = ({ portfolio, videos }: any) => {
   const [tag, setTag] = useState("all");
@@ -17,6 +18,8 @@ export const Gallery = ({ portfolio, videos }: any) => {
 
   return (
     <>
+      {tag != "Cinematography" && <PortfolioPhotoIntro />}
+
       <GalleryControls onChange={setTag} active={tag} />
       <div className="mt-8">
         <PortfolioGallery tag={tag} portfolio={galleryPhotos} />

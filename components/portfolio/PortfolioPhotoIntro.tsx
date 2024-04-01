@@ -1,6 +1,6 @@
 import React from "react";
 
-export const PortfolioIntro = () => {
+export const PortfolioPhotoIntro = () => {
   return (
     <div className="flex flex-wrap justify-start items-start gap-8">
       <div className="w-full md:w-[35%]">

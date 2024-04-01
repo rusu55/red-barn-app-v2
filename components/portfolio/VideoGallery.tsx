@@ -13,6 +13,7 @@ import "lightgallery/css/lg-zoom.css";
 import "lightgallery/css/lg-video.css";
 import lgZoom from "lightgallery/plugins/zoom";
 import lgVideo from "lightgallery/plugins/video";
+import { PortfolioVideoIntro } from "./PortfolioVideoIntro";
 
 export const VideoGallery = ({ videos }: any) => {
   const bodyContent = (
@@ -52,6 +53,9 @@ export const VideoGallery = ({ videos }: any) => {
 
   return (
     <>
+      <div className="mt-12">
+        <PortfolioVideoIntro />
+      </div>
       <div className="grid gap-y-8 sm:gap-6 lg:grid-cols-4 lg:gap-4 2xl:gap-5">
         <AnimatePresence>
           <LightGallery
