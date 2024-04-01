@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Icon } from "../ui/Icon";
 import Lightbox from "yet-another-react-lightbox";
+
 import { AnimatePresence } from "framer-motion";
 
 import "yet-another-react-lightbox/styles.css";
@@ -61,7 +62,6 @@ export const PortfolioGallery = ({ portfolio, tag }: any) => {
       <Lightbox
         index={index}
         slides={slides}
-        
         open={index >= 0}
         close={() => setIndex(-1)}
       />

@@ -2,8 +2,9 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { GalleryControls } from "./GalleryControls";
 import { PortfolioGallery } from "./PortfolioGallery";
+import { VideoGallery } from "./VideoGallery";
 
-export const Gallery = ({ portfolio }: any) => {
+export const Gallery = ({ portfolio, videos }: any) => {
   const [tag, setTag] = useState("all");
   const [galleryPhotos, setGalleryPhotos] = useState(portfolio);
   +useEffect(() => {
@@ -20,6 +21,11 @@ export const Gallery = ({ portfolio }: any) => {
       <div className="mt-8">
         <PortfolioGallery tag={tag} portfolio={galleryPhotos} />
       </div>
+      {(tag === "all" || tag === "Cinematography") && (
+        <div className="mt-10">
+          <VideoGallery videos={videos} />
+        </div>
+      )}
     </>
   );
 };
