@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <footer ref={containerRef}>
       <div className="bg-neutral-100/75">
-        <div className="mx-auto max-w-screen-xl mt-10">
+        <div className="mx-auto max-w-screen-xl">
           <div className="flex flex-col items-center space-y-12 md:flex-row md:justify-evenly py-20">
             <div>
               <h6 className="relative text-lg font-semibold tracking-wide text-black">

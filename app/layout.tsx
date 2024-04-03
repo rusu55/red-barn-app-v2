@@ -7,6 +7,7 @@ import { ParallaxProviders } from "@/providers/ParallaxProvider";
 import { NavBar } from "@/components/nav/NavBar";
 import Footer from "@/components/footer/Footer";
 
+
 const nunito = Nunito({
   weight: ["300", "400", "700"],
   style: ["normal", "italic"],

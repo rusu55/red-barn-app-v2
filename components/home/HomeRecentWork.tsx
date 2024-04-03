@@ -3,7 +3,6 @@ import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useInView } from "react-intersection-observer";
-import { MotionDiv } from "../ui/MotionDiv";
 import { useAnimation } from "framer-motion";
 import { AnimeCard } from "../ui/AnimeCard";
 
