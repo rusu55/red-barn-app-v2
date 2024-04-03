@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import prisma from "@/prisma/prisma";
 
 const BlogIdPage = async ({ params }: any) => {
@@ -8,11 +9,27 @@ const BlogIdPage = async ({ params }: any) => {
     },
   });
   return (
-    <div className="mx-auto max-w-screen-xl pt-24">
-      <h1 className="text-center">{blog?.title}</h1>
-      <div className="mt-10">
-        <p>{blog?.description}</p>
+    <div className="mx-auto max-w-screen-xl pt-2">
+      {blog?.coverPhoto && 
+      <div className="flex w-full items-center justify-center">
+        <Image src={blog.coverPhoto} alt="" width={1000} height={600} />
       </div>
+      } 
+      <div className="mx-auto flex max-w-[1000px] flex-wrap items-center justify-start">
+           <div className="w-full md:w-1/2"> 
+              <span className="inline-block mt-5 uppercase text-xs text-roze tracking-[5px]">{blog?.postType} Photography</span>
+              <h1 className="w-[80%] text-left text-3xl pt-2">{blog?.title}</h1>
+              <hr className='line line-hr-left'></hr>
+              <p>{blog?.description}</p>
+          </div>
+          <div className="w-full md:w-1/2">
+              <ul className="mx-auto w-[80%] ">
+                <li className="py-2 border-b-2 border-roze flex justify-between items-center"><span className=" uppercase">Photographer:</span><span className="font-pariss text-lg text-right w-[80%] leading-9">Red Barn Wedding Studio</span></li>
+                <li className="py-2 border-b-2 border-roze flex justify-between items-center"><span className=" uppercase">Cinematographer:</span><span className="font-pariss text-lg text-right w-[80%] leading-9">Red Barn Wedding Studio</span></li> 
+                <li className="py-2 border-b-2 border-roze flex justify-between items-center"><span className=" uppercase">Venue:</span><span className="font-pariss text-lg text-right w-[80%] leading-9">Chevy Chase CC</span></li> 
+              </ul>
+          </div>
+      </div> 
       <div className="px-2 lg:px-0 flex flex-col space-y-2 mdspace-y-2 items-center mt-10">
         {blog?.photos.map((photo: string, index: number) => (
           <Image key={index} src={photo} alt="" width={800} height={400} />
