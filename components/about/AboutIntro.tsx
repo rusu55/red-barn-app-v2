@@ -4,7 +4,7 @@ import Link from "next/link";
 export const AboutIntro = ({image,...props}: any) => {
   return (
     <>
-        <div className='max-w-screen-xl mx-auto flex flex-wrap justify-center px-6'>
+        <div className='max-w-screen-xl mx-auto flex flex-wrap justify-center px-2 md:px-6'>
             {/* Block Text*/}
             <div className="w-full md:w-1/2 px-4">
                 <div className="flex flex-col px-4 py-2">
@@ -28,16 +28,16 @@ export const AboutIntro = ({image,...props}: any) => {
                 </div>
             </div>
         </div>
-        <div className="w-full bg-neutral-100/75 py-20">
-            <div className="max-w-screen-xl mx-auto flex flex-wrap justify-start items-start px-6">
+        <div className="w-full bg-neutral-100/75 py-10 md:py-20">
+            <div className="max-w-screen-xl mx-auto flex flex-wrap justify-start items-start px-2 md:px-6">
                 <div className="w-full md:w-1/2 px-4">
                     <div className="flex flex-col px-4 py-2">
                         <p>You deserve a creative and personal story that is completely yours, and it is our job as Wedding photographers and cinematographers to capture your wedding story in a beautiful and innovative way. Your wedding is unique to you. Together, we will make sure your wedding photos will look like nobody else&apos;s. Our commitment is to you as a customer and to our quality. All our offerings come with unlimited images captured on your wedding day , USBs with full copyright release and raw footage as included in the package.</p>
-                        <p className="font-normal font-pariss text-roze text-xl text-right">Red Barn Wedding Studio</p>
+                        <p className="font-normal font-pariss text-roze text-xl text-center md:text-right">Red Barn Wedding Studio</p>
                     </div>
                 </div>
                 <div className="w-full md:w-1/2 px-4">                   
-                        <ul className="mx-auto font-pariss text-lg text-right w-[80%] leading-9">
+                        <ul className="mx-auto font-pariss text-lg text-center md:text-right w-[80%] leading-9">
                             <li className="py-2 border-b-2 border-roze"><Link href="">Wedding Photography</Link></li>
                             <li className="py-2 border-b-2 border-roze"><Link href="">Wedding Cinematography</Link></li>
                             <li className="py-2 border-b-2 border-roze"><Link href="">Engagement Photograohy</Link></li>

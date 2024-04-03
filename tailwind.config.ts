@@ -17,6 +17,7 @@ const config: Config = {
       colors: {
         roze: '#dd888d',
         grey: '#FBF9F9',
+        p_color: '#505050',
       },
       fontFamily: {
                 pariss: ["Pariss", "sans-serif"],

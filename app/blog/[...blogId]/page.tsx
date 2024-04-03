@@ -16,7 +16,7 @@ const BlogIdPage = async ({ params }: any) => {
       </div>
       } 
       <div className="mx-auto flex max-w-[1000px] flex-wrap items-center justify-start">
-           <div className="w-full md:w-1/2"> 
+           <div className="w-full md:w-1/2 px-4"> 
               <span className="inline-block mt-5 uppercase text-xs text-roze tracking-[5px]">{blog?.postType} Photography</span>
               <h1 className="w-[80%] text-left text-3xl pt-2">{blog?.title}</h1>
               <hr className='line line-hr-left'></hr>
@@ -24,8 +24,8 @@ const BlogIdPage = async ({ params }: any) => {
           </div>
           <div className="w-full md:w-1/2">
               <ul className="mx-auto w-[80%] ">
-                <li className="py-2 border-b-2 border-roze flex justify-between items-center"><span className=" uppercase">Photographer:</span><span className="font-pariss text-lg text-right w-[80%] leading-9">Red Barn Wedding Studio</span></li>
-                <li className="py-2 border-b-2 border-roze flex justify-between items-center"><span className=" uppercase">Cinematographer:</span><span className="font-pariss text-lg text-right w-[80%] leading-9">Red Barn Wedding Studio</span></li> 
+                <li className="py-2 border-b-2 border-roze flex justify-between items-center"><span className=" uppercase">Photographer:</span><span className="font-pariss text-lg text-right w-[80%] leading-9">Red Barn Studio</span></li>
+                <li className="py-2 border-b-2 border-roze flex justify-between items-center"><span className=" uppercase">Cinematographer:</span><span className="font-pariss text-lg text-right w-[80%] leading-9">Red Barn Studio</span></li> 
                 <li className="py-2 border-b-2 border-roze flex justify-between items-center"><span className=" uppercase">Venue:</span><span className="font-pariss text-lg text-right w-[80%] leading-9">Chevy Chase CC</span></li> 
               </ul>
           </div>

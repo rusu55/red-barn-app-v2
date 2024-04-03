@@ -11,7 +11,7 @@ const Footer = () => {
     <footer ref={containerRef}>
       <div className="bg-neutral-100/75">
         <div className="mx-auto max-w-screen-xl">
-          <div className="flex flex-col items-start space-y-12 md:flex-row md:justify-evenly md:space-y-0 py-20">
+          <div className="flex flex-col items-center space-y-12 md:flex-row md:justify-evenly md:space-y-0 py-20">
             <div>
               <h6 className="relative text-lg font-semibold tracking-wide text-black">
                 <span className="relative z-20">Connect with Us</span>

@@ -20,7 +20,7 @@ const TestimonialsItem = ({
         <h2 className="text-xl md:text-2xl">{name}</h2>
         <hr className="line line-hr-center" />
       </div>
-      <p className="mt-4">{review}</p>
+      <p className="mt-4 text-sm">{review}</p>
     </div>
   );
 };
