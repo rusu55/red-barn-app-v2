@@ -27,10 +27,7 @@ export const BlogFeature = ({ data }: any) => {
           </Link>
           {blog.dexroption !== "" && (
             <p className="mt-4">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
-              error, molestias autem nostrum dolore minima obcaecati iure
-              deserunt eaque consequuntur doloremque qui a id quod ipsa quia
-              doloribus dolores soluta.
+              {blog.description}
             </p>
           )}
           <span className="text-right text-xs mb-12 pr-14">

@@ -60,12 +60,9 @@ export const InfiniteScrollingBlogs = ({ initialBlogs }: any) => {
           <Link href={`blog/${blog.id}`}>
             <h5 className="text-[1.6rem] mt-2">{blog.title}</h5>
           </Link>
-          {blog.dexroption !== "" && (
+          {blog.description !== "" && (
             <p className="mt-4">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
-              error, molestias autem nostrum dolore minima obcaecati iure
-              deserunt eaque consequuntur doloremque qui a id quod ipsa quia
-              doloribus dolores soluta.
+              {blog.description}
             </p>
           )}
           <span className="text-right text-xs mb-12 pr-14">

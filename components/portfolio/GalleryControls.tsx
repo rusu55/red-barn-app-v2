@@ -4,7 +4,7 @@ import { Button } from "../ui/Button";
 
 export const GalleryControls = ({ onChange, active }: any) => {
   return (
-    <div className="px-4 pt-10 sm:px-6 sm:pt-28 lg:px-8 lg:pt-8 flex items-center justify-center">
+    <div className="px-4 pt-10 sm:px-6 sm:pt-28 lg:px-8 lg:pt-8 flex flex-col md:flex-row items-center justify-center">
       <Button
         variant="secondary"
         className={clsx("uppercase", active === "all" && "bg-roze text-white")}

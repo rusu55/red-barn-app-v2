@@ -19,8 +19,9 @@ export const VideoGallery = ({ videos }: any) => {
   const bodyContent = (
     <>
       {videos.map((video: any, index: number) => (
+       
         <motion.div
-          className="gallery-item cursor-pointer aspect-square overflow- group relative"
+          className="gallery-item cursor-pointer aspect-square overflow-hidden group relative "
           data-src={video.src}
           key={index}
           data-lg-size={video.size}
@@ -47,6 +48,7 @@ export const VideoGallery = ({ videos }: any) => {
             </div>
           </div>
         </motion.div>
+        
       ))}
     </>
   );
@@ -56,14 +58,17 @@ export const VideoGallery = ({ videos }: any) => {
       <div className="mt-12">
         <PortfolioVideoIntro />
       </div>
-      <div className="grid gap-y-8 sm:gap-6 lg:grid-cols-4 lg:gap-4 2xl:gap-5">
+      <div className="">
         <AnimatePresence>
           <LightGallery
             plugins={[lgVideo, lgZoom]}
             download={false}
-            elementClassNames="custom-class-name"
+            elementClassNames="custom-class-name grid gap-y-8 sm:gap-6 lg:grid-cols-4 lg:gap-4 2xl:gap-5"
+           
           >
+            
             {bodyContent}
+            
           </LightGallery>
         </AnimatePresence>
       </div>
