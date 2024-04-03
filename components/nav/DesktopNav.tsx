@@ -11,9 +11,9 @@ import { Icon } from "../ui/Icon";
 import { Button } from "../ui/Button";
 
 const services = [
-  { label: "Wedding Photography", href: "/wedding_photography" },
-  { label: "Wedding Cinematography", href: "/wedding_cinematography" },
-  { label: "Wedding Photobooth", href: "/wedding_photobooth" },
+  { label: "Wedding Photography", description: 'Capturing moments, crafting memories forever.',  href: "/wedding_photography" },
+  { label: "Wedding Cinematography", description: 'Storytelling through cinematic wedding visuals.', href: "/wedding_cinematography" },
+  { label: "Wedding Photobooth", description: 'Fun snaps to cherish forever.', href: "/wedding_photobooth" },
 ];
 
 export const DesktopNav = ({ logo, navigation }: any) => {
@@ -146,7 +146,7 @@ export const DesktopNav = ({ logo, navigation }: any) => {
                                         {service.label}
                                       </h5>
                                       <p className="mt-1 text-sm opacity-90">
-                                        {service.label}
+                                        {service.description}
                                       </p>
                                     </Link>
                                     {index != services.length - 1 && (

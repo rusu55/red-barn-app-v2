@@ -11,7 +11,7 @@ const navigation = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Services", services:[
-        {label: 'Wedding Photography', href: "/wedding_photography"},
+        {label: 'Wedding Photography',  href: "/wedding_photography"},
         {label: 'Wedding Cinematography', href: "/wedding_cinematography"},
         {label: 'Wedding Photobooth', href: "/wedding_photobooth"},
   ]},
