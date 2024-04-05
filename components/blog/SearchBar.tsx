@@ -22,7 +22,7 @@ export const SearchBar = ({ search }: { search?: string }) => {
     } else {
       router.push(`/blog?search=${query}`);
     }
-  }, [query]);
+  }, [query, router]);
 
   return (
     <div className="relative rounded-md shadow-sm">
@@ -32,7 +32,7 @@ export const SearchBar = ({ search }: { search?: string }) => {
         placeholder="Search blogs..."
         onChange={(e) => setText(e.target.value)}
         className="block w-full rounded-md border-0 py-1.5 pl-10 ring-1 ring-inset ring-gray-300 placeholder:text-grey-300 focus:ring-roze focus:ring-inset focus:ring-2 focus:outline-none sm:text-sm sm:leading-6 transition-all duration-300"
-      />  
+      />
     </div>
   );
 };

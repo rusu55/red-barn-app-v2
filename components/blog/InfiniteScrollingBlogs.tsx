@@ -1,7 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { format } from "date-fns";
@@ -9,15 +10,29 @@ import { AnimatePresence } from "framer-motion";
 import { motion } from "framer-motion";
 import { fetchBlogs } from "@/app/blog/action";
 
-export const InfiniteScrollingBlogs = ({ initialBlogs }: any) => {
+export const InfiniteScrollingBlogs = ({ search, initialBlogs }: any) => {
   const [blogs, setBlogs] = useState(initialBlogs);
+
   const [page, setPage] = useState(1);
   const [lastPage, setLastPage] = useState(false);
   const [ref, inView] = useInView();
 
+  /*
+  const loadMoreBlogs = useCallback(async () => {
+    const next = page + 1;
+    const blogs = await fetchBlogs({ search, page: next });
+    if (blogs?.length) {
+      setPage(next);
+      setBlogs((prev: any) => [...(prev?.length ? prev : []), ...blogs]);
+    } else {
+      setLastPage(true);
+    }
+  }, []);
+  */
+
   async function loadMoreBlogs() {
     const next = page + 1;
-    const blogs = await fetchBlogs({ page: next });
+    const blogs = await fetchBlogs({ search, page: next });
 
     if (blogs?.length) {
       setPage(next);
@@ -32,44 +47,45 @@ export const InfiniteScrollingBlogs = ({ initialBlogs }: any) => {
       loadMoreBlogs();
     }
   }, [inView]);
+
   return (
     <>
-    <AnimatePresence>
-      {blogs?.map((blog: any, index: number) => (
-        <motion.div key={index}
-          layout
-          initial={{ opacity: 0, y: 20}}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.3 }}
-          className="flex flex-col">
-          <div className="relative overflow-hidden place-self-center">
+      <AnimatePresence>
+        {blogs?.map((blog: any, index: number) => (
+          <motion.div
+            key={index}
+            layout
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="flex flex-col"
+          >
+            <div className="relative overflow-hidden place-self-center">
+              <Link href={`blog/${blog.id}`}>
+                <Image
+                  src={blog.coverPhoto}
+                  width={740}
+                  height={400}
+                  alt=""
+                  className="duration-500 ease-in-out hover:scale-110"
+                />
+              </Link>
+            </div>
+            <span className="mt-6 uppercase text-xs tracking-widest  text-roze">
+              Wedding Photography
+            </span>
             <Link href={`blog/${blog.id}`}>
-              <Image
-                src={blog.coverPhoto}
-                width={740}
-                height={400}
-                alt=""
-                className="duration-500 ease-in-out hover:scale-110"
-              />
+              <h5 className="text-[1.6rem] mt-2">{blog.title}</h5>
             </Link>
-          </div>
-          <span className="mt-6 uppercase text-xs tracking-widest  text-roze">
-            Wedding Photography
-          </span>
-          <Link href={`blog/${blog.id}`}>
-            <h5 className="text-[1.6rem] mt-2">{blog.title}</h5>
-          </Link>
-          {blog.description !== "" && (
-            <p className="mt-4">
-              {blog.description}
-            </p>
-          )}
-          <span className="text-right text-xs mb-12 pr-14">
-            {format(blog.postDate, "MM/dd/yyyy")}
-          </span>
-        </motion.div>
-      ))}
+            {blog.description !== "" && (
+              <p className="mt-4">{blog.description}</p>
+            )}
+            <span className="text-right text-xs mb-12 pr-14">
+              {format(blog.postDate, "MM/dd/yyyy")}
+            </span>
+          </motion.div>
+        ))}
       </AnimatePresence>
       {/* loading spinner */}
       {!lastPage && (

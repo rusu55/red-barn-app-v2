@@ -10,7 +10,7 @@ export const getBlogs = async ({
     }) =>{
         try{
             const skip = (page-1) * limit
-            console.log(query)
+          
             const result = await prisma.blog.findMany({
                 skip: skip,
                 take: limit,
