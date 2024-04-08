@@ -23,13 +23,16 @@ const BlogPage = async ({
   return (
     <div className="pt-20 md:pt-0">
       <Hero image={hero_img} title="" description="" />
-      <div className="mx-auto max-w-screen-xl py-20 flex flex-wrap justify-center gap-4">
+      <div className="mx-auto max-w-screen-xl py-20 flex flex-wrap justify-center gap-4 ">
         {/** Left Section */}
-        <div className="w-full px-4 md:w-[60%]" key={Math.random()}>
+        <div
+          className="w-full px-4 lg:w-[60%]  order-2 lg:order-1"
+          key={Math.random()}
+        >
           <InfiniteScrollingBlogs search={search} initialBlogs={blogs} />
         </div>
         {/** Right Section */}
-        <div className="w-full px-4 md:w-[38%] flex flex-col gap-y-6">
+        <div className="w-full px-4 lg:w-[38%] flex flex-col gap-y-6 order-1 lg:order-2">
           <SearchBar />
           <RecentBlogs recentBlogs={recentBlogs} />
           <TagsComponent />
