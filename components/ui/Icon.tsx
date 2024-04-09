@@ -37,9 +37,13 @@ import {
   IconArrowBack,
   IconSearch,
   IconArrowRight,
+  IconBrandVimeo,
+  IconBrandYoutube,
 } from "@tabler/icons-react";
 
 const iconOptions: any = {
+  vimeo: IconBrandVimeo,
+  youtube: IconBrandYoutube,
   arrowBack: IconArrowBack,
   calendar: IconCalendar,
   arrowLeft: IconArrowLeft,

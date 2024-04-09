@@ -3,11 +3,11 @@ import { ServiceIntro } from "@/components/services/ServiceIntro";
 import { AdditionalServices } from "@/components/services/AdditionalServices";
 import { Hero } from "@/components/ui/Hero";
 import { ServiceForm } from "@/components/services/ServiceForm";
-
+import Img from '/public/images/photography-hero.jpg'
 const PhotographyPage = () => {
   return (
     <div className="pt-20 md:pt-0">
-      <Hero image={""} title={""} description={""} />
+      <Hero image={Img} title={""} description={""} />
       <div className="mx-auto max-w-screen-xl mt-16 px-6">
         <ServiceIntro />
         <div className="flex flex-col md:flex-row md:flex-wrap md:max-w-screen-lg md:mx-auto md:gap-4">
