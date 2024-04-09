@@ -15,10 +15,10 @@ export const HomeIntroduction = () => {
             <p>
               Photography is so much more than taking pretty pictures. We want
               to help you make memories and preserve them in images that make
-              you feel like you're in those moments again.
+              you feel like you&apos;re in those moments again.
             </p>
             <p>
-              We are Red Barn Wedding STudio, Chicago wedding photographer and
+              We are Red Barn Wedding Studio, Chicago wedding photographer and
               cinematographer serving Chicago, all suburbs, and beyond!
             </p>
             <p>
