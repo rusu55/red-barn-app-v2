@@ -4,7 +4,7 @@ import aboutImage from "/public/images/image-1.jpg";
 
 export const HomeIntroduction = () => {
   return (
-    <section className=" my-16">
+    <section className="my-16">
       <div className="mx-auto max-w-screen-xl flex flex-wrap justify-center">
         {/* Block Text*/}
         <div className="w-full md:w-1/2 px-4">

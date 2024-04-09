@@ -5,6 +5,7 @@ import { HomeIntroduction } from "@/components/home/HomeIntroduction";
 import { HomeRecentWork } from "@/components/home/HomeRecentWork";
 import HomeReviews from "@/components/home/HomeReviews";
 import { HomeSocialIcons } from "@/components/home/HomeSocialIcons";
+import { HomeIcons } from "@/components/home/HomeIcons";
 
 const Home = async () => {
   const highlights = await prisma.blog.findMany({
@@ -18,6 +19,7 @@ const Home = async () => {
       <HomeHero />
       <HomeIntroduction />
       <HomeRecentWork highlights={highlights} />
+      <HomeIcons />
       <HomeReviews />
       <HomeSocialIcons />
     </>
