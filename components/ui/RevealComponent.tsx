@@ -21,7 +21,7 @@ export const RevealComponent = ({index, variants, children}: any) => {
             variants={variants}
             initial= "hidden"
             animate={controls}
-            transition={{duration:0.5, delay: 0.1 * index, }}
+            transition={{duration:0.5, delay: 0.2 * index, }}
             viewport={{once: true}}
         >
             {children}
