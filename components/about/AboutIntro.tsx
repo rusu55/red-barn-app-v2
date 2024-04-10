@@ -1,8 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
+import { RevealComponent } from "../ui/RevealComponent";
+
+import { fadeTopBottom } from "@/lib/animation";
 
 export const AboutIntro = ({image,...props}: any) => {
-  return (
+
+    return (
     <>
         <div className='max-w-screen-xl mx-auto flex flex-wrap justify-center px-2 md:px-6'>
             {/* Block Text*/}
@@ -36,14 +40,15 @@ export const AboutIntro = ({image,...props}: any) => {
                         <p className="font-normal font-pariss text-roze text-xl text-center md:text-right">Red Barn Wedding Studio</p>
                     </div>
                 </div>
-                <div className="w-full md:w-1/2 px-4">                   
+                <div className="w-full md:w-1/2 px-4">
+                    <RevealComponent id={1} variants={fadeTopBottom}>                  
                         <ul className="mx-auto font-pariss text-lg text-center md:text-right w-[80%] leading-9">
                             <li className="py-2 border-b-2 border-roze"><Link href="/services/wedding_photography">Wedding Photography</Link></li>
                             <li className="py-2 border-b-2 border-roze"><Link href="/services/wedding_cinematography">Wedding Cinematography</Link></li>
                             <li className="py-2 border-b-2 border-roze"><Link href="/services/wedding_photography">Engagement Photograohy</Link></li>
                             <li className="py-2 border-b-2 border-roze"><Link href="/services/wedding_photobooth">Wedding Photobooth</Link></li>
                         </ul>
-                    
+                    </RevealComponent> 
                 </div>
             </div>
         </div>

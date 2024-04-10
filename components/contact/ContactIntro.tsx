@@ -1,8 +1,16 @@
-import React from "react";
+
+import React, {useEffect} from "react";
 import Link from "next/link";
+
+import { RevealComponent } from "../ui/RevealComponent";
 import { Button } from "../ui/Button";
 import { Icon } from "../ui/Icon";
+
+import { fadeTopBottom } from "@/lib/animation";
+
 export const ContactIntro = () => {
+
+  
   return (
     <div>
       <div>
@@ -27,10 +35,18 @@ export const ContactIntro = () => {
       <div className="mt-10">
         <h2>Follow US on: </h2>
         <div className="flex items-center justify-start gap-x-2 cursor-pointer">
+        <RevealComponent index={1} variants={fadeTopBottom}>
             <Link href="https://www.facebook.com/RedBarnWeddingStudio"><Icon icon="facebook" className="text-roze w-12 h-12"/></Link>
+        </RevealComponent>
+        <RevealComponent index={2} variants={fadeTopBottom}>
             <Link href="https://www.instagram.com/redbarnweddingstudio/"><Icon icon="instagram" className="text-roze  w-12 h-12"/></Link>
+          </RevealComponent>
+          <RevealComponent index={3} variants={fadeTopBottom}>
             <Link href="https://vimeo.com/user81106458"><Icon icon="vimeo" className="text-roze  w-12 h-12"/></Link>
+          </RevealComponent>
+          <RevealComponent index={4} variants={fadeTopBottom}>
             <Link href="https://www.youtube.com/channel/UCnTzNTKip1rjTTzd5vqO5HA"><Icon icon="youtube" className="text-roze  w-12 h-12"/></Link>
+          </RevealComponent>
         </div>
       </div>
     </div>

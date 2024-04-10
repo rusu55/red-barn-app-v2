@@ -1,10 +1,10 @@
-"use client";
+
 import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useInView } from "react-intersection-observer";
-import { useAnimation } from "framer-motion";
-import { AnimeCard } from "../ui/AnimeCard";
+
+import { RevealComponent } from "../ui/RevealComponent";
+import { fadeBottomTop } from "@/lib/animation";
 
 const introText = [
   {
@@ -25,22 +25,9 @@ const introText = [
 ];
 
 export const HomeRecentWork = ({ highlights }: any) => {
-  const { ref, inView } = useInView();
-  const controls = useAnimation();
-
-  const variants = {
-    hidden: { opacity: 0, y: -20 },
-    visible: { opacity: 1, y: 0 },
-  };
-
-  useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    }
-  }, [inView, controls]);
-
+ 
   return (
-    <section ref={ref} className="bg-neutral-100/75">
+    <section className="bg-neutral-100/75">
       <div className="mx-auto max-w-screen-xl py-20">
         <div className="flex flex-col items-center">
           <span className="heading-meta">Portfolio</span>
@@ -50,7 +37,7 @@ export const HomeRecentWork = ({ highlights }: any) => {
         <div className="flex flex-wrap justify-center mt-10">
           {highlights.map((highlight: any, index: number) => (
             <div key={index} className="w-full md:w-1/3 px-4">
-              <AnimeCard index={index}>
+              <RevealComponent index={index} variants={fadeBottomTop}>
                 <div className="relative overflow-hidden h-[480px]">
                   <Image
                     src={highlight.coverPhoto}
@@ -67,7 +54,7 @@ export const HomeRecentWork = ({ highlights }: any) => {
                   </h5>
                   <p className="text-center px-6">{introText[index].text}</p>
                 </div>
-              </AnimeCard>
+              </RevealComponent>
             </div>
           ))}
         </div>

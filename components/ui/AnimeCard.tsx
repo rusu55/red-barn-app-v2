@@ -19,12 +19,12 @@ interface Prop {
     index: number;
   }
 
-  const variants = {
-    hidden: { opacity: 0, y: 250 },
-    visible: { opacity: 1, y: 0 },
-  };
+ // const variants = {
+   // hidden: { opacity: 0, y: 250 },
+   // visible: { opacity: 1, y: 0 },
+ // };
   
-export const AnimeCard = ({index, children}: any) => {
+export const AnimeCard = ({index, variants, children}: any) => {
   return (
     
     <MotionDiv
