@@ -1,7 +1,8 @@
 import Image from "next/image";
 import { Hero } from "@/components/ui/Hero";
+import { StripsSlider } from "@/components/services/StripsSlider";
 import Img from "/public/images/photography-hero.jpg";
-import photobooth from "/public/images/1.png";
+import photobooth from "/public/images/photobooth.jpg";
 
 const PhotoboothPage = () => {
   return (
@@ -40,7 +41,7 @@ const PhotoboothPage = () => {
             </div>
           </div>
           <div className="w-full md:w-1/2">
-            <Image src={photobooth} alt="" />
+            <Image src={photobooth} alt="" className="w-[300px] object-cover mx-auto" />
           </div>
           {/* Right Column*/}
           <div className="w-full md:w-1/4">
@@ -77,6 +78,8 @@ const PhotoboothPage = () => {
             </div>
           </div>
         </div>
+        {/* Slider */}
+        <StripsSlider />
       </div>
     </div>
   );
