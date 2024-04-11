@@ -47,7 +47,7 @@ export const StripsSlider = () => {
           className="swiper"
         >
             {slides.map((img, index) =>(
-                <SwiperSlide>
+                <SwiperSlide key={index}>
                     <div className="w-full flex justify-center items-center">
                     <Image
                         src={img.src}
