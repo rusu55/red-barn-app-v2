@@ -18,16 +18,14 @@ export const HomeIntroduction = () => {
               you feel like you&apos;re in those moments again.
             </p>
             <p>
-              We are Red Barn Wedding Studio, Chicago wedding photographer and
-              cinematographer serving Chicago, all suburbs, and beyond!
+              Red Barn Wedding Studio is a FAMILY OWNED wedding photography and cinematography company, based in Chicago - Illinois, dedicated to customer service and exceptional visual storytelling. All our lead professionals have around 15 years experience in the wedding field, covering and experiencing all kinds of lighting scenarios and true life stories.
             </p>
             <p>
-              We often say that we are a mix of a lifestyle and fine art wedding
-              photographers. A little bit candid and fun, and a little bit
-              poised and elegant. We love to create romantic images with an
-              editorial feel that still capture your authentic emotions and
-              personality.
+            We believe that your wedding collection should reflect who you are as a couple; it should capture all the joy and energy of your special day. The artistic, documentary approach is a celebration of authentic, meaningful moments. We would be delighted to be part of your wedding journey, and we hope your collection will bring you joy for many years to come.
             </p>
+           <p>
+           We know that it takes much time and energy to plan a dream wedding, and we are determined to do our part to make your special day a success. We can not wait to meet you and discuss your initial wedding thoughts and vision.
+           </p>
             <p className="font-normal font-pariss text-roze text-xl text-center md:text-right">
               Red Barn Wedding Studio
             </p>
