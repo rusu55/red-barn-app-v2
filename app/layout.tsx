@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from 'next/script'
 import { Nunito, Old_Standard_TT } from "next/font/google";
 import "./globals.css";
 
@@ -6,6 +7,7 @@ import "./globals.css";
 import { ParallaxProviders } from "@/providers/ParallaxProvider";
 import { NavBar } from "@/components/nav/NavBar";
 import Footer from "@/components/footer/Footer";
+import { TackChat } from "@/components/ui/TackChat";
 
 
 const nunito = Nunito({
@@ -34,12 +36,15 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+ 
   return (
     <html lang="en">
       <body className={`${nunito.variable} ${old_standard.variable}`}>
-        <NavBar />
-        <ParallaxProviders>{children}</ParallaxProviders>        
-        <Footer />      
+        <NavBar />        
+        <ParallaxProviders>{children}</ParallaxProviders>    
+        <TackChat />    
+        <Footer />  
+        
       </body>
     </html>
   );

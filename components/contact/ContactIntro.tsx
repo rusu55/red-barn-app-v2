@@ -18,7 +18,7 @@ export const ContactIntro = () => {
         <h2 className="w-[80%] text-center py-4">I`d love to tell your story.</h2>
       </div>
       <div className="w-full">
-        <p>We are excited to go wherever your love story is taking me and looking forward to hearing from you!</p>
+        <p className="mx-2 text-center">We are excited to go wherever your love story is taking me and looking forward to hearing from you!</p>
         <div className="pt-6">
              <ul className="mx-auto w-[80%] ">
                 <li className="py-2 border-b-2 border-roze flex justify-between items-center"><span className=" uppercase">Phone:</span><span className="font-pariss text-lg text-right w-[80%] leading-9">(312) 912-5004</span></li>
