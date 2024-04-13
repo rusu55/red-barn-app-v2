@@ -16,7 +16,7 @@ const PhotographyPage = () => {
         <ServiceIntro />
         <div className="flex flex-col md:flex-row md:flex-wrap md:max-w-screen-lg md:mx-auto md:gap-4">
           {weddingPhotography.map((service, index) =>(
-            <RevealComponent index={index} variants={fadeBottomTop}>
+            <RevealComponent key={index} index={index} variants={fadeBottomTop}>
               <Card key={index} service={service}/>
             </RevealComponent>
           ))}
