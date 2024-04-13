@@ -8,8 +8,9 @@ export const ServiceIntro = () => {
             <hr className="line line-hr-left" />
         </div>
         <div className='w-full md:w-[70%]'>
-            <p>Are you looking for an experienced destination photographer for affordable prices? You found me! My pricing and packages are designed to appeal to everyone.</p>
-            <p>Vivento efficitur nisi nec tellus fringilla posuere. Sed ut scelerisque tortor. Mauris maximus sollicitudin purus, sed fringilla lorem auctor eget. Interdum et malesuada fames ac ante ipsum primis in faucibus. Ut efficitur magna in auctor egestas. Curabitur in eleifend risus. Nullam interdum nisi ut lacinia dignissim.</p>
+            <p>Are you looking for an top-notch photographer at affordable prices? You found us! Our pricing and packages are designed to appeal to everyone.</p>
+            <p>We believe that pricing should be upfront and straightforward. You will see the hard work, dedication, and years of experience we will bring to your special day if you choose to work with us. </p>
+            <p>With all wedding photo packages, you will receive your entire digital gallery of high resolution images, ready to download, within 70 Days of your wedding day.</p>
         </div>
     </div>
   )
