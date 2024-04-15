@@ -2,7 +2,7 @@ import clsx from "clsx"
 
 export const MenuIcon = ({open}: any) => {
   return (
-   <div className="ml-4 mt-8 relative w-8 h-8">
+   <div className="ml-4 mt-6 relative w-8 h-6">
         <span 
             className={clsx(
                 'absolute block h-1 rotate-0 transform rounded-full opacity-100 transition-all duration-300 ease-out',

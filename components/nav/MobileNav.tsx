@@ -13,14 +13,14 @@ export const MobileNav = ({ logo, navigation }: any) => {
   return (
     <>
       <div className="block fixed lg:hidden z-50 w-full ">
-        <div className="h-20 w-full bg-white  shadow-md shadow-black/5 absolute top-0 z-30 flex items-center justify-center">
-          <Image src={logo} width={160} alt="" className="z-50" />
+        <div className=" h-16 w-full bg-white  shadow-md shadow-black/5 absolute top-0 z-30 flex items-center justify-center">
+          <Image src={logo} width={140} alt="" className="z-50" />
         </div>
 
         <Menu as="div">
           {({ open }) => (
             <>
-              <Menu.Button className="group relative z-50 h-5 w-6 rotate-0 transform cursor-pointer transition duration-500 ease-in-out focus:outline-none">
+              <Menu.Button className="group relative z-50 h-4 w-6 rotate-0 transform cursor-pointer transition duration-500 ease-in-out focus:outline-none">
                 <MenuIcon open={open} />
               </Menu.Button>
               <Transition
