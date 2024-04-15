@@ -22,6 +22,7 @@ model Blog {
   postDate    DateTime
   postType    String[]
   highlights  String
+  sample Boolean?
 }
 
 model Portfolio {

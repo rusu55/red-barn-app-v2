@@ -17,6 +17,12 @@ const PhotographyPage = async () => {
       highlights: "yes",
     },
   });
+  const samples = await prisma.blog.findMany({
+    take: 3,
+    where: {
+      sample: true,
+    }
+  })
 
   return (
     <div className="pt-20 md:pt-0">
@@ -35,7 +41,7 @@ const PhotographyPage = async () => {
         </div>
       </div>
         <div className="mt-20">
-          <PhotographySamples  highlights={highlights}/>
+          <PhotographySamples  highlights={samples}/>
         </div>
         <div className="mx-auto max-w-screen-xl mt-16 px-6">
           <div className="mt-20">
