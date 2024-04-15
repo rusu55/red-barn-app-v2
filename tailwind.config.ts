@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+const plugin = require('tailwindcss/plugin')
 
 const config: Config = {
   content: [
@@ -24,6 +25,11 @@ const config: Config = {
                 old: ['var(--font-old_standard)'],
                 nunito: ['var(--font-nunito)'],
       },
+      textShadow: {
+        sm: '0 1px 2px var(--tw-shadow-color)',
+        DEFAULT: '0 2px 4px var(--tw-shadow-color)',
+        lg: '0 8px 16px var(--tw-shadow-color)',
+      },
       keyframes: {
         fadeIn: {
           from : { transform: 'translateY(30%)', opacity: '0' },
@@ -35,6 +41,17 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ matchUtilities, theme }: any) {
+      matchUtilities(
+        {
+          'text-shadow': (value: any) => ({
+            textShadow: value,
+          }),
+        },
+        { values: theme('textShadow') }
+      )
+    }),
+  ],
 };
 export default config;
