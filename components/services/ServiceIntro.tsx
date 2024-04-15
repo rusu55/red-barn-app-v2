@@ -4,6 +4,7 @@ export const ServiceIntro = () => {
   return (
     <div className='flex flex-wrap justify-start items-start gap-8'>
         <div className='w-full md:w-[26%]'>
+         <span className="heading-meta text-roze uppercase tracking-[.25em]">Photography Services</span>
             <h2>Clear Prices & Complete Packages</h2>
             <hr className="line line-hr-left" />
         </div>
