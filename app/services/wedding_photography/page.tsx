@@ -9,6 +9,7 @@ import { weddingPhotography } from "@/lib/services";
 import { RevealComponent } from "@/components/ui/RevealComponent";
 import { fadeBottomTop } from "@/lib/animation";
 import { PhotographySamples } from "@/components/services/PhotographySamples";
+import {ServiceIntroData} from '@/lib/services';
 
 const PhotographyPage = async () => {
   const highlights = await prisma.blog.findMany({
@@ -28,8 +29,8 @@ const PhotographyPage = async () => {
     <div className="pt-20 md:pt-0">
       <Hero image={Img} title={""} description={""} />
       <div className="mx-auto max-w-screen-xl mt-16 px-6">
-        <ServiceIntro />
-        <div className="flex flex-col md:flex-row md:flex-wrap md:max-w-screen-lg md:mx-auto md:gap-4">
+        <ServiceIntro data={ServiceIntroData[0]} />
+        <div className="flex flex-col md:flex-row md:flex-wrap md:justify-center md:max-w-screen-lg md:mx-auto md:gap-8">
           {weddingPhotography.map((service, index) =>(
             <RevealComponent key={index} index={index} variants={fadeBottomTop}>
               <Card key={index} service={service}/>

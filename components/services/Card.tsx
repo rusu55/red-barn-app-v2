@@ -4,7 +4,8 @@ import img1 from '/public/images/2.jpg';
 
 export const Card = ({service}: any) => {
   return (
-   <div className="shadow-lg max-w-[450px] mt-10 mx-auto">
+<div className="w-full">
+   <div className="shadow-lg max-w-[450px] m-4 mx-auto w-[98%]">
         <div className="relative  overflow-hidden">
             <Image src={`/images/${service.img}`} width={500} height={200} alt="" className="duration-500 ease-in-out hover:scale-110 w-full"/>
             <div className="inline-block absolute right-4 bottom-4 bg-roze text-white px-4 py-2">
@@ -21,6 +22,7 @@ export const Card = ({service}: any) => {
                 ))}                       
             </ul>
         </div>
+   </div>
    </div>
   )
 }
