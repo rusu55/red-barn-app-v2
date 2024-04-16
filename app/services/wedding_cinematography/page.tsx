@@ -13,6 +13,9 @@ import "lightgallery/css/lg-zoom.css";
 import "lightgallery/css/lg-video.css";
 import { Icon } from "@/components/ui/Icon";
 
+import { RevealComponent } from "@/components/ui/RevealComponent";
+import { fadeBottomTop } from "@/lib/animation";
+
 
 import { videoItems, weddingVideography } from "@/lib/services";
 
@@ -43,7 +46,9 @@ const CinematographyPage = () => {
                     download={false}
                     >
                     {videoItems?.map((video: any, index: number) =>(
-                            <VideoItem key={index} data={video}/>    
+                        <RevealComponent index={index} variants={fadeBottomTop}>
+                            <VideoItem key={index} data={video}/> 
+                        </RevealComponent>   
                     ))}                                   
                 </LightGallery>    
             </div>
