@@ -46,7 +46,7 @@ const CinematographyPage = () => {
                     download={false}
                     >
                     {videoItems?.map((video: any, index: number) =>(
-                        <RevealComponent index={index} variants={fadeBottomTop}>
+                        <RevealComponent key={index} index={index} variants={fadeBottomTop}>
                             <VideoItem key={index} data={video}/> 
                         </RevealComponent>   
                     ))}                                   
