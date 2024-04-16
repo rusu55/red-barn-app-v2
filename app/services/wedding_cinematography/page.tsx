@@ -38,17 +38,17 @@ const CinematographyPage = () => {
                     </div>      
                 </div>
                 <LightGallery 
-                    elementClassNames='w-full md:w-[50%] grid gap-y-8 sm:gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-4 2xl:gap-5'
+                    elementClassNames='w-full md:w-[50%] grid gap-y-8 sm:gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-4 2xl:gap-5 px-4'
                     plugins={[lgVideo, lgZoom]}
                     download={false}
                     >
                     {videoItems?.map((video: any, index: number) =>(
-                            <VideoItem key={index} data={video} />    
+                            <VideoItem key={index} data={video}/>    
                     ))}                                   
                 </LightGallery>    
             </div>
         </div>
-        <div className="mx-auto max-w-screen-xl my-16">
+        <div className="mx-auto max-w-screen-xl my-16 px-4">
             <AdditionalServices /> 
         </div>           
     </div>
