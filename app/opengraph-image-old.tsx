@@ -22,6 +22,7 @@ export default async function og() {
           </p>
         </div>
       </div>
-    )
+    ),
+    size
   );
 }
