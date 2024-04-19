@@ -64,7 +64,7 @@ export const InfiniteScrollingBlogs = ({ search, initialBlogs }: any) => {
             <div className="relative overflow-hidden place-self-center">
               <Link href={`blog/${blog.id}`}>
                 <Image
-                  src={blog.coverPhoto}
+                  src={blog.photos[0]}
                   width={740}
                   height={400}
                   alt=""
