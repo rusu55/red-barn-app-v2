@@ -32,7 +32,7 @@ const CinematographyPage = () => {
                 <div className="px-4">
                         <h5 className="text-xl mt-5">{weddingVideography.title}</h5>
                         <hr className="line-hr-left" />
-                        <p>{weddingVideography.highlights}</p>
+                        <p className=" whitespace-pre-line">{weddingVideography.highlights}</p>
                         <ul className="pb-8">
                             {weddingVideography.details.map((detail: string, index: number) =>(
                                     <li  key={index} className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />{detail}</li>

@@ -8,11 +8,12 @@ const BlogIdPage = async ({ params }: any) => {
       id: params.blogId.toString(),
     },
   });
+ 
   return (
     <div className="mx-auto max-w-screen-xl pt-2">
-      {blog?.coverPhoto && 
+      {blog?.photos && 
       <div className="flex w-full items-center justify-center">
-        <Image src={blog.coverPhoto} alt="" width={1000} height={600} />
+        <Image src={blog?.photos[0]} alt="" width={1000} height={600} />
       </div>
       } 
       <div className="mx-auto flex max-w-[1000px] flex-wrap items-center justify-start">
@@ -32,6 +33,7 @@ const BlogIdPage = async ({ params }: any) => {
       </div> 
       <div className="px-2 lg:px-0 flex flex-col space-y-2 mdspace-y-2 items-center mt-10">
         {blog?.photos.map((photo: string, index: number) => (
+          index > 0 &&
           <Image key={index} src={photo} alt="" width={800} height={400} />
         ))}
       </div>

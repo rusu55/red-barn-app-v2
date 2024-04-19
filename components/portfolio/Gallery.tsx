@@ -8,7 +8,8 @@ import { PortfolioPhotoIntro } from "@/components/portfolio/PortfolioPhotoIntro"
 export const Gallery = ({ portfolio, videos }: any) => {
   const [tag, setTag] = useState("all");
   const [galleryPhotos, setGalleryPhotos] = useState(portfolio);
-  +useEffect(() => {
+  
+  useEffect(() => {
     setGalleryPhotos(
       tag === "all"
         ? portfolio

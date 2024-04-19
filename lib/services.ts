@@ -49,7 +49,7 @@ export const weddingVideography =
     {
         title: 'Wedding Day Coverage',
         type: 'Wedding Cinematography',
-        highlights: 'Wedding videography packages from Red Barn Studio give you access to high-quality storytelling films you will enjoy forever.<br/>Our skilled wedding videographers will capture the moments important to you. Then our professional wedding video editors will create a cinematic film telling your story in a way that reflects your individual personalities.',
+        highlights: `Wedding videography packages from Red Barn Studio give you access to high-quality storytelling films you will enjoy forever. \n Our skilled wedding videographers will capture the moments important to you. Then our professional wedding video editors will create a cinematic film telling your story in a way that reflects your individual personalities.`,
         details: ['10 Hours Photography Coverage', 'Full Length Wedding Video Edit','Highlight Video Edit', 'Online Video Edits Delivery','Free USB with Video Edits', 'RAW Files available for download'],
     } 
 
