@@ -1,5 +1,4 @@
-import prisma from "@/prisma/prisma";
-import { v4 as uuid } from "uuid";
+
 import { Hero } from "@/components/ui/Hero";
 import hero_img from "/public/images/about.jpg";
 import { SearchBar } from "@/components/blog/SearchBar";

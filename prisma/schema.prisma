@@ -23,6 +23,7 @@ model Blog {
   postType    String[]
   highlights  String
   sample Boolean?
+  orderBy Int?
 }
 
 model Portfolio {

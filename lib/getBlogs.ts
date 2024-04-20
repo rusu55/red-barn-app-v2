@@ -14,6 +14,9 @@ export const getBlogs = async ({
             const result = await prisma.blog.findMany({
                 skip: skip,
                 take: limit,
+                orderBy: [
+                    { orderBy: 'asc'}
+                ],
                 where:{                    
                    // title: query != null ? query.toString() : undefined 
                    title:{
