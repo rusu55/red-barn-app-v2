@@ -15,7 +15,7 @@ const PhotographyPage = async () => {
   const highlights = await prisma.blog.findMany({
     take: 3,
     where: {
-      highlights: "yes",
+      highlights: true,
     },
   });
   const samples = await prisma.blog.findMany({

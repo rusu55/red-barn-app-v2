@@ -11,7 +11,7 @@ const Home = async () => {
   const highlights = await prisma.blog.findMany({
     take: 3,
     where: {
-      highlights: "yes",
+      highlights: true,
     },
   });
   return (

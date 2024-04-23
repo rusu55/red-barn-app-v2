@@ -21,7 +21,7 @@ model Blog {
   coverPhoto  String
   postDate    DateTime
   postType    String[]
-  highlights  String
+  highlights  Boolean?
   sample Boolean?
   orderBy Int?
 }

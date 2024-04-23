@@ -23,7 +23,7 @@ export const PhotographySamples = ({highlights}: any) => {
                 <div className="relative overflow-hidden h-[480px]">
                     <Link href={`/blog/${highlight.id}`}>
                     <Image
-                        src={highlight.coverPhoto}
+                        src={highlight.photos[0]}
                         className="duration-500 ease-in-out hover:scale-110 object-cover"
                         fill
                         alt=""

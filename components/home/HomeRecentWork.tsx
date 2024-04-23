@@ -40,7 +40,7 @@ export const HomeRecentWork = ({ highlights }: any) => {
               <RevealComponent index={index} variants={fadeBottomTop}>
                 <div className="relative overflow-hidden h-[480px]">
                   <Image
-                    src={highlight.coverPhoto}
+                    src={highlight.photos[0]}
                     className="duration-500 ease-in-out hover:scale-110 object-cover"
                     fill
                     alt=""
