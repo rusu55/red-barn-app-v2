@@ -18,7 +18,7 @@ model Blog {
   photos      String[]
   description String
   title       String
-  coverPhoto  String
+  coverPhoto  String?
   postDate    DateTime
   postType    String[]
   highlights  Boolean?
