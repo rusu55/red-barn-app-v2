@@ -12,16 +12,11 @@ import { PhotographySamples } from "@/components/services/PhotographySamples";
 import {ServiceIntroData} from '@/lib/services';
 
 const PhotographyPage = async () => {
-  const highlights = await prisma.blog.findMany({
-    take: 3,
-    where: {
-      highlights: true,
-    },
-  });
+
   const samples = await prisma.blog.findMany({
     take: 3,
     where: {
-      sample: true,
+      sample: Boolean(true),
     }
   })
 
