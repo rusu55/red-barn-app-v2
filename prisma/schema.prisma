@@ -20,7 +20,7 @@ model Blog {
   title       String
   coverPhoto  String?
   postDate    DateTime
-  postType    String[]
+  postType    String?
   highlights  Boolean?
   sample Boolean?
   orderBy Int?

@@ -15,6 +15,7 @@ const BlogPage = async ({
 }) => {
   const search =
     typeof searchParams.search === "string" ? searchParams.search : undefined;
+    
 
   let blogs = await fetchBlogs({ search });
   const recentBlogs = blogs.slice(0, 3);

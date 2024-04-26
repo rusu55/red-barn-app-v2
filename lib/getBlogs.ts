@@ -8,10 +8,11 @@ export const getBlogs = async ({
     page?: number
     limit?: number 
     }) =>{
+        let result
         try{
             const skip = (page-1) * limit
-          
-            const result = await prisma.blog.findMany({
+          if(query){
+            result = await prisma.blog.findMany({
                 skip: skip,
                 take: limit,
                 orderBy: [
@@ -19,13 +20,29 @@ export const getBlogs = async ({
                 ],
                 where:{                    
                    // title: query != null ? query.toString() : undefined 
-                   title:{
+                   OR: [
+                    {title:{
                     contains: query?.toString(),
                     mode: 'insensitive'
-                   }
-                }
+                   }},
+                    {postType:{
+                       contains: query?.toString(),
+                       mode: 'insensitive'
+                    }}
+                    ]
+                }             
+              
             })
-
+        }
+        else{
+            result = await prisma.blog.findMany({
+                skip: skip,
+                take: limit,
+                orderBy: [
+                    { orderBy: 'asc'}
+                ]
+                })
+        }
             await new Promise(resolve => setTimeout(resolve, 300));
             
             return JSON.parse(JSON.stringify(result))

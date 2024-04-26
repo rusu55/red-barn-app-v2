@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
-import { useRouter } from "next/navigation";
+import _ from 'lodash';
 import Link from "next/link";
 import Image from "next/image";
 import { format } from "date-fns";
@@ -73,7 +73,7 @@ export const InfiniteScrollingBlogs = ({ search, initialBlogs }: any) => {
               </Link>
             </div>
             <span className="mt-6 uppercase text-xs tracking-widest  text-roze">
-              Wedding Photography
+              {blog?.postType} Photography
             </span>
             <Link href={`blog/${blog.id}`}>
               <h5 className="text-[1.6rem] mt-2">{blog.title}</h5>
@@ -81,8 +81,8 @@ export const InfiniteScrollingBlogs = ({ search, initialBlogs }: any) => {
             {blog.description !== "" && (
               <p className="mt-4">{blog.description}</p>
             )}
-            <span className="text-right text-xs mb-12 pr-14">
-              {format(blog.postDate, "MM/dd/yyyy")}
+            <span className="text-right text-sm text-roze mb-12 pr-14">
+              <Link href="">See more photos...</Link>
             </span>
           </motion.div>
         ))}

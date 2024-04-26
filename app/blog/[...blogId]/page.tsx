@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import _ from 'lodash'
 import prisma from "@/prisma/prisma";
 
 const BlogIdPage = async ({ params }: any) => {
@@ -8,7 +8,7 @@ const BlogIdPage = async ({ params }: any) => {
       id: params.blogId.toString(),
     },
   });
- 
+ console.log(blog)
   return (
     <div className="mx-auto max-w-screen-xl pt-2">
       {blog?.photos && 
@@ -27,7 +27,7 @@ const BlogIdPage = async ({ params }: any) => {
               <ul className="mx-auto w-[80%] ">
                 <li className="py-2 border-b-2 border-roze flex justify-between items-center"><span className=" uppercase">Photographer:</span><span className="font-pariss text-lg text-right w-[80%] leading-9">Red Barn Studio</span></li>
                 <li className="py-2 border-b-2 border-roze flex justify-between items-center"><span className=" uppercase">Cinematographer:</span><span className="font-pariss text-lg text-right w-[80%] leading-9">Red Barn Studio</span></li> 
-                <li className="py-2 border-b-2 border-roze flex justify-between items-center"><span className=" uppercase">Venue:</span><span className="font-pariss text-lg text-right w-[80%] leading-9">Chevy Chase CC</span></li> 
+                <li className="py-2 border-b-2 border-roze flex justify-between items-center"><span className=" uppercase">Venue:</span><span className="font-pariss text-lg text-right w-[80%] leading-9">{_.split(blog?.title, '-').pop()}</span></li> 
               </ul>
           </div>
       </div> 
