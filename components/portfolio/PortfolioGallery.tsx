@@ -42,8 +42,9 @@ export const PortfolioGallery = ({ portfolio, tag }: any) => {
                   src={image.url}
                   alt=""
                   fill
+                  
                   className="rounded-2xl object-cover"
-                  sizes="(min-width: 1280px) 19.25rem, (min-width: 1024px) 20vw, (min-width: 768px) 23.25rem, (min-width: 640px) 50vw, 100vw"
+                  sizes="(min-width: 1280px) 29rem, (min-width: 1024px) 20vw, (min-width: 768px) 50rem, (min-width: 640px) 50vw, 100vw"
                 />
                 <div className="absolute inset-0 rounded-2xl bg-gray-900 opacity-0 transition duration-300 group-hover:opacity-60" />
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 transition duration-300 group-hover:opacity-100">
