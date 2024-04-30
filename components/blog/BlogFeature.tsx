@@ -13,9 +13,10 @@ export const BlogFeature = ({ data }: any) => {
               <Image
                 src={blog.coverPhoto}
                 width={740}
-                height={400}
+                height={490}
                 alt=""
-                className="duration-500 ease-in-out hover:scale-110"
+                className="duration-500 ease-in-out hover:scale-110 object-cover"
+                sizes="(min-width: 1280px) 74rem, (min-width: 1024px) 74rem, (min-width: 768px) 50rem, (min-width: 640px) 50vw, 100vw"
               />
             </Link>
           </div>

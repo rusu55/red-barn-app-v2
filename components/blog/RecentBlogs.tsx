@@ -16,7 +16,7 @@ export const RecentBlogs = ({ recentBlogs }: any) => {
           {blogs?.map((blog: any, index: number) => (
             <li key={index}>
               <div className="flex gap-3">
-                <Image src={blog.photos[0]} alt="" width={100} height={100} />
+                <Image src={blog.photos[0]} alt="" width={100} height={100} className="object-cover" />
                 <div className="flex flex-col">
                   <Link
                     href={`/blog/${blog.id}`}

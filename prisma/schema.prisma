@@ -30,6 +30,7 @@ model Portfolio {
   id  String   @id @default(auto()) @map("_id") @db.ObjectId
   url String
   tag String[]
+  orderBy Int?
 }
 
 type PhotoObject {

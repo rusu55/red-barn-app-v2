@@ -6,7 +6,9 @@ import heroImage from '/public/images/portfolio-hero.jpg'
 import videos from "@/lib/videos";
 
 const Portfolio = async () => {
-  const portfolio = await prisma.portfolio.findMany({});
+  const portfolio = await prisma.portfolio.findMany({ 
+    orderBy: [{ orderBy: "asc" }],
+  });
 
   return (
     <div className="pt-20 md:pt-0">
