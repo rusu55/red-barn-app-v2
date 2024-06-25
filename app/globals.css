@@ -39,7 +39,7 @@ h6 {
 
 /* paragraph */
 p{
-  @apply text-p_color  mb-4 text-[16px] md:text-[14px] font-nunito font-light leading-relaxed
+  @apply text-p_color  mb-4 text-[16px] md:text-[15px] font-nunito font-light leading-relaxed
 }
 
 /* ======= Line style ======= */

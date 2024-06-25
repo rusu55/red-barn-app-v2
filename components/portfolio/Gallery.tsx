@@ -22,11 +22,11 @@ export const Gallery = ({ portfolio, videos }: any) => {
       {tag != "Cinematography" && <PortfolioPhotoIntro />}
 
       <GalleryControls onChange={setTag} active={tag} />
-      <div className="mt-8">
+      <div className="pt-8 pb-8">
         <PortfolioGallery tag={tag} portfolio={galleryPhotos} />
       </div>
       {(tag === "all" || tag === "Cinematography") && (
-        <div className="mt-10">
+        <div>
           <VideoGallery videos={videos} />
         </div>
       )}

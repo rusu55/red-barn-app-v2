@@ -17,7 +17,7 @@ export const HomeIcons = () => {
             <div className='w-full px-4 md:w-1/3'>
                 <h2>Check our reviews on:</h2>
                 <hr className="line line-hr-center"></hr>
-                <p className='w-full md:w-[80%] pt-5'>Because every picture should be unique. Making your special day. We will make a wonderful story</p>
+                <p className='w-full md:w-[80%] pt-5'>Reviews are a reflection of the work we do, echoing the love stories and family memories we celebrate.</p>
             </div>
             <div className='flex items-center gap-8'>
                 <RevealComponent index={1} variants={fadeTopBottom}>

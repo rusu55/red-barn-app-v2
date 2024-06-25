@@ -9,16 +9,12 @@ export const PortfolioVideoIntro = () => {
       </div>
       <div className="w-full md:w-[62%]">
         <p>
-          Are you looking for an experienced destination photographer for
-          affordable prices? You found me! My pricing and packages are designed
+          Are you looking for an experienced Cinematographer at
+          affordable prices? You found us! Our pricing and packages are designed
           to appeal to everyone.
         </p>
         <p>
-          Vivento efficitur nisi nec tellus fringilla posuere. Sed ut
-          scelerisque tortor. Mauris maximus sollicitudin purus, sed fringilla
-          lorem auctor eget. Interdum et malesuada fames ac ante ipsum primis in
-          faucibus. Ut efficitur magna in auctor egestas. Curabitur in eleifend
-          risus. Nullam interdum nisi ut lacinia dignissim.
+        Whether you`re planning an intimate elopement or a grand celebration, we are here to tell your story. Let`s embark on this journey together, where every click is a brushstroke on the canvas of your forever. Explore our portfolio, and if our images resonate with your heart, let`s connect!
         </p>
       </div>
     </div>

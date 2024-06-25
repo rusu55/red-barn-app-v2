@@ -55,7 +55,7 @@ export const VideoGallery = ({ videos }: any) => {
 
   return (
     <>
-      <div className="mt-12">
+      <div className="py-12">
         <PortfolioVideoIntro />
       </div>
       <div className="">

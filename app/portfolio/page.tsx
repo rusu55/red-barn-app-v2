@@ -11,10 +11,10 @@ const Portfolio = async () => {
   });
 
   return (
-    <div className="pt-20 md:pt-0">
+    <div className="pt-10 md:pt-0">
       <Hero image={heroImage} title={""} description={""} />
       <div className="mx-auto max-w-screen-xl mt-16 px-6">
-        <div className="mt-14">
+        <div>
           <Gallery portfolio={portfolio} videos={videos} />
         </div>
       </div>

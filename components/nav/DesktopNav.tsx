@@ -11,9 +11,9 @@ import { Icon } from "../ui/Icon";
 import { Button } from "../ui/Button";
 
 const services = [
-  { label: "Wedding Photography", description: 'Capturing moments, crafting memories forever.',  href: "/wedding_photography" },
-  { label: "Wedding Cinematography", description: 'Storytelling through cinematic wedding visuals.', href: "/wedding_cinematography" },
-  { label: "Wedding Photobooth", description: 'Fun snaps to cherish forever.', href: "/wedding_photobooth" },
+  { label: "Wedding Photography", description: 'Capturing moments and crafting memories...',  href: "/wedding_photography" },
+  { label: "Wedding Cinematography", description: 'Storytelling through cinematic wedding visuals...', href: "/wedding_cinematography" },
+  { label: "Wedding Photobooth", description: 'Fun snaps to cherish forever...', href: "/wedding_photobooth" },
 ];
 
 export const DesktopNav = ({ logo, navigation }: any) => {
@@ -63,7 +63,9 @@ export const DesktopNav = ({ logo, navigation }: any) => {
     <>
       <div className="nav w-full bg-white shadow-md shadow-black/5">
         <div className="hidden mx-auto max-w-screen-xl py-2 lg:flex items-center justify-between">
-          <Image src={logo} width={160} alt="" className=" pl-4" />
+          <Link href="/"> 
+            <Image src={logo} width={160} alt="" className=" pl-4" />
+          </Link>
           <div className="flex gap-6 pr-12">
             {navigation.map((link: any, index: any) => (
               <Fragment key={`link-${index}`}>

@@ -9,8 +9,8 @@ import { fadeBottomTop } from "@/lib/animation";
 const introText = [
   {
     id: 0,
-    title: "A Creative Lens on LOve",
-    text: "Capturing the essence of love and commitment, our wedding photography is not just about the images we create, but the moments we encapsulate.",
+    title: "A Creative Lens on Love",
+    text: "Capturing the essence of love and commitment, our wedding photography is not just about the images we create, but the moments we freeze in time.",
   },
   {
     id: 1,

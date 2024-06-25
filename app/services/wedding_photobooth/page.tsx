@@ -11,12 +11,12 @@ const PhotoboothPage = () => {
       <Hero image={Img} title={""} description={""} />
       <div className="mx-auto max-w-screen-xl mt-16 px-6">
         <div className="flex flex-col items-center">
-          <h1 className="text-center text-2xl w-[80%] md:text-4xl">Why People Love our PhotoBooth</h1>
+          <h1 className="text-center text-2xl w-[80%] md:text-4xl">Why People Love our Photobooth</h1>
           <hr className="mx-auto block line-hr-center" />
-          <p className="text-center pt-4">
-            The photobooth is always a great way to entertain your guests and our
-            photobooth is the top shelf of booths.
+          <p className="text-center pt-4 text-xl">
+            The photobooth is always a great way to entertain your guests!            
           </p>
+          <span  className="-mt-2">(offered at discounted price if booked with other services)</span>
         </div>
         <div className="flex flex-wrap items-start justify-center pt-10">
           {/* Left Column */}
@@ -25,7 +25,7 @@ const PhotoboothPage = () => {
               <h2 className=" !text-2xl md:!text-3xl duration-500 ease-in-out hover:scale-105 cursor-pointer">Quality Photobooth</h2>
               <p className="pt-4 text-center md:text-right ">
                 Quality built booths for worry free events! <br />
-                Our photobooth is a open booth that can accommodate 10
+                Our photobooth is an open booth that can accommodate up to 10
                 people at once
               </p>
               <span className="border-t border-roze w-[120px]" />
@@ -33,14 +33,19 @@ const PhotoboothPage = () => {
             <div className="pt-8 w-full flex flex-col items-center md:items-end">
               <h2 className=" !text-2xl md:!text-3xl duration-500 ease-in-out hover:scale-105 cursor-pointer">Live Printing</h2>
               <p className="pt-4 text-center md:text-right">
-                 Unlimited prints are included in the rental price 
-                <br />2 strips of 2×6 at a time
+                 Unlimited images and prints are included in the rental price 
+                <br />2 Strips of 2×6 at a time
               </p>
               <span className="border-t border-roze w-[120px]" />
             </div>
             <div className="pt-8 w-full flex flex-col items-center md:items-end">
               <h2 className="!text-2xl md:!text-3xl duration-500 ease-in-out hover:scale-105 cursor-pointer">Online Gallery</h2>
-              <p className="pt-4 text-center md:text-right">Online Gallery with all the Sztrips to share with friends and family</p>
+              <p className="pt-4 text-center md:text-right">Online Gallery with all the Strips to share with friends and family</p>
+              <span className="border-t border-roze w-[120px]" />
+            </div>
+            <div className="pt-8 w-full flex flex-col items-center md:items-end">
+              <h2 className="!text-2xl md:!text-3xl duration-500 ease-in-out hover:scale-105 cursor-pointer">Photobooth Assistant</h2>
+              <p className="pt-4 text-center md:text-right">1 attendant for the Reception: he/she will setup, breakdown and take care of the booth while it is running</p>
               <span className="border-t border-roze w-[120px]" />
             </div>
           </div>
@@ -51,7 +56,7 @@ const PhotoboothPage = () => {
           <div className="order-2 md:order-3 w-full md:w-1/4">
             
             <div className="pt-8 w-full flex flex-col items-center md:items-start md:pt-0">
-              <h2 className="!text-2xl md:!text-3xl duration-500 ease-in-out hover:scale-105 cursor-pointer">Unlimited Props</h2>
+              <h2 className="!text-2xl md:!text-3xl duration-500 ease-in-out hover:scale-105 cursor-pointer">Variety of Props</h2>
               <p className="pt-4 text-center  md:text-left">
                 We have everything from wigs, hats, moustaches, fancy glasses
                 and others...
@@ -67,8 +72,13 @@ const PhotoboothPage = () => {
               <span className="border-t border-roze w-[120px]" />
             </div>
             <div className="pt-8 w-full flex flex-col items-center md:items-start">
-              <h2 className="!text-2xl md:!text-3xl duration-500 ease-in-out hover:scale-105 cursor-pointer">Choice of backdrop</h2>
-              <p className="pt-4 text-center  md:text-left">Your choice out of deferent backdrops colors to mactch your Wedding Theme</p>
+              <h2 className="!text-2xl md:!text-3xl duration-500 ease-in-out hover:scale-105 cursor-pointer">Choice of Backdrop</h2>
+              <p className="pt-4 text-center  md:text-left">Option to choose a backdrop color to match your wedding theme</p>
+              <span className="border-t border-roze w-[120px]" />
+            </div>
+            <div className="pt-8 w-full flex flex-col items-center md:items-start">
+              <h2 className="!text-2xl md:!text-3xl duration-500 ease-in-out hover:scale-105 cursor-pointer">Customized Logo</h2>
+              <p className="pt-4 text-center  md:text-left">Access to online website provided to assist you in designing your own logo</p>
               <span className="border-t border-roze w-[120px]" />
             </div>
           </div>          

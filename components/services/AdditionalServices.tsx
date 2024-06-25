@@ -6,16 +6,16 @@ export const AdditionalServices = () => {
         <div className='w-full md:w-[35%]'>
             <h2 className='px-2'>Extra Services</h2>
             <hr className="line line-hr-left" />
-            <p className='px-2'>Have another type of shooting or just want to say hello? I would love to get in touch with you in any case.</p>
+            <p className='px-2'>Embellish your package with our additional services. Check the list and feel free to ask questions during our Complimentary Wedding Consultations: </p>
         </div>
         <div className='w-full md:w-[60%]'>
             <div>
-              <h5 className='text-lg  pt-4 text-left  border-b border-dashed border-slate-200'>Event Photography <span className="text-roze float-right text-sm">min 4h Coverage</span></h5>
-              <h5 className='text-lg pt-6 text-left  border-b border-dashed border-slate-200'>Second Photographer <span className="text-roze float-right text-sm">6h to 10h Coverage</span></h5>
-              <h5 className='text-lg pt-6 text-left  border-b border-dashed border-slate-200'>Second Videographer <span className="text-roze float-right text-sm">6h to 10h Coverage</span></h5>
-              <h5 className='text-lg pt-6 text-left  border-b border-dashed border-slate-200'>Extended Coverage <span className="text-roze float-right text-sm">min 1h</span></h5>
-              <h5 className='text-lg pt-6 text-left  border-b border-dashed border-slate-200'>Engagement or Family Sessin <span className="text-roze float-right text-sm">45min Coverage</span></h5>
-              <h5 className='text-lg pt-6 text-left  border-b border-dashed border-slate-200'>Drone Coverage <span className="text-roze float-right text-sm">contact us for details</span></h5>
+              <h5 className='text-lg  pt-4 text-left  border-b border-dashed border-slate-200'>Event Photography <span className="text-roze float-right text-sm">Minimum 4hrs coverage</span></h5>
+              <h5 className='text-lg pt-6 text-left  border-b border-dashed border-slate-200'>Second Photographer <span className="text-roze float-right text-sm">Minimum 8hrs coverage</span></h5>
+              <h5 className='text-lg pt-6 text-left  border-b border-dashed border-slate-200'>Second Videographer <span className="text-roze float-right text-sm">Minimum 8hrs coverage</span></h5>
+              <h5 className='text-lg pt-6 text-left  border-b border-dashed border-slate-200'>Extended Coverage <span className="text-roze float-right text-sm">Minimum 1hour</span></h5>
+              <h5 className='text-lg pt-6 text-left  border-b border-dashed border-slate-200'>Engagement or Family Session <span className="text-roze float-right text-sm">Minimum 45min coverage</span></h5>
+              <h5 className='text-lg pt-6 text-left  border-b border-dashed border-slate-200'>Drone Coverage <span className="text-roze float-right text-sm">Addition only to Videography packages</span></h5>
             </div>
         </div>
     </div>

@@ -8,7 +8,7 @@ const Footer = () => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   return (
-    <footer ref={containerRef}>
+    <footer ref={containerRef} className="pt-12">
       <div className="bg-neutral-100/75">
         <div className="mx-auto max-w-screen-xl">
           <div className="flex flex-col items-center space-y-12 md:flex-row md:justify-evenly md:space-y-0 py-20">

@@ -9,16 +9,12 @@ export const PortfolioPhotoIntro = () => {
       </div>
       <div className="w-full md:w-[62%]">
         <p>
-          Are you looking for an experienced destination photographer for
-          affordable prices? You found me! My pricing and packages are designed
+          Are you looking for an experienced  photographer at
+          affordable prices? You found us! Our pricing and packages are designed
           to appeal to everyone.
         </p>
         <p>
-          Vivento efficitur nisi nec tellus fringilla posuere. Sed ut
-          scelerisque tortor. Mauris maximus sollicitudin purus, sed fringilla
-          lorem auctor eget. Interdum et malesuada fames ac ante ipsum primis in
-          faucibus. Ut efficitur magna in auctor egestas. Curabitur in eleifend
-          risus. Nullam interdum nisi ut lacinia dignissim.
+        Our lenses don&apos;t merely capture smiles; it seeks the quiet tears, the shared laughter, and the stolen kisses. We blend candid moments with artful compositions, creating a visual narrative that resonates with your unique love story. Whether it&apos;s the sun-kissed golden hour portraits or the intimate exchange of rings, We believe in authenticity above all else.
         </p>
       </div>
     </div>
