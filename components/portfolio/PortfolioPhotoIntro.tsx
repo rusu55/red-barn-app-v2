@@ -14,7 +14,7 @@ export const PortfolioPhotoIntro = () => {
           to appeal to everyone.
         </p>
         <p>
-        Our lenses don&apos;t merely capture smiles; it seeks the quiet tears, the shared laughter, and the stolen kisses. We blend candid moments with artful compositions, creating a visual narrative that resonates with your unique love story. Whether it&apos;s the sun-kissed golden hour portraits or the intimate exchange of rings, We believe in authenticity above all else.
+        Our lenses don&apos;t merely capture smiles; they seek the quiet tears, the shared laughter, and the stolen kisses. We blend candid moments with artful compositions, creating a visual narrative that resonates with your unique love story. Whether it&apos;s the sun-kissed golden hour portraits or the intimate exchange of rings, we believe in authenticity above all else.
         </p>
       </div>
     </div>
