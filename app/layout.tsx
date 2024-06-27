@@ -7,6 +7,7 @@ import { ParallaxProviders } from "@/providers/ParallaxProvider";
 import { NavBar } from "@/components/nav/NavBar";
 import Footer from "@/components/footer/Footer";
 import { TackChat } from "@/components/ui/TackChat";
+import ToasterProvider from "@/providers/ToastProvider";
 
 const nunito = Nunito({
   weight: ["300", "400", "700"],
@@ -39,6 +40,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${nunito.variable} ${old_standard.variable}`}>
         <NavBar />
+        <ToasterProvider />
         <ParallaxProviders>{children}</ParallaxProviders>
         <TackChat />
         <Footer />
