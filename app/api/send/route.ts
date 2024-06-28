@@ -30,7 +30,7 @@ export const POST = async (request: NextRequest) =>{
         try{
             const { data, error } = await resend.emails.send({
                 from: 'Video Questionnaire <office@redbarnweddingstudio.xyz>',
-                to: ['rusu55@yahoo.com'],
+                to: ['rusu55@yahoo.com','redbarnbride@yahoo.com'],
                 subject: `Video Questionnaire - ${body.brideName} , ${body.groomName} - ${body.weddingDate}`,
                 react: EmailTemplate({
                     brideName: body.brideName,
