@@ -31,7 +31,7 @@
     "postcss-simple-vars": "^7.0.1",
     "prisma": "^5.8.1",
     "react": "^18",
-    "react-date-picker": "^11.0.0",
+    "react-calendar": "^5.0.0",
     "react-dom": "^18",
     "react-email": "2.1.4",
     "react-grid-gallery": "^1.0.1-alpha.0",

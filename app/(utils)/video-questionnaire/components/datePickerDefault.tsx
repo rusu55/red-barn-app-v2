@@ -1,5 +1,5 @@
 'use client';
-import { useForm, Controller, SubmitHandler } from "react-hook-form";
+
 import { useState } from 'react';
 import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react';
 import Calendar from 'react-calendar';
@@ -11,26 +11,12 @@ type ValuePiece = Date | null;
 
 type Value = ValuePiece | [ValuePiece, ValuePiece];
 
-const page = () => {
+export const DatePickerDefault = () => {
     const [value, onChange] = useState<any>(new Date());
-
-    const { handleSubmit, control, reset } = useForm<any>({
-        defaultValues: {
-            MyCheckbox: {}
-        },
-      })
-
-      const onSubmit: SubmitHandler<any> = (data) => console.log(data)
+  
 
   return (
-    <div className="flex h-screen w-full justify-center pt-20">
-    <div className="flex gap-8">
-    <form onSubmit={handleSubmit(onSubmit)}>
-    <Controller
-                name="MyCheckbox"
-                control={control}
-                rules={{ required: true }}
-                render={({ field }) => (
+    <>
       <Popover>
         <PopoverButton 
           className={clsx(
@@ -46,21 +32,15 @@ const page = () => {
         >
           <div className="p-3">
           
-          <Calendar  {...field} onChange={field.onChange} showWeekNumbers value={value} onClickDay={onChange} />
+          <Calendar onChange={field.onChange} showWeekNumbers value={value} onClickDay={onChange} />
            
           
           </div>
           
         </PopoverPanel>
-      </Popover>
-                )} />
-       <input type="submit"  className=" mt-24 p-10 shadow-lg"/>
-      </form>
-      <div className="text-sm/6 font-semibold text-white/50">Pricing</div>
-    </div>
-  </div>      
+      </Popover>         
+  </>
 
   )
 }
 
-export default page
