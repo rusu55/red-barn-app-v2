@@ -37,3 +37,19 @@ type PhotoObject {
   photo String
   tag   String
 }
+
+model Video {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  brideName String
+  groomName String
+  email String
+  weddingDate DateTime
+  songSelection String
+  highlightSong String?
+  videoSongs String?
+  details String?
+  address String?
+  city String?
+  state String?
+  zipCode String?
+}

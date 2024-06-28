@@ -6,15 +6,17 @@ import { toast } from "react-hot-toast";
 const VideoForm = dynamic(() => import("./components/video-form"), {
   ssr: false,
 });
+import { Hero } from "@/components/ui/Hero";
+import aboutImage from "/public/images/about-hero.jpg";
 
 const VideoQuestionnaire = () => {
   const [loading, isLoading] = useState(false);
 
   const onSubmit = (values: any) => {
-    console.log(values);
+    
     isLoading(true);
     axios
-      .post("/api/video", values)
+      .post("/api/send", values)
       .then((response) => {
         toast.success(response.data);
       })
@@ -27,9 +29,11 @@ const VideoQuestionnaire = () => {
   };
 
   return (
-    <>
-      <VideoForm onSubmit={onSubmit} />
-    </>
+    <div className="pt-20 md:pt-0">
+      <Hero image={aboutImage} title={""} description={""} />      
+        <VideoForm onSubmit={onSubmit} disabled={loading}/>    
+      
+    </div>
   );
 };
 
