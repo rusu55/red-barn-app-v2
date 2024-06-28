@@ -68,11 +68,11 @@ const VideoForm = ({ onSubmit, disabled }: Props) => {
   };
 
   return (
-    <div className="w-full max-w-screen-lg mx-auto -mt-24 ">
+    <div className="w-full max-w-screen-lg mx-auto md:-mt-24 ">
       <form onSubmit={handleSubmit(formSubmit)}>
         <Fieldset className="space-y-6 rounded-xl bg-neutral-50 p-6 sm:p-10">
           <Legend className="text-base/7 font-semibold">Copule Info:</Legend>
-          <div className="flex w-full items-center justify-between space-x-3">
+          <div className="flex flex-col md:flex-row w-full items-center justify-between space-x-3 space-y-4 md:space-y-0">
             <Field className="w-full">
               <Label className="text-sm/4 font-medium ">Bride Name</Label>
               <Controller
@@ -102,7 +102,7 @@ const VideoForm = ({ onSubmit, disabled }: Props) => {
               />
             </Field>
           </div>
-          <div className="flex w-full items-center justify-between space-x-3">
+          <div className="flex w-full flex-col md:flex-row items-center justify-between space-x-3 space-y-4 md:space-y-0">
             <Field className="w-full">
               <Label className="text-sm/4 font-medium ">Email Address:</Label>
               <Controller
@@ -214,7 +214,7 @@ const VideoForm = ({ onSubmit, disabled }: Props) => {
                   )}
                 />
               </Field>
-             <div className="flex w-full items-start justify-between space-x-2 pt-6">
+             <div className="flex flex-col md:flex-row w-full items-start justify-between space-x-2 space-y-4 md:space-y-0 pt-6">
               <Field className="w-full">
                 <Label className="text-sm/4 font-medium ">City:</Label>
                 <Controller
