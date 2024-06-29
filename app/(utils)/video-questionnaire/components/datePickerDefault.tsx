@@ -49,6 +49,11 @@ export const DatePickerDefault = ({ onChange, error }: any) => {
           </div>
         </PopoverPanel>
       </Popover>
+      {error && (
+        <p className="mt-2 text-sm text-red-600" id="email-error">
+          {error}
+        </p>
+      )}
     </>
   );
 };

@@ -19,7 +19,6 @@ const VideoQuestionnaire = () => {
 
   const onSubmit = (values: any) => {
     isLoading(true);
-    console.log(format(values.weddingDate, "PPP"));
 
     axios
       .post("/api/send", values)

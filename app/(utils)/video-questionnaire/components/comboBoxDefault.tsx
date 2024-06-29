@@ -1,8 +1,8 @@
-'use client';
+"use client";
 import { Fragment, useState } from "react";
 import { Combobox, Transition } from "@headlessui/react";
 //import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/20/solid";
-import {IconArrowDown, IconCheck}  from '@tabler/icons-react'
+import { IconArrowDown, IconCheck } from "@tabler/icons-react";
 import { FieldError } from "react-hook-form";
 
 type OptionType = {
@@ -20,10 +20,9 @@ export default function ComboBoxDefaultWrapper({
   label,
   options,
   error,
-}: any
-) {
+}: any) {
   const [query, setQuery] = useState("");
-
+  console.log("error" + error);
   const filteredOptions =
     query === ""
       ? options
@@ -32,13 +31,14 @@ export default function ComboBoxDefaultWrapper({
         });
 
   const getValue = (val: ValueType) => {
-    return "id" in val ? options.find((option: any) => option.id === val.id) : val;
+    return "id" in val
+      ? options.find((option: any) => option.id === val.id)
+      : val;
   };
 
   return (
     <>
       <Combobox value={getValue(value)} onChange={onChange} nullable>
-        
         <div className="relative mt-2">
           <div className="relative w-full cursor-default overflow-hidden rounded-lg bg-white text-left shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
             <Combobox.Button className="w-full inset-y-0 right-0 flex items-center pr-2">
@@ -49,7 +49,7 @@ export default function ComboBoxDefaultWrapper({
                 placeholder="Select an Option"
                 onBlur={onBlur}
               />
-              
+
               <IconArrowDown
                 className="h-5 w-5 text-gray-400"
                 aria-hidden="true"

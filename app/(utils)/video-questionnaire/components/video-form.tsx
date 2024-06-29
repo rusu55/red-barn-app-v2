@@ -35,13 +35,13 @@ const formSchema = z.object({
   groomName: z.string().min(4),
   email: z.string().email("Email address not valid!"),
   weddingDate: z.date(),
-  songsOptions: z.any(),
+  songsOptions: z.any().optional(),
   highlightSong: z.string().optional(),
   videoSongs: z.string().optional(),
   state: z.any(),
-  zipCode: z.string(),
-  address: z.string(),
-  city: z.string(),
+  zipCode: z.string().optional(),
+  address: z.string().optional(),
+  city: z.string().optional(),
   details: z.string(),
 });
 
@@ -102,7 +102,7 @@ const VideoForm = ({ onSubmit, disabled }: Props) => {
               />
             </Field>
           </div>
-          <div className="flex w-full flex-col md:flex-row items-center justify-between space-x-3 space-y-4 md:space-y-0">
+          <div className="flex w-full flex-col md:flex-row items-start justify-between space-x-3 space-y-4 md:space-y-0">
             <Field className="w-full">
               <Label className="text-sm/4 font-medium ">Email Address:</Label>
               <Controller
@@ -148,18 +148,18 @@ const VideoForm = ({ onSubmit, disabled }: Props) => {
             <Controller
               name="songsOptions"
               control={control}
-              rules={{
-                required: "Please select an Option!",
+              render={({ field }) => {
+                console.log(field.value);
+                return (
+                  <ComboBoxDefaultWrapper
+                    value={field.value}
+                    onChange={field.onChange}
+                    onBlur={field.onBlur}
+                    options={comboBoxOptions}
+                    error={errors.songsOptions?.message}
+                  />
+                );
               }}
-              render={({ field: { onChange, value, onBlur } }) => (
-                <ComboBoxDefaultWrapper
-                  value={value}
-                  onChange={onChange}
-                  onBlur={onBlur}
-                  options={comboBoxOptions}
-                  error={errors.songsOptions?.message}
-                />
-              )}
             />
             <Field className="w-full pt-6">
               <Label className="text-sm/4 font-medium ">
@@ -206,6 +206,7 @@ const VideoForm = ({ onSubmit, disabled }: Props) => {
                   <TextAreaDefault
                     field={{ ...field }}
                     placeholder="provide song name and artist or youtube link..."
+                    error={errors.details?.message}
                   />
                 )}
               />
