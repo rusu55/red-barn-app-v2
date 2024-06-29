@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import axios from "axios";
 import dynamic from "next/dynamic";
 import { toast } from "react-hot-toast";
+import { format } from "date-fns";
 const VideoForm = dynamic(() => import("./components/video-form"), {
   ssr: false,
 });
@@ -16,6 +17,8 @@ const VideoQuestionnaire = () => {
 
   const onSubmit = (values: any) => {
     isLoading(true);
+    console.log(format(values.weddingDate, "PPP"));
+
     axios
       .post("/api/send", values)
       .then((response) => {

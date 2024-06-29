@@ -3,39 +3,38 @@
 import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import {
-  Field,
-  Fieldset, 
-  Label,
-  Legend,
-  Button,
-   
-} from "@headlessui/react";
+import { Field, Fieldset, Label, Legend, Button } from "@headlessui/react";
 
-import states from 'states-us';
+import states from "states-us";
 import ComboBoxDefaultWrapper from "./comboBoxDefault";
 import { InputDefault } from "./inputDefault";
 import { TextAreaDefault } from "./textAreaDefault";
-
-
-
 import { DatePickerDefault } from "./datePickerDefault";
 
-
 const comboBoxOptions = [
-  { id: 1, label: "Yes, I would like you to choose the songs for my video", value: "Red Barn Selection" },
-  { id: 2, label: " No, please see the songs we have chose bellow", value: "Bride Slection" },
+  {
+    id: 1,
+    label: "Yes, I would like you to choose the songs for my video",
+    value: "Red Barn Selection",
+  },
+  {
+    id: 2,
+    label: " No, please see the songs we have chose bellow",
+    value: "Bride Slection",
+  },
 ];
 
-const statesOption = states.map(({name, abbreviation}, index) =>(
-  {id: index, label: name, value: abbreviation}
-))
+const statesOption = states.map(({ name, abbreviation }, index) => ({
+  id: index,
+  label: name,
+  value: abbreviation,
+}));
 
 const formSchema = z.object({
   brideName: z.string().min(4),
   groomName: z.string().min(4),
   email: z.string().email("Email address not valid!"),
-  weddingDate: z.string().min(6),
+  weddingDate: z.date(),
   songsOptions: z.any(),
   highlightSong: z.string().optional(),
   videoSongs: z.string().optional(),
@@ -64,9 +63,9 @@ const VideoForm = ({ onSubmit, disabled }: Props) => {
     defaultValues,
   });
 
-  console.log(errors)
+  console.log(errors);
 
-  const formSubmit = (values: z.infer<typeof formSchema>) => {    
+  const formSubmit = (values: z.infer<typeof formSchema>) => {
     onSubmit(values);
   };
 
@@ -82,11 +81,11 @@ const VideoForm = ({ onSubmit, disabled }: Props) => {
                 name="brideName"
                 control={control}
                 render={({ field }) => (
-                  <InputDefault                 
-                    field={{...field}}
-                    placeholder='e.g. Monica Hunt'
-                    error={errors.brideName?.message}                   
-                  />   
+                  <InputDefault
+                    field={{ ...field }}
+                    placeholder="e.g. Monica Hunt"
+                    error={errors.brideName?.message}
+                  />
                 )}
               />
             </Field>
@@ -96,11 +95,11 @@ const VideoForm = ({ onSubmit, disabled }: Props) => {
                 name="groomName"
                 control={control}
                 render={({ field }) => (
-                  <InputDefault                 
-                  field={{...field}}
-                  placeholder='e.g. John Boo'
-                  error={errors.groomName?.message}                   
-                />   
+                  <InputDefault
+                    field={{ ...field }}
+                    placeholder="e.g. John Boo"
+                    error={errors.groomName?.message}
+                  />
                 )}
               />
             </Field>
@@ -112,11 +111,11 @@ const VideoForm = ({ onSubmit, disabled }: Props) => {
                 name="email"
                 control={control}
                 render={({ field }) => (
-                  <InputDefault                 
-                  field={{...field}}
-                  placeholder='e.g. jh@example.com'
-                  error={errors.email?.message}                   
-                />   
+                  <InputDefault
+                    field={{ ...field }}
+                    placeholder="e.g. jh@example.com"
+                    error={errors.email?.message}
+                  />
                 )}
               />
             </Field>
@@ -124,14 +123,15 @@ const VideoForm = ({ onSubmit, disabled }: Props) => {
               <Label className="text-sm/4 font-medium ">Wedding Date:</Label>
               <Controller
                 name="weddingDate"
-                control={control}          
-                render={({ field }) => (                           
-                  <InputDefault                 
-                    field={{...field}}
-                    placeholder='04/06/2024'
-                    error={errors.weddingDate?.message}                   
-                  />                              
-                )}
+                control={control}
+                render={({ field }) => {
+                  return (
+                    <DatePickerDefault
+                      onChange={field.onChange}
+                      error={errors.weddingDate?.message}
+                    />
+                  );
+                }}
               />
             </Field>
           </div>
@@ -154,7 +154,7 @@ const VideoForm = ({ onSubmit, disabled }: Props) => {
                 required: "Please select an Option!",
               }}
               render={({ field: { onChange, value, onBlur } }) => (
-                <ComboBoxDefaultWrapper                  
+                <ComboBoxDefaultWrapper
                   value={value}
                   onChange={onChange}
                   onBlur={onBlur}
@@ -164,67 +164,79 @@ const VideoForm = ({ onSubmit, disabled }: Props) => {
               )}
             />
             <Field className="w-full pt-6">
-                <Label className="text-sm/4 font-medium ">Highlight Video - Song:</Label>
-                <Controller
-                  name="highlightSong"
-                  control={control}          
-                  render={({ field }) => (
-                    <InputDefault                 
-                      field={{...field}}                      
-                      placeholder="provide song name and artist or youtube link..."
-                    />
-                  )}
-                />
-              </Field>
-              <Field className="w-full  pt-6">
-                <Label className="text-sm/4 font-medium ">Full Length Video, select three songs: one slow song for the getting ready part of the day, one more dynamic for the romantic session and bridal party pictures and one dancing one for the dancing segment:</Label>
-                <Controller
-                  name="videoSongs"
-                  control={control}          
-                  render={({ field }) => (
-                    <TextAreaDefault
-                     field={{...field}}
-                     placeholder="provide song name and artist or youtube link..."
-                    />
-                  )}
-                />
-              </Field>
-              <Field className="w-full  pt-6">
-                <Label className="text-sm/4 font-medium ">What are important elements that you will like to make sure are included in the full length film?</Label>
-                <Controller
-                  name="details"
-                  control={control}          
-                  render={({ field }) => (
-                    <TextAreaDefault
-                     field={{...field}}
-                     placeholder="provide song name and artist or youtube link..."
-                    />
-                  )}
-                />
-              </Field>
-              <Legend className="text-base/7 font-semibold pt-6">Current Address:</Legend>
-              <Field className="w-full pt-2">
-                <Label className="text-sm/4 font-medium ">Address:</Label>
-                <Controller
-                  name="address"
-                  control={control}          
-                  render={({ field }) => (
-                    <InputDefault                 
-                      field={{...field}}
-                      error={errors.songsOptions}
-                    />
-                  )}
-                />
-              </Field>
-             <div className="flex flex-col md:flex-row w-full items-start justify-between space-x-2 space-y-4 md:space-y-0 pt-6">
+              <Label className="text-sm/4 font-medium ">
+                Highlight Video - Song:
+              </Label>
+              <Controller
+                name="highlightSong"
+                control={control}
+                render={({ field }) => (
+                  <InputDefault
+                    field={{ ...field }}
+                    placeholder="provide song name and artist or youtube link..."
+                  />
+                )}
+              />
+            </Field>
+            <Field className="w-full  pt-6">
+              <Label className="text-sm/4 font-medium ">
+                Full Length Video, select three songs: one slow song for the
+                getting ready part of the day, one more dynamic for the romantic
+                session and bridal party pictures and one dancing one for the
+                dancing segment:
+              </Label>
+              <Controller
+                name="videoSongs"
+                control={control}
+                render={({ field }) => (
+                  <TextAreaDefault
+                    field={{ ...field }}
+                    placeholder="provide song name and artist or youtube link..."
+                  />
+                )}
+              />
+            </Field>
+            <Field className="w-full  pt-6">
+              <Label className="text-sm/4 font-medium ">
+                What are important elements that you will like to make sure are
+                included in the full length film?
+              </Label>
+              <Controller
+                name="details"
+                control={control}
+                render={({ field }) => (
+                  <TextAreaDefault
+                    field={{ ...field }}
+                    placeholder="provide song name and artist or youtube link..."
+                  />
+                )}
+              />
+            </Field>
+            <Legend className="text-base/7 font-semibold pt-6">
+              Current Address:
+            </Legend>
+            <Field className="w-full pt-2">
+              <Label className="text-sm/4 font-medium ">Address:</Label>
+              <Controller
+                name="address"
+                control={control}
+                render={({ field }) => (
+                  <InputDefault
+                    field={{ ...field }}
+                    error={errors.songsOptions}
+                  />
+                )}
+              />
+            </Field>
+            <div className="flex flex-col md:flex-row w-full items-start justify-between space-x-2 space-y-4 md:space-y-0 pt-6">
               <Field className="w-full">
                 <Label className="text-sm/4 font-medium ">City:</Label>
                 <Controller
                   name="city"
-                  control={control}          
+                  control={control}
                   render={({ field }) => (
-                    <InputDefault                 
-                      field={{...field}}
+                    <InputDefault
+                      field={{ ...field }}
                       error={errors.address?.message}
                       placeholder="City Name..."
                     />
@@ -235,10 +247,9 @@ const VideoForm = ({ onSubmit, disabled }: Props) => {
                 <Label className="text-sm/4 font-medium ">State:</Label>
                 <Controller
                   name="state"
-                  control={control}          
+                  control={control}
                   render={({ field: { onChange, value, onBlur } }) => (
                     <ComboBoxDefaultWrapper
-                      
                       value={value}
                       onChange={onChange}
                       onBlur={onBlur}
@@ -252,10 +263,10 @@ const VideoForm = ({ onSubmit, disabled }: Props) => {
                 <Label className="text-sm/4 font-medium ">Zip Code:</Label>
                 <Controller
                   name="zipCode"
-                  control={control}          
+                  control={control}
                   render={({ field }) => (
-                    <InputDefault                 
-                      field={{...field}}
+                    <InputDefault
+                      field={{ ...field }}
                       error={errors.songsOptions}
                       placeholder=""
                     />

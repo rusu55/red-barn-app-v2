@@ -35,7 +35,7 @@ export const POST = async (request: NextRequest) =>{
                 react: EmailTemplate({
                     brideName: body.brideName,
                     groomName: body.groomName,
-                    weddingDate: body.weddingDate,
+                    weddingDate: format(body.weddingDate, "PPP"),
                     songsOptions: body.songsOptions.value,
                     highlightSong: body?.highlightSong,
                     videoSongs: body?.videoSongs,
