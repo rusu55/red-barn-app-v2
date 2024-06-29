@@ -72,7 +72,7 @@ const VideoForm = ({ onSubmit, disabled }: Props) => {
       <form onSubmit={handleSubmit(formSubmit)}>
         <Fieldset className="space-y-6 rounded-xl bg-neutral-50 p-6 sm:p-10">
           <Legend className="text-base/7 font-semibold">Copule Info:</Legend>
-          <div className="flex flex-col md:flex-row w-full items-center justify-between space-x-3 space-y-4 md:space-y-0">
+          <div className="flex flex-col md:flex-row w-full items-start justify-between space-x-3 space-y-4 md:space-y-0">
             <Field className="w-full">
               <Label className="text-sm/4 font-medium ">Bride Name</Label>
               <Controller
