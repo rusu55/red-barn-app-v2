@@ -13,6 +13,8 @@ import aboutImage from "/public/images/about-hero.jpg";
 
 const VideoQuestionnaire = () => {
   const [loading, isLoading] = useState(false);
+  //const [value, setValue] = useState<any>();
+
   const router = useRouter();
 
   const onSubmit = (values: any) => {

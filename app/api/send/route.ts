@@ -8,7 +8,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export const POST = async (request: NextRequest) =>{
     const body = await request.json();
-    
+    console.log(body)
     
         const newQuestionnaire  = await prisma.video.create({
             data:{

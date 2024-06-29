@@ -1,17 +1,18 @@
-'use client';
+"use client";
 import { useForm, Controller, SubmitHandler } from "react-hook-form";
-import { useState } from 'react';
-import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react';
-import Calendar from 'react-calendar';
-import 'react-calendar/dist/Calendar.css';
-import clsx from 'clsx';
-import { format } from "date-fns"
+import { useState } from "react";
+import { Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
+import Calendar from "react-calendar";
+import "react-calendar/dist/Calendar.css";
+import clsx from "clsx";
+import { format } from "date-fns";
 
 type ValuePiece = Date | null;
 
 type Value = ValuePiece | [ValuePiece, ValuePiece];
 
 const page = () => {
+  /*
     const [value, onChange] = useState<any>(new Date());
 
     const { handleSubmit, control, reset } = useForm<any>({
@@ -61,6 +62,8 @@ const page = () => {
   </div>      
 
   )
-}
+  */
+  return <></>;
+};
 
-export default page
+export default page;

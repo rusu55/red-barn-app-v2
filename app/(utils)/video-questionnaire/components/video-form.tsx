@@ -63,8 +63,6 @@ const VideoForm = ({ onSubmit, disabled }: Props) => {
     defaultValues,
   });
 
-  console.log(errors);
-
   const formSubmit = (values: z.infer<typeof formSchema>) => {
     onSubmit(values);
   };
