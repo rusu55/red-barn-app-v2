@@ -29,16 +29,26 @@ const statesOption = states.map(({ name, abbreviation }, index) => ({
   label: name,
   value: abbreviation,
 }));
+const generic = z.object({
+  id: z.any(),
+  label: z.any(),
+  value: z.any()
+})
 
 const formSchema = z.object({
   brideName: z.string().min(4),
   groomName: z.string().min(4),
   email: z.string().email("Email address not valid!"),
   weddingDate: z.date(),
-  songsOptions: z.any().optional(),
+  songsOptions: z.object({
+    id: z.any(),
+    label: z.any(),
+    value: z.any()
+  }),
+  //songsOptions: z.any().optional(),
   highlightSong: z.string().optional(),
   videoSongs: z.string().optional(),
-  state: z.any(),
+  state: z.any().optional(),
   zipCode: z.string().optional(),
   address: z.string().optional(),
   city: z.string().optional(),
@@ -149,7 +159,7 @@ const VideoForm = ({ onSubmit, disabled }: Props) => {
               name="songsOptions"
               control={control}
               render={({ field }) => {
-                console.log(field.value);
+                
                 return (
                   <ComboBoxDefaultWrapper
                     value={field.value}
@@ -222,7 +232,7 @@ const VideoForm = ({ onSubmit, disabled }: Props) => {
                 render={({ field }) => (
                   <InputDefault
                     field={{ ...field }}
-                    error={errors.songsOptions}
+                    
                   />
                 )}
               />
@@ -253,7 +263,7 @@ const VideoForm = ({ onSubmit, disabled }: Props) => {
                       onChange={onChange}
                       onBlur={onBlur}
                       options={statesOption}
-                      error={errors.songsOptions?.message}
+                      
                     />
                   )}
                 />
@@ -266,7 +276,7 @@ const VideoForm = ({ onSubmit, disabled }: Props) => {
                   render={({ field }) => (
                     <InputDefault
                       field={{ ...field }}
-                      error={errors.songsOptions}
+                      
                       placeholder=""
                     />
                   )}

@@ -13,13 +13,13 @@ import aboutImage from "/public/images/about-hero.jpg";
 
 const VideoQuestionnaire = () => {
   const [loading, isLoading] = useState(false);
-  //const [value, setValue] = useState<any>();
+ 
 
   const router = useRouter();
 
   const onSubmit = (values: any) => {
     isLoading(true);
-
+    
     axios
       .post("/api/send", values)
       .then((response) => {
@@ -32,6 +32,7 @@ const VideoQuestionnaire = () => {
         isLoading(false);
         router.push("/");
       });
+
   };
 
   return (

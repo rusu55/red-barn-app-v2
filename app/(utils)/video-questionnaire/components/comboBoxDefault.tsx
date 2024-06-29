@@ -35,7 +35,7 @@ export default function ComboBoxDefaultWrapper({
       ? options.find((option: any) => option.id === val.id)
       : val;
   };
-
+  
   return (
     <>
       <Combobox value={getValue(value)} onChange={onChange} nullable>
@@ -46,7 +46,7 @@ export default function ComboBoxDefaultWrapper({
                 className="w-full border-none py-2 pl-3 pr-10 text-sm leading-5 text-gray-900 focus:ring-0"
                 onChange={(event) => setQuery(event.target.value)}
                 displayValue={(option: OptionType) => option.label}
-                placeholder="Select an Option"
+                placeholder="Select an Option..."
                 onBlur={onBlur}
               />
 
@@ -108,7 +108,7 @@ export default function ComboBoxDefaultWrapper({
       </Combobox>
       {error && (
         <p className="mt-2 text-sm text-red-600" id="email-error">
-          {error.message}
+          {error}
         </p>
       )}
     </>

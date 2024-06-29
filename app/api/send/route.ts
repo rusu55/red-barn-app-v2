@@ -33,10 +33,10 @@ export const POST = async (request: NextRequest) =>{
                 to: ['rusu55@yahoo.com','redbarnbride@yahoo.com'],
                 subject: `Video Questionnaire - ${body.brideName} , ${body.groomName} - ${body.weddingDate}`,
                 react: EmailTemplate({
-                    brideName: body.brideName,
-                    groomName: body.groomName,
+                    brideName: body?.brideName,
+                    groomName: body?.groomName,
                     weddingDate: format(body.weddingDate, "PPP"),
-                    songsOptions: body.songsOptions.value,
+                    songsOptions: body?.songsOptions.value,
                     highlightSong: body?.highlightSong,
                     videoSongs: body?.videoSongs,
                     details: body?.details,
