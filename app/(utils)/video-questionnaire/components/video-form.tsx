@@ -262,8 +262,7 @@ const VideoForm = ({ onSubmit, disabled }: Props) => {
                       value={value}
                       onChange={onChange}
                       onBlur={onBlur}
-                      options={statesOption}
-                      
+                      options={statesOption}                      
                     />
                   )}
                 />
@@ -275,8 +274,7 @@ const VideoForm = ({ onSubmit, disabled }: Props) => {
                   control={control}
                   render={({ field }) => (
                     <InputDefault
-                      field={{ ...field }}
-                      
+                      field={{ ...field }}                      
                       placeholder=""
                     />
                   )}

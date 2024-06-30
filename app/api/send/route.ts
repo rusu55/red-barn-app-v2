@@ -22,7 +22,7 @@ export const POST = async (request: NextRequest) =>{
                 details: body?.details,
                 address: body?.address,
                 city: body?.city,
-                state: body?.state.label,
+                state:  body.state ? body.state.label : "",
                 zipCode: body?.zipCode
             }
         })
@@ -43,7 +43,7 @@ export const POST = async (request: NextRequest) =>{
                     address: body?.address,
                     city: body?.city,
                     zipCode: body?.zipCode,
-                    state: body?.state.label
+                    state: body.state ? body.state.label : ""
                 })  
             });
             if (error) {
