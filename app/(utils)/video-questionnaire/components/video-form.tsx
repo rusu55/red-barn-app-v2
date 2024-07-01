@@ -1,5 +1,6 @@
 "use client";
 
+import { useMemo } from "react";
 import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -11,29 +12,6 @@ import { InputDefault } from "./inputDefault";
 import { TextAreaDefault } from "./textAreaDefault";
 import { DatePickerDefault } from "./datePickerDefault";
 
-const comboBoxOptions = [
-  {
-    id: 1,
-    label: "Yes, I would like you to choose the songs for my video",
-    value: "Red Barn Selection",
-  },
-  {
-    id: 2,
-    label: " No, please see the songs we have chose bellow",
-    value: "Bride Slection",
-  },
-];
-
-const statesOption = states.map(({ name, abbreviation }, index) => ({
-  id: index,
-  label: name,
-  value: abbreviation,
-}));
-const generic = z.object({
-  id: z.any(),
-  label: z.any(),
-  value: z.any()
-})
 
 const formSchema = z.object({
   brideName: z.string().min(4),
@@ -45,7 +23,6 @@ const formSchema = z.object({
     label: z.any(),
     value: z.any()
   }),
-  //songsOptions: z.any().optional(),
   highlightSong: z.string().optional(),
   videoSongs: z.string().optional(),
   state: z.any().optional(),
@@ -63,6 +40,27 @@ type Props = {
 
 const VideoForm = ({ onSubmit, disabled }: Props) => {
   const defaultValues: Partial<FormValues> = {};
+
+  const comboBoxOptions = [
+    {
+      id: 1,
+      label: "Yes, I would like you to choose the songs for my video",
+      value: "Red Barn Selection",
+    },
+    {
+      id: 2,
+      label: " No, please see the songs we have chose bellow",
+      value: "Bride Slection",
+    },
+  ];
+  
+  const statesOption =  useMemo(()=>(
+    states.map(({ name, abbreviation }, index) => ({
+      id: index,
+      label: name,
+      value: abbreviation,
+    }))
+  ), [states])
 
   const {
     handleSubmit,
