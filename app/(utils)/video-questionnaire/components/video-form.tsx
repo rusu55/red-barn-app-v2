@@ -31,6 +31,18 @@ const formSchema = z.object({
   city: z.string().optional(),
   details: z.string(),
 });
+const comboBoxOptions = [
+  {
+    id: 1,
+    label: "Yes, I would like you to choose the songs for my video",
+    value: "Red Barn Selection",
+  },
+  {
+    id: 2,
+    label: " No, please see the songs we have chose bellow",
+    value: "Bride Slection",
+  },
+];
 
 type FormValues = z.infer<typeof formSchema>;
 type Props = {
@@ -41,26 +53,15 @@ type Props = {
 const VideoForm = ({ onSubmit, disabled }: Props) => {
   const defaultValues: Partial<FormValues> = {};
 
-  const comboBoxOptions = [
-    {
-      id: 1,
-      label: "Yes, I would like you to choose the songs for my video",
-      value: "Red Barn Selection",
-    },
-    {
-      id: 2,
-      label: " No, please see the songs we have chose bellow",
-      value: "Bride Slection",
-    },
-  ];
-  
-  const statesOption =  useMemo(()=>(
-    states.map(({ name, abbreviation }, index) => ({
+
+
+  const statesOption =  useMemo(()=>{   
+    return states.map(({ name, abbreviation }, index) => ({
       id: index,
       label: name,
       value: abbreviation,
     }))
-  ), [states])
+}, [states])
 
   const {
     handleSubmit,
@@ -74,7 +75,7 @@ const VideoForm = ({ onSubmit, disabled }: Props) => {
   const formSubmit = (values: z.infer<typeof formSchema>) => {
     onSubmit(values);
   };
-
+  
   return (
     <div className="w-full max-w-screen-lg mx-auto md:-mt-24 ">
       <form onSubmit={handleSubmit(formSubmit)}>
