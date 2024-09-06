@@ -1,4 +1,4 @@
-
+import type { Metadata } from "next";
 import { Hero } from "@/components/ui/Hero";
 import hero_img from "/public/images/about.jpg";
 import { SearchBar } from "@/components/blog/SearchBar";
@@ -8,6 +8,12 @@ import { InfiniteScrollingBlogs } from "@/components/blog/InfiniteScrollingBlogs
 
 import { fetchBlogs } from "./action";
 
+export const metadata: Metadata = {
+  title: "Chicago Best Wedding Photography  - Red Barn Wedding Studio",
+  description:
+    "Best Chicago Wedding Photography  and Best of Weddings Cinematography. Explore our articles for guidance on making the most of your wedding photography experience and preserving memories that last a lifetime.",
+};
+
 const BlogPage = async ({
   searchParams,
 }: {
@@ -15,7 +21,6 @@ const BlogPage = async ({
 }) => {
   const search =
     typeof searchParams.search === "string" ? searchParams.search : undefined;
-    
 
   let blogs = await fetchBlogs({ search });
   const recentBlogs = blogs.slice(0, 3);
