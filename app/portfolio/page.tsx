@@ -1,9 +1,15 @@
 import prisma from "@/prisma/prisma";
+import type { Metadata } from "next";
 import { Hero } from "@/components/ui/Hero";
 import { Gallery } from "@/components/portfolio/Gallery";
 import heroImage from '/public/images/portfolio-hero.jpg'
 
 import videos from "@/lib/videos";
+
+export const metadata: Metadata = {
+  title: "Best Wedding Photography, Cinematography, Engagement  - Red Barn Wedding Studio Portfolio",
+  description: "Top Chicago Wedding Photographer and Videographer  in Chicago land. Wedding Photography and Cinematography at the art level."
+}
 
 const Portfolio = async () => {
   const portfolio = await prisma.portfolio.findMany({ 
