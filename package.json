@@ -42,7 +42,7 @@
     "react-scroll-parallax": "^3.4.5",
     "react-spinners": "^0.13.8",
     "resend": "^3.4.0",
-    "sharp": "^0.33.3",
+    "sharp": "^0.33.5",
     "states-us": "^1.0.4",
     "swiper": "^11.0.7",
     "use-debounce": "^10.0.0",
