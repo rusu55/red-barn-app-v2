@@ -1,5 +1,5 @@
 
-
+import Script from "next/script";
 import { Nunito, Old_Standard_TT } from "next/font/google";
 import "./globals.css";
 
@@ -33,6 +33,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+          <Script  defer src="https://cloud.umami.is/script.js" data-website-id="bbd44199-17b1-465c-a696-43d2f251e3dd" />
+      </head>
       <body className={`${nunito.variable} ${old_standard.variable}`}>
         <NavBar />
         <ToasterProvider />
