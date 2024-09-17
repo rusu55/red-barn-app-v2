@@ -1,5 +1,5 @@
-import type { Metadata } from "next";
-import Script from "next/script";
+
+
 import { Nunito, Old_Standard_TT } from "next/font/google";
 import "./globals.css";
 
@@ -25,11 +25,6 @@ const old_standard = Old_Standard_TT({
   variable: "--font-old_standard",
 });
 
-export const metadata: Metadata = {
-  title: "Chicago Luxury Wedding Photography and Vinematography",
-  description:
-    "Book your Wedding Day with Red Barn Wedding Studio, the best of wedding photography and cinematography in Chicago. Cherish memories for a lifetime.",
-};
 
 export default function RootLayout({
   children,

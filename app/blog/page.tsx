@@ -9,7 +9,7 @@ import { InfiniteScrollingBlogs } from "@/components/blog/InfiniteScrollingBlogs
 import { fetchBlogs } from "./action";
 
 export const metadata: Metadata = {
-  title: "Chicago Best Wedding Photography  - Red Barn Wedding Studio",
+  title: "Best Wedding Photography in Chicago Area  - Red Barn Wedding Studio",
   description:
     "Best Chicago Wedding Photography  and Best of Weddings Cinematography. Explore our articles for guidance on making the most of your wedding photography experience and preserving memories that last a lifetime.",
 };

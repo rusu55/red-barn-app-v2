@@ -5,7 +5,7 @@ import { ContactIntro } from "@/components/contact/ContactIntro";
 import Img from '/public/images/contact-hero.jpg';
 
 export const metadata: Metadata = {
-  title: "  - Red Barn Wedding Studio Contact",
+  title: " Wedding Photographer and Videographer Chicago land -  Red Barn Wedding Studio Contact",
   description: "Top Chicago Wedding Photographer and Videographer  in Chicago land. Wedding Photography and Cinematography at the art level."
 }
 

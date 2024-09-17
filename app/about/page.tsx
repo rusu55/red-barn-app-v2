@@ -8,7 +8,7 @@ import aboutImage from "/public/images/about-hero.jpg";
 import img1 from '/public/images/alexis.jpg'
 
 export const metadata: Metadata = {
-  title: "About Chicago Wedding Photographer - Red Barn Wedding Studio",
+  title: "About Chicago Wedding Photographer - Red Barn Wedding Studio, best wedding photography",
   description: "Voted the Best Chicago Wedding Photographer  and Best of Weddings by The Knot. With over 10 years of experience, we understand that your wedding is a celebration for two of you and the people coming together."
 }
 

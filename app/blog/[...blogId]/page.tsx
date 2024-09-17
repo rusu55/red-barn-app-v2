@@ -1,5 +1,4 @@
 import Image from "next/image";
-
 import { Metadata, ResolvingMetadata } from "next";
 import axios from 'axios';
 

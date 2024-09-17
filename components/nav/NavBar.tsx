@@ -16,7 +16,7 @@ const navigation = [
         {label: 'Wedding Photobooth', href: "/wedding_photobooth"},
   ]},
   { label: "Portfolio", href: "/portfolio" },
-  { label: "Blog", href: "/blog" },
+  { label: "Recent Weddings", href: "/blog" },
   { label: "Contact", href: "/contact" },
 ];
 
