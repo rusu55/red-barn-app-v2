@@ -13,6 +13,7 @@
     "@edgestore/server": "^0.1.6",
     "@headlessui/react": "^2.1.1",
     "@hookform/resolvers": "^3.6.0",
+    "@next/third-parties": "^14.2.13",
     "@prisma/client": "^5.8.1",
     "@react-email/components": "0.0.19",
     "@tabler/icons-react": "^2.45.0",

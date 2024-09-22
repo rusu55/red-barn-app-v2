@@ -31,7 +31,7 @@ export const HomeHero = () => {
           <SwiperSlide key={index}>
             <Image
               src={image.src}
-              alt={image.alt}
+              alt="Chicago Wedding Photographer"
               className="block w-full h-full object-cover object-center"
             />
           </SwiperSlide>

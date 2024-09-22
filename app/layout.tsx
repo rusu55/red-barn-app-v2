@@ -1,6 +1,7 @@
 
 import Script from "next/script";
 import { Nunito, Old_Standard_TT } from "next/font/google";
+import { GoogleAnalytics } from '@next/third-parties/google';
 import "./globals.css";
 
 import { ParallaxProviders } from "@/providers/ParallaxProvider";
@@ -42,6 +43,7 @@ export default function RootLayout({
         <ParallaxProviders>{children}</ParallaxProviders>
         <TackChat />
         <Footer />
+        <GoogleAnalytics gaId="G-XXNF8207Y0" />
       </body>
     </html>
   );

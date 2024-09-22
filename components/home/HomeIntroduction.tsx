@@ -10,12 +10,12 @@ export const HomeIntroduction = () => {
         <div className="w-full md:w-1/2 px-4">
           <div className="flex flex-col px-4 py-2">
             <span></span>
-            {/*
-            <h2>About Us</h2>
+            
+            <h1>Wedding Photographers and Cinematographers</h1>
             <hr className="line line-hr-left"></hr>
-              */}
+              
             <p>
-              Photography is so much more than taking pretty pictures. We want
+              Wedding Photography is so much more than taking pretty pictures. We want
               to help you make memories and preserve them in images that make
               you feel like you&apos;re in those moments again.
             </p>
