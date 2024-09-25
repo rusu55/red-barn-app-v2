@@ -21,13 +21,13 @@ export const HomeIcons = () => {
             </div>
             <div className='flex items-center gap-8'>
                 <RevealComponent index={1} variants={fadeTopBottom}>
-                    <Link href="https://www.theknot.com/marketplace/red-barn-wedding-studio-schaumburg-il-2027022"><Image src={tk} alt="" className='w-20 md:w-28 object-cover duration-500 ease-in-out hover:scale-105' /></Link>
+                    <Link href="https://www.theknot.com/marketplace/red-barn-wedding-studio-schaumburg-il-2027022"><Image src={tk} alt="Chicago Wedding Photography" className='w-20 md:w-28 object-cover duration-500 ease-in-out hover:scale-105' /></Link>
                 </RevealComponent>
                 <RevealComponent index={2} variants={fadeTopBottom}>
-                    <Link href="https://www.weddingwire.com/biz/red-barn-wedding-studio/776d90b9b48065a1.html"><Image src={ww} alt="" className='w-20 md:w-28 object-cover duration-500 ease-in-out hover:scale-105'/></Link>
+                    <Link href="https://www.weddingwire.com/biz/red-barn-wedding-studio/776d90b9b48065a1.html"><Image src={ww} alt="Chicago Wedding Cinematogaphy" className='w-20 md:w-28 object-cover duration-500 ease-in-out hover:scale-105'/></Link>
                 </RevealComponent>
                 <RevealComponent index={3} variants={fadeTopBottom}>
-                    <Link href="https://www.theknot.com/marketplace/red-barn-wedding-studio-schaumburg-il-2027022"><Image src={hf} alt="" className='w-20 md:w-28 object-cover duration-500 ease-in-out hover:scale-105'/></Link>
+                    <Link href="https://www.theknot.com/marketplace/red-barn-wedding-studio-schaumburg-il-2027022"><Image src={hf} alt="Chicago Wedding Photographers" className='w-20 md:w-28 object-cover duration-500 ease-in-out hover:scale-105'/></Link>
                 </RevealComponent>
              </div>           
         </div>       

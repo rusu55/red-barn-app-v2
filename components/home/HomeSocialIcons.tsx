@@ -55,7 +55,7 @@ export const HomeSocialIcons = () => {
                 <Image
                   src={theKNot}
                   className="object-cover"
-                  alt=""
+                  alt="Weddig Photogapher"
                   width="160"
                 />
               </Link>
@@ -66,7 +66,7 @@ export const HomeSocialIcons = () => {
               <Link href='https://www.weddingwire.com/biz/red-barn-wedding-studio/776d90b9b48065a1.html'>
                 <Image
                   src={weddingwire}
-                  alt=""
+                  alt="Wedding Photography Chicago"
                   width="180"
                   className=" opacity-70"
                 />
@@ -78,7 +78,7 @@ export const HomeSocialIcons = () => {
               <Link href='https://www.instagram.com/redbarnweddingstudio/'>
                 <Image
                   src={instagram}
-                  alt=""
+                  alt="Weddin Photogapher Chicago"
                   width="180"
                   className=" opacity-70"
                 />
@@ -90,7 +90,7 @@ export const HomeSocialIcons = () => {
               <Link href='https://www.facebook.com/RedBarnWeddingStudio'>
                 <Image
                   src={facebook}
-                  alt=""
+                  alt="Wedding Photographers in Chicago"
                   width="180"
                   className=" opacity-70"
                 />
@@ -100,7 +100,7 @@ export const HomeSocialIcons = () => {
           <SwiperSlide>
             <div className="w-full flex justify-center items-center">
               <Link href='https://vimeo.com/user81106458'>
-                <Image src={vimeo} alt="" width="180" className=" opacity-70" />
+                <Image src={vimeo} alt="Chicago Wedding Photographer" width="180" className=" opacity-70" />
               </Link>
             </div>
           </SwiperSlide>
@@ -109,7 +109,7 @@ export const HomeSocialIcons = () => {
               <Link href='https://www.youtube.com/channel/UCnTzNTKip1rjTTzd5vqO5HA'>
                 <Image
                   src={youtube}
-                  alt=""
+                  alt="Chicago Wedding Photographer"
                   width="180"
                   className=" opacity-70"
                 />

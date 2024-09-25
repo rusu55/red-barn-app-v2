@@ -43,7 +43,7 @@ export const HomeRecentWork = ({ highlights }: any) => {
                     src={highlight.photos[0]}
                     className="duration-500 ease-in-out hover:scale-110 object-cover"
                     fill
-                    alt=""
+                    alt="Wedding Photography Chicago"
                   />
                 </div>
                 <div className="mt-6 flex flex-col gap-y-4">
