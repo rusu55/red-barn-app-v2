@@ -11,7 +11,7 @@ export const HomeIntroduction = () => {
           <div className="flex flex-col px-4 py-2">
             <span></span>
             
-            <h1>Wedding Photographers and Cinematographers</h1>
+            <h1>Chicago Wedding Photographers</h1>
             <hr className="line line-hr-left"></hr>
               
             <p>
@@ -20,7 +20,7 @@ export const HomeIntroduction = () => {
               you feel like you&apos;re in those moments again.
             </p>
             <p>
-              Red Barn Wedding Studio is a wedding photography and cinematography company, based in Chicago, Illinois, dedicated to customer service and exceptional visual storytelling. All our lead professionals have around 15 years experience in the wedding field, covering and experiencing all kinds of lighting scenarios and true life stories.
+              Red Barn Wedding Studio is a wedding photography and wedding cinematography company, based in Chicago, Illinois, dedicated to customer service and exceptional visual storytelling. All our lead wedding photographers and videographers have around 15 years experience in the wedding field, covering and experiencing all kinds of lighting scenarios and true life stories.
             </p>
             <p>
             We believe that your wedding collection should reflect who you are as a couple; it should capture all the joy and energy of your special day. The artistic, documentary approach is a celebration of authentic, meaningful moments. We would be delighted to be part of your wedding journey, and we hope your collection will bring you joy for many years to come.

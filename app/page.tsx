@@ -11,7 +11,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Chicago Wedding Photographer - Red Barn Wedding Studio",
   description:
-    "Perfect Wedding Day with Red Barn Wedding Studio, the best of wedding photography and cinematography in Chicago. We are the best wedding photographers",
+    "Perfect Wedding Day with Red Barn Wedding Studio, the best wedding photographer and cinematographer in Chicago land. We are the best wedding photographers in Illinois",
 };
 const Home = async () => {
   const highlights = await prisma.blog.findMany({

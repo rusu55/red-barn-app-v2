@@ -31,7 +31,7 @@ export const HomeRecentWork = ({ highlights }: any) => {
       <div className="mx-auto max-w-screen-xl py-20">
         <div className="flex flex-col items-center">
           <span className="heading-meta">Portfolio</span>
-          <h2 className="pwe-heading">Recent Work</h2>
+          <h2 className="pwe-heading">Recent Wdding Photography Work</h2>
           <hr className="line line-hr-center" />
         </div>
         <div className="flex flex-wrap justify-center mt-10">

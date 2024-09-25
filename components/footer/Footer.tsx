@@ -38,7 +38,7 @@ const Footer = () => {
             <div>
               <h2 className="font-pariss text-roze">Red Barn</h2>
               <span className="inline-block w-full text-center">
-                Wedding Studio
+                Chicago Wedding Photographer
               </span>
             </div>
             <div>
@@ -72,7 +72,7 @@ const Footer = () => {
       <div className="bg-neutral-200">
         <div className="mx-auto max-w-screen-xl text-center">
           <span className=" inline-block py-4">
-           Red Barn Wedding Studio | Wedding Photography
+           Red Barn Wedding Studio | Chicago Wedding Photography
           </span>
         </div>
       </div>
