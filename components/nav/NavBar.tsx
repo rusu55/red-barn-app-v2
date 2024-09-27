@@ -9,7 +9,7 @@ import logo from "/public/images/logo.jpg";
 
 const navigation = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
+  { label: "About", href: "/about-wedding-photographer" },
   { label: "Services", services:[
         {label: 'Wedding Photography',  href: "/wedding_photography"},
         {label: 'Wedding Cinematography', href: "/wedding_cinematography"},

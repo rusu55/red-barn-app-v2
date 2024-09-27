@@ -11,7 +11,29 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Chicago Wedding Photographer - Red Barn Wedding Studio",
   description:
-    "Perfect Wedding Day with Red Barn Wedding Studio, the best wedding photographer and cinematographer in Chicago land. We are the best wedding photographers in Illinois",
+    "Your Perfect Wedding Day with our Chicago Wedding Photographer from Red Barn Wedding Studio team, the best of wedding photographers and cinematographers in Chicago land.",
+
+    openGraph: {
+      title: 'Chicago Wedding Photographer - Red Barn Wedding Studio',
+      description: 'Your Perfect Wedding Day with our Chicago Wedding Photographer from Red Barn Wedding Studio team, the best of wedding photographers and cinematographers in Chicago land.',
+      url: 'https://redbarnweddingstudio.com',
+      siteName: 'Red Barn Wedding Studio',
+      images: [
+        {
+          url: 'https://files.edgestore.dev/0xr56vabfzzugegm/publicFiles/_public/796573d8-903d-4666-ae15-7c39d499072a.jpg',
+          width: 800,
+          height: 600,
+        },
+        {
+          url: 'https://nextjs.org/og-alt.png',
+          width: 1800,
+          height: 1600,
+          alt: 'My custom alt',
+        },
+      ],
+      locale: 'en_US',
+      type: 'website',
+    },
 };
 const Home = async () => {
   const highlights = await prisma.blog.findMany({

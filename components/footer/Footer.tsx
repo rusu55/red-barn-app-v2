@@ -53,7 +53,7 @@ const Footer = () => {
                 </li>
 
                 <li className="font-medium text-xs text-neutral-400 duration-300 ease-in-out hover:text-roze">
-                  <Link href="/about">ABOUT</Link>
+                  <Link href="/about-wedding-photographer">ABOUT</Link>
                 </li>
                 <li className="font-medium text-xs text-neutral-400 duration-300 ease-in-out hover:text-roze">
                   <Link href="/contact">CONTACT</Link>
