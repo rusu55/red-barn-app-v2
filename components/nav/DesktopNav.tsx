@@ -68,7 +68,7 @@ return (
       <div className="nav w-full bg-white shadow-md shadow-black/5">
         <div className="hidden mx-auto max-w-screen-xl py-2 lg:flex items-center justify-between">
           <Link href="/">
-            <Image src={logo} width={160} alt="" className=" pl-4" />
+            <Image src={logo} width={160} alt="Wedding Photographer Chicago" className=" pl-4" />
           </Link>
           <div className="flex gap-6 pr-12">
             {navigation.map((link: any, index: any) => (

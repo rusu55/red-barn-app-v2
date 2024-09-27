@@ -14,7 +14,7 @@ export const MobileNav = ({ logo, navigation }: any) => {
     <>
       <div className="block fixed lg:hidden z-50 w-full ">
         <div className=" h-16 w-full bg-white  shadow-md shadow-black/5 absolute top-0 z-30 flex items-center justify-center">
-          <Image src={logo} width={140} alt="" className="z-50" />
+          <Image src={logo} width={140} alt="Wedding Photographer Chicago" className="z-50" />
         </div>
 
         <Menu as="div">
