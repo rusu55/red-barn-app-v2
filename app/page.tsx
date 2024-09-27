@@ -11,12 +11,12 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Chicago Wedding Photographer - Red Barn Wedding Studio",
   description:
-    "Your Perfect Wedding Day with our Chicago Wedding Photographer from Red Barn Wedding Studio team, the best of wedding photographers and cinematographers in Chicago land.",
+    "Your Perfect Wedding with our Chicago Wedding Photographer from Red Barn Wedding Studio, the best of wedding photographers and cinematographers in Chicago",
 
   openGraph: {
     title: "Chicago Wedding Photographer - Red Barn Wedding Studio",
     description:
-      "Your Perfect Wedding Day with our Chicago Wedding Photographer from Red Barn Wedding Studio team, the best of wedding photographers and cinematographers in Chicago land.",
+      "Your Perfect Wedding with our Chicago Wedding Photographer from Red Barn Wedding Studio, the best of wedding photographers and cinematographers in Chicago",
     url: "https://redbarnweddingstudio.com",
     siteName: "Red Barn Wedding Studio",
     images: [
