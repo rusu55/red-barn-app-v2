@@ -9,6 +9,7 @@ import { HomeIcons } from "@/components/home/HomeIcons";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.redbarnweddingstudio.com'),
   title: "Chicago Wedding Photographer - Red Barn Wedding Studio",
   description:
     "Your Perfect Wedding with our Chicago Wedding Photographer from Red Barn Wedding Studio, the best of wedding photographers and cinematographers in Chicago",

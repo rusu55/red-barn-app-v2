@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import { Button } from "../ui/Button";
 import aboutImage from "/public/images/image-1.jpg";
 
 export const HomeIntroduction = () => {
@@ -43,6 +43,9 @@ export const HomeIntroduction = () => {
                 alt="Wedding Photographer n Chicago"
               />
             </div>
+          </div>
+          <div className="text-right pr-4">
+              <Button variant="secondary" href="/reviews-wedding-photographer">Kind Words from our Couples</Button>
           </div>
         </div>
       </div>
