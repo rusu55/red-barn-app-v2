@@ -19,7 +19,7 @@ export const Hero = ({ image, title, description }: Props) => {
           </span>
           <hr className="line line-hr-center mx-auto" />
           <h1 className="text-base md:text-4xl pt-2 md:pt-4">
-            Wedding Photography Cinematography
+            {title}
           </h1>
         </div>
       </div>

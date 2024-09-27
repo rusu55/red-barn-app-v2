@@ -18,7 +18,7 @@ const Portfolio = async () => {
 
   return (
     <div className="pt-10 md:pt-0">
-      <Hero image={heroImage} title={""} description={""} />
+      <Hero image={heroImage} title="Wedding Photography and Cinematography" description={""} />
       <div className="mx-auto max-w-screen-xl mt-16 px-6">
         <div>
           <Gallery portfolio={portfolio} videos={videos} />

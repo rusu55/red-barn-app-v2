@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/Button";
 const PhotoboothPage = () => {
   return (
     <div className="pt-20 md:pt-0">
-      <Hero image={Img} title={""} description={""} />
+      <Hero image={Img} title="Wedding Photo Booth" description={""} />
       <div className="mx-auto max-w-screen-xl mt-16 px-6">
         <div className="flex flex-col items-center">
           <h1 className="text-center text-2xl w-[80%] md:text-4xl">Why People Love our Photobooth</h1>

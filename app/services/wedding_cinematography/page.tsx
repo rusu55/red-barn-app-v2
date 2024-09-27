@@ -22,7 +22,7 @@ import { videoItems, weddingVideography } from "@/lib/services";
 const CinematographyPage = () => {
   return (
     <div className="pt-20 md:pt-0">
-        <Hero image={Img} title={""} description={""} />
+        <Hero image={Img} title="Best Wedding Videography in Chicago" description={""} />
         <div className="mx-auto max-w-screen-xl mt-16 px-6">
             <ServiceIntro data={ServiceIntroData[1]} />
         </div>

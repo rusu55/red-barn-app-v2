@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 const About = () => {
   return (
     <div className="pt-20 md:pt-0">
-      <Hero image={aboutImage} title={""} description={""} />
+      <Hero image={aboutImage} title="Wedding Photographers Chicago" description={""} />
       <div className="mt-20">
         <AboutIntro image={img1}/>
       </div>

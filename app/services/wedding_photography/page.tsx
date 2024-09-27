@@ -22,7 +22,7 @@ const PhotographyPage = async () => {
 
   return (
     <div className="pt-20 md:pt-0">
-      <Hero image={Img} title={""} description={""} />
+      <Hero image={Img} title="Best Wedding Photography in Chicago" description={""} />
       <div className="mx-auto max-w-screen-xl mt-16 px-6">
         <ServiceIntro data={ServiceIntroData[0]} />
         <div className="flex flex-col md:flex-row md:flex-wrap md:justify-center md:max-w-screen-lg md:mx-auto md:gap-8 pt-8">

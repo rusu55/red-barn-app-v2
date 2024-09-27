@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 const Contact = () => {
   return (
     <div className="pt-20 md:pt-0">
-      <Hero image={Img} title={""} description={""} />
+      <Hero image={Img} title="Wedding Photographers and Videographers" description={""} />
       <div className="mx-auto max-w-screen-xl py-20 flex flex-wrap justify-center md:gap-4">
         <div className="w-full md:w-[40%]">
           <ContactIntro />
