@@ -15,9 +15,9 @@ const navigation = [
         {label: 'Wedding Cinematography', href: "/wedding_cinematography"},
         {label: 'Wedding Photobooth', href: "/wedding_photobooth"},
   ]},
-  { label: "Portfolio", href: "/portfolio" },
+  { label: "Portfolio", href: "/portfolio-wedding-photographer" },
   { label: "Recent Weddings", href: "/blog" },
-  { label: "Contact", href: "/contact" },
+  { label: "Contact", href: "/contact-wedding-photographer" },
 ];
 
 export const NavBar = () => {

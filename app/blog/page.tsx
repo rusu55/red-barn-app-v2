@@ -11,7 +11,7 @@ import { fetchBlogs } from "./action";
 export const metadata: Metadata = {
   title: "Best Wedding Photography in Chicago Area  - Red Barn Wedding Studio",
   description:
-    "Best Chicago Wedding Photography  and Best of Weddings Cinematography. Explore our articles for guidance on making the most of your wedding photography experience and preserving memories that last a lifetime.",
+    "Best Chicago Wedding Photography and Best of Weddings Cinematography. Explore our photography for guidance on making the most of your wedding photography experience.",
 };
 
 const BlogPage = async ({

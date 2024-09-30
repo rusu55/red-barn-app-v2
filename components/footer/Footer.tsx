@@ -56,10 +56,10 @@ const Footer = () => {
                   <Link href="/about-wedding-photographer">ABOUT</Link>
                 </li>
                 <li className="font-medium text-xs text-neutral-400 duration-300 ease-in-out hover:text-roze">
-                  <Link href="/contact">CONTACT</Link>
+                  <Link href="/contact-wedding-photographer">CONTACT</Link>
                 </li>
                 <li className="font-medium text-xs text-neutral-400 duration-300 ease-in-out hover:text-roze">
-                  <Link href="/portfolio">PORTFOLIO</Link>
+                  <Link href="/portfolio-wedding-photographer">PORTFOLIO</Link>
                 </li>
                 <li className="font-medium text-xs text-neutral-400 duration-300 ease-in-out hover:text-roze">
                   <Link href="/blog">BLOG</Link>

@@ -12,33 +12,33 @@ export async function generateMetadata(
 ): Promise<Metadata> {
 
 const id = params.blogId
-const {data: response} = await axios.get(`http://localhost:3000/api/blog/${id}`)
+const blog = await fetch(`http://localhost:3000/api/blog/${id}`).then((res) => res.json())
 
 return {
-    title: response.title,
-    description: `Best of Wedding Photography and Cinematography in Chicago, Red Barn Wedding Studio brigs to the future Brides and Grooms an new Weding Photography Blog about: ${response.title}`,
+    title: blog.title,
+    description: `Red Barn Wedding Studio brigs to the future Brides and Grooms an new Weding Photography Blog about: ${blog.title}`,
   };
 }
 
 const BlogIdPage = async ({ params }: any) => {
   const id = params.blogId
-  const {data: response} = await axios.get(`http://localhost:3000/api/blog/${id}`)
+  const blog = await fetch(`http://localhost:3000/api/blog/${id}`).then((res) => res.json())
 
   return (
     <div className="mx-auto max-w-screen-xl pt-2">
-      {response?.photos && (
+      {blog?.photos && (
         <div className="flex w-full items-center justify-center">
-          <Image src={response?.photos[0]} alt="" width={1000} height={600} />
+          <Image src={blog?.photos[0]} alt="" width={1000} height={600} />
         </div>
       )}
       <div className="mx-auto flex max-w-[1000px] flex-wrap items-center justify-start">
         <div className="w-full md:w-1/2 px-4">
           <span className="inline-block mt-5 uppercase text-xs text-roze tracking-[5px]">
-            {response?.postType} Photography
+            {blog?.postType} Photography
           </span>
-          <h1 className="w-[80%] text-left text-3xl pt-2">{response?.title}</h1>
+          <h1 className="w-[80%] text-left text-3xl pt-2">{blog?.title}</h1>
           <hr className="line line-hr-left"></hr>
-          <p>{response?.description}</p>
+          <p>{blog?.description}</p>
         </div>
         <div className="w-full md:w-1/2">
           <ul className="mx-auto w-[80%] ">
@@ -57,14 +57,14 @@ const BlogIdPage = async ({ params }: any) => {
             <li className="py-2 border-b-2 border-roze flex justify-between items-center">
               <span className=" uppercase">Venue:</span>
               <span className="font-pariss text-lg text-right w-[80%] leading-9">
-                {_.split(response?.title, "-").pop()}
+                {_.split(blog?.title, "-").pop()}
               </span>
             </li>
           </ul>
         </div>
       </div>
       <div className="px-2 lg:px-0 flex flex-col space-y-2 mdspace-y-2 items-center mt-10">
-        {response?.photos.map(
+        {blog?.photos.map(
           (photo: string, index: number) =>
             index > 0 && (
               <Image key={index} src={photo} alt="" width={800} height={400} />
