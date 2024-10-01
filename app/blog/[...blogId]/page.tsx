@@ -17,6 +17,13 @@ const blog = await fetch(`http://localhost:3000/api/blog/${id}`).then((res) => r
 return {
     title: blog.title,
     description: `Red Barn Wedding Studio brigs to the future Brides and Grooms an new Weding Photography Blog about: ${blog.title}`,
+    openGraph:{
+      images: [
+        {
+          url: blog.photos[0]
+        }
+      ]
+    }
   };
 }
 
