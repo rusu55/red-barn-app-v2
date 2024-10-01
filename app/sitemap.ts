@@ -1,7 +1,9 @@
 import { MetadataRoute } from "next";
+import prisma from "@/prisma/prisma";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap>{
-    const response = await fetch('http://localhost:3000/api/blog').then((res) => res.json())
+    //const response = await fetch('http://localhost:3000/api/blog').then((res) => res.json())
+    const response = await prisma.blog.findMany();
 
     const blogEntries: MetadataRoute.Sitemap =  response.map(({id, postDate}: any) => ({
         url: `${process.env.BASE_URL}/blog/${id}`,
