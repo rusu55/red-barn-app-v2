@@ -1,6 +1,6 @@
-
+"use client";
 import { Hero } from "@/components/ui/Hero";
-import type { Metadata } from "next";
+
 import Img from '/public/images/photography-hero.jpg';
 import { ServiceIntro } from "@/components/services/ServiceIntro";
 import {ServiceIntroData} from '@/lib/services';
@@ -20,12 +20,7 @@ import { fadeBottomTop } from "@/lib/animation";
 
 import { videoItems, weddingVideography } from "@/lib/services";
 
-export const metadata: Metadata = {
-  metadataBase: new URL('https://www.redbarnweddingstudio.com'),
-    title: "Wedding Videography Services Chicago land",
-    description: "We offer Wedding Videography services  at the art level for brides and grooms in Chicago land",
-   
-  }
+
 
 const CinematographyPage = () => {
   return (
@@ -48,7 +43,7 @@ const CinematographyPage = () => {
                         </ul>
                     </div>      
                 </div>
-                {/** 
+                
                     <LightGallery 
                         elementClassNames='w-full md:w-[50%] grid gap-y-8 sm:gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-4 2xl:gap-5 px-4'
                         plugins={[lgVideo, lgZoom]}
@@ -60,7 +55,7 @@ const CinematographyPage = () => {
                             
                         ))}                                   
                     </LightGallery>   
-                */}
+              
             </div>
         </div>
         <div className="mx-auto max-w-screen-xl my-16 px-4">
