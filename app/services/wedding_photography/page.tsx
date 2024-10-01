@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Card } from "@/components/services/Card";
 import { ServiceIntro } from "@/components/services/ServiceIntro";
 import { AdditionalServices } from "@/components/services/AdditionalServices";
@@ -11,6 +12,17 @@ import { fadeBottomTop } from "@/lib/animation";
 import { PhotographySamples } from "@/components/services/PhotographySamples";
 import {ServiceIntroData} from '@/lib/services';
 
+export const metadata: Metadata = {
+  title: "Wedding Photography Services Chicago land",
+  description: "We offer Wedding Photography services  at the art level for brides and grooms in Chicago land",
+  openGraph:{
+    images: [
+      {
+        url: 'https://files.edgestore.dev/0xr56vabfzzugegm/publicFiles/_public/79cdac27-9ab5-45a2-835a-5a8c6dd04726.jpg'
+      }
+    ]
+  }
+}
 const PhotographyPage = async () => {
 
   const samples = await prisma.blog.findMany({

@@ -4,6 +4,19 @@ import { StripsSlider } from "@/components/services/StripsSlider";
 import Img from "/public/images/photography-hero.jpg";
 import photobooth from "/public/images/photobooth.jpg";
 import { Button } from "@/components/ui/Button";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Wedding Photobooth Chicago | Red Barn Studio",
+  description: "Photo Booth Chicago |  Open Air Photo Booth Chicago. The photobooth is always a great way to entertain your guests!",
+  openGraph:{
+    images: [
+      {
+        url: 'https://files.edgestore.dev/0xr56vabfzzugegm/publicFiles/_public/79cdac27-9ab5-45a2-835a-5a8c6dd04726.jpg'
+      }
+    ]
+  }
+}
 
 const PhotoboothPage = () => {
   return (

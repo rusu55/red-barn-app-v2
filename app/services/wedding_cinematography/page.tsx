@@ -1,5 +1,6 @@
-'use client'
+
 import { Hero } from "@/components/ui/Hero";
+import type { Metadata } from "next";
 import Img from '/public/images/photography-hero.jpg';
 import { ServiceIntro } from "@/components/services/ServiceIntro";
 import {ServiceIntroData} from '@/lib/services';
@@ -18,6 +19,18 @@ import { fadeBottomTop } from "@/lib/animation";
 
 
 import { videoItems, weddingVideography } from "@/lib/services";
+
+export const metadata: Metadata = {
+    title: "Wedding Videography Services Chicago land",
+    description: "We offer Wedding Videography services  at the art level for brides and grooms in Chicago land",
+    openGraph:{
+        images: [
+          {
+            url: 'https://files.edgestore.dev/0xr56vabfzzugegm/publicFiles/_public/79cdac27-9ab5-45a2-835a-5a8c6dd04726.jpg'
+          }
+        ]
+      }
+  }
 
 const CinematographyPage = () => {
   return (
