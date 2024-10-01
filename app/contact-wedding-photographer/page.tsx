@@ -2,7 +2,7 @@ import { Hero } from "@/components/ui/Hero";
 import type { Metadata } from "next";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { ContactIntro } from "@/components/contact/ContactIntro";
-import Img from '/public/images/contact-hero.jpg';
+import Img from '/public/images/contact-hero.webp';
 
 export const metadata: Metadata = {
   title: " Wedding Photographer and Videographer Chicago land -  Red Barn Wedding Studio Contact",
