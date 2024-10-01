@@ -21,15 +21,10 @@ import { fadeBottomTop } from "@/lib/animation";
 import { videoItems, weddingVideography } from "@/lib/services";
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.redbarnweddingstudio.com'),
     title: "Wedding Videography Services Chicago land",
     description: "We offer Wedding Videography services  at the art level for brides and grooms in Chicago land",
-    openGraph:{
-        images: [
-          {
-            url: 'https://files.edgestore.dev/0xr56vabfzzugegm/publicFiles/_public/79cdac27-9ab5-45a2-835a-5a8c6dd04726.jpg'
-          }
-        ]
-      }
+   
   }
 
 const CinematographyPage = () => {
@@ -53,7 +48,7 @@ const CinematographyPage = () => {
                         </ul>
                     </div>      
                 </div>
-                
+                {/** 
                     <LightGallery 
                         elementClassNames='w-full md:w-[50%] grid gap-y-8 sm:gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-4 2xl:gap-5 px-4'
                         plugins={[lgVideo, lgZoom]}
@@ -65,7 +60,7 @@ const CinematographyPage = () => {
                             
                         ))}                                   
                     </LightGallery>   
-                
+                */}
             </div>
         </div>
         <div className="mx-auto max-w-screen-xl my-16 px-4">
