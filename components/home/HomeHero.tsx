@@ -30,9 +30,14 @@ export const HomeHero = () => {
         {images.map((image, index) => (
           <SwiperSlide key={index}>
             <Image
+              height={600}
+              width={1200}
               src={image.src}
               alt="Chicago Wedding Photographer"
               className="block w-full h-full object-cover object-center"
+              priority={true}
+              loading="eager"
+              sizes="(max-width: 720px) 390px, calc(95.5vw - 19px)"
             />
           </SwiperSlide>
         ))}

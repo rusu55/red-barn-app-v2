@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import {motion} from 'framer-motion'
+import {motion, LazyMotion, domAnimation} from 'framer-motion'
 
 
 const fadeInAnimation = {
@@ -16,17 +16,19 @@ const fadeInAnimation = {
 
 export const FadeInAnimation = ({children}: any) => {
   return (
-   <motion.div
-        variants={fadeInAnimation}
-        initial="initial"
-        whileInView="animate"
-        viewport={{
-            once: true,
-        }}
-        transition={{delay:0.25}}
-   >
-        {children}
-   </motion.div>
+    <LazyMotion features={domAnimation}>
+        <motion.div
+                variants={fadeInAnimation}
+                initial="initial"
+                whileInView="animate"
+                viewport={{
+                    once: true,
+                }}
+                transition={{delay:0.25}}
+        >
+                {children}
+        </motion.div>
+    </LazyMotion>
   )
 }
 

@@ -1,6 +1,6 @@
 'use client';
 import { useEffect} from 'react';
-import {motion, useAnimation} from 'framer-motion';
+import {m, useAnimation,  LazyMotion, domAnimation} from 'framer-motion';
 import { useInView } from "react-intersection-observer";
 
 
@@ -17,7 +17,8 @@ export const RevealComponent = ({index, variants, children}: any) => {
 
   return (
     <div ref={ref} style={{position:"relative",overflow: "hidden"}}>
-        <motion.div
+      <LazyMotion features={domAnimation}>
+        <m.div
             variants={variants}
             initial= "hidden"
             animate={controls}
@@ -25,7 +26,8 @@ export const RevealComponent = ({index, variants, children}: any) => {
             viewport={{once: true}}
         >
             {children}
-        </motion.div>
+        </m.div>
+      </LazyMotion>
     </div>
   )
 }

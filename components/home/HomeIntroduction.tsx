@@ -40,6 +40,8 @@ export const HomeIntroduction = () => {
               <Image
                 className="object-cover object-center h-full w-full duration-500 ease-in-out hover:scale-95"
                 src={aboutImage}
+                loading="eager"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 alt="Wedding Photographer n Chicago"
               />
             </div>
