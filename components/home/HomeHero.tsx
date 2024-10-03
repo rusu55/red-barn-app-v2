@@ -39,7 +39,7 @@ export const HomeHero = () => {
               className="block w-full h-full object-cover object-center"
               priority={true}
               loading="eager"
-              sizes="(max-width: 720px) 390px, calc(95.5vw - 19px)"
+              sizes="(min-width: 440px) 100vw, (min-width: 340px) calc(75vw + 85px), 300px"
             />
           </SwiperSlide>
         ))}
