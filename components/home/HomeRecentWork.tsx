@@ -45,6 +45,7 @@ export const HomeRecentWork = ({ highlights }: any) => {
                     className="duration-500 ease-in-out hover:scale-110 object-cover"
                     fill
                     alt="Wedding Photography Chicago"
+                    sizes="(min-width: 1360px) 395px, (min-width: 780px) 29.82vw, calc(100vw - 32px)"
                   />
                   </Link>
                 </div>

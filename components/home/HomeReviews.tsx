@@ -6,7 +6,7 @@ import Testimonials from "../ui/testimonials/Testimonials";
 const HomeReviews = () => {
   return (
     <ParallaxBanner
-      layers={[{ image: "/images/img-2.jpg", speed: -25 }]}
+      layers={[{ image: "/images/img-2.webp", speed: -25 }]}
       className="h-[500px]"
     >
       <div className="absolute inset-0 flex items-center justify-center">
