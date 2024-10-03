@@ -26,8 +26,8 @@ const ReviewsPage = () => {
     <div className="pt-20 md:pt-0">
       <Hero image={aboutImage} title="Wedding Photographers Reviews" description={""} />
       <div className="mt-20 max-w-screen-xl mx-auto flex flex-wrap justify-center px-2 md:px-6">
-        <div className="w-full" >
-            <span className="uppercase text-md tracking-widest  text-roze">Nice Words About</span>
+        <div className="w-full text-center md:text-left" >
+            <span className="inline-block uppercase text-md tracking-widest  text-roze">Nice Words About</span>
             <h1 className="leading-snug text-4xl">Our Red Barn Team</h1>
             <hr className='line line-hr-left'></hr>      
         </div>
@@ -48,13 +48,13 @@ const ReviewsPage = () => {
             <div className='w-full'>
                     <div className='grid grid-rows-2 grid-flow-col gap-2 items-center'>
                       <div className="row-span-2">
-                        <Image className='object-cover rounded-lg h-[508px] duration-500 ease-in-out hover:scale-95'  src={img1} alt=""  /> 
+                        <Image className='object-cover rounded-lg md:h-[508px] duration-500 ease-in-out hover:scale-95'  src={img1} alt=""  /> 
                       </div>
                       <div>
-                        <Image className='object-cover rounded-lg h-[255px] duration-500 ease-in-out hover:scale-95'  src={img2} alt=""  /> 
+                        <Image className='object-cover rounded-lg md:h-[255px] duration-500 ease-in-out hover:scale-95'  src={img2} alt=""  /> 
                       </div>
                       <div>
-                        <Image className='object-cover rounded-lg h-[255px] duration-500 ease-in-out hover:scale-95'  src={img3} alt=""  /> 
+                        <Image className='object-cover rounded-lg md:h-[255px] duration-500 ease-in-out hover:scale-95'  src={img3} alt=""  /> 
                       </div>                       
                     </div>
                 </div>
@@ -65,19 +65,19 @@ const ReviewsPage = () => {
             <div className="max-w-screen-xl mx-auto flex flex-wrap justify-center px-2 md:px-6">
             <RevealComponent index={0} variants={fadeBottomTop}>
             <div className="w-full flex flex-wrap justify-center items-center">
-            <div className="w-full lg:w-3/5 px-4">
+            <div className="w-full lg:w-3/5 px-4 order-2 sm:order-1">
                 <div className='w-full'>
                         <div className='grid grid-rows-2 grid-flow-col gap-2 items-center'>
                           <div className="row-span-2">
-                            <Image className='object-cover rounded-lg h-[508px] duration-500 ease-in-out hover:scale-95'  src={img4} alt=""  /> 
+                            <Image className='object-cover rounded-lg md:h-[508px] duration-500 ease-in-out hover:scale-95'  src={img4} alt=""  /> 
                           </div>
                           <div className="row-span-2">
-                            <Image className='object-cover rounded-lg h-[508px] duration-500 ease-in-out hover:scale-95'  src={img5} alt=""  /> 
+                            <Image className='object-cover rounded-lg md:h-[508px] duration-500 ease-in-out hover:scale-95'  src={img5} alt=""  /> 
                           </div>                    
                         </div>
                     </div>
                 </div>
-                <div className="w-full lg:w-2/5 px-4">
+                <div className="w-full lg:w-2/5 px-4 order-1 sm:order-2">
                   <p>
                   All I can say is WOW! We had Elena and Bogdan as our photographers, as well as a videographer. They were so professional, and worked their butts off to get amazing shots from beginning to end. 
                   </p>
@@ -113,13 +113,13 @@ const ReviewsPage = () => {
             <div className='w-full'>
                     <div className='grid grid-rows-2 grid-flow-col gap-2 items-center'>                      
                       <div>
-                        <Image className='object-cover rounded-lg h-[255px] duration-500 ease-in-out hover:scale-95'  src={img7} alt=""  /> 
+                        <Image className='object-cover rounded-lg md:h-[255px] duration-500 ease-in-out hover:scale-95'  src={img7} alt=""  /> 
                       </div>
                       <div>
-                        <Image className='object-cover rounded-lg h-[255px] duration-500 ease-in-out hover:scale-95'  src={img8} alt=""  /> 
+                        <Image className='object-cover rounded-lg md:h-[255px] duration-500 ease-in-out hover:scale-95'  src={img8} alt=""  /> 
                       </div> 
                       <div className="row-span-2">
-                        <Image className='object-cover rounded-lg h-[508px] duration-500 ease-in-out hover:scale-95'  src={img6} alt=""  /> 
+                        <Image className='object-cover rounded-lg md:h-[508px] duration-500 ease-in-out hover:scale-95'  src={img6} alt=""  /> 
                       </div>                      
                     </div>
                 </div>
