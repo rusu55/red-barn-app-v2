@@ -46,8 +46,8 @@ export const HomeIntroduction = () => {
               />
             </div>
           </div>
-          <div className="text-right pr-4">
-              <Button variant="secondary" href="/reviews-wedding-photographer">Kind Words from our Couples</Button>
+          <div className="md:text-right text-center pr-4">
+              <Button href="/reviews-wedding-photographer" className="rounded-xl">Kind Words from our Couples</Button>
           </div>
         </div>
       </div>
