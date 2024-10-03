@@ -2,7 +2,7 @@
 import Script from 'next/script'
 import { Hero } from "@/components/ui/Hero";
 import Image from "next/image";
-import aboutImage from "/public/images/about-hero.jpg";
+import aboutImage from "/public/images/about-hero.webp";
 import Img1  from '/public/images/album1.jpeg'
 import Img2 from '/public/images/album2.jpeg'
 import Img3 from '/public/images/album3.jpg'

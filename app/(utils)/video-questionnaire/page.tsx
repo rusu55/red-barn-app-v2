@@ -9,7 +9,7 @@ const VideoForm = dynamic(() => import("./components/video-form"), {
   ssr: false,
 });
 import { Hero } from "@/components/ui/Hero";
-import aboutImage from "/public/images/about-hero.jpg";
+import aboutImage from "/public/images/about-hero.webp";
 
 const VideoQuestionnaire = () => {
   const [loading, isLoading] = useState(false);

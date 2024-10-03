@@ -4,8 +4,8 @@ import { AboutIntro } from "@/components/about/AboutIntro";
 import HomeReviews from "@/components/home/HomeReviews";
 import { HomeIcons } from "@/components/home/HomeIcons";
 
-import aboutImage from "/public/images/about-hero.jpg";
-import img1 from '/public/images/alexis.jpg'
+import aboutImage from "/public/images/about-hero.webp";
+import img1 from '/public/images/alexis.webp'
 
 export const metadata: Metadata = {
   title: "About Chicago Wedding Photographer - Red Barn Wedding Studio, best wedding photography",

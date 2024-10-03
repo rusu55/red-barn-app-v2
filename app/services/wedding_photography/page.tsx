@@ -5,7 +5,7 @@ import { AdditionalServices } from "@/components/services/AdditionalServices";
 import { Hero } from "@/components/ui/Hero";
 import { ServiceForm } from "@/components/services/ServiceForm";
 import prisma from "@/prisma/prisma";
-import Img from '/public/images/photography-hero.jpg';
+import Img from '/public/images/photography-hero.webp';
 import { weddingPhotography } from "@/lib/services";
 import { RevealComponent } from "@/components/ui/RevealComponent";
 import { fadeBottomTop } from "@/lib/animation";

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Button } from "../ui/Button";
-import aboutImage from "/public/images/image-1.jpg";
+import aboutImage from "/public/images/image-1.webp";
 
 export const HomeIntroduction = () => {
   return (

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Hero } from "@/components/ui/Hero";
 import { StripsSlider } from "@/components/services/StripsSlider";
-import Img from "/public/images/photography-hero.jpg";
+import Img from "/public/images/photography-hero.webp";
 import photobooth from "/public/images/photobooth.jpg";
 import { Button } from "@/components/ui/Button";
 import type { Metadata } from "next";

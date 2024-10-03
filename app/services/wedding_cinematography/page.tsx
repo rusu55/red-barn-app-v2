@@ -1,7 +1,7 @@
 "use client";
 import { Hero } from "@/components/ui/Hero";
 
-import Img from '/public/images/photography-hero.jpg';
+import Img from '/public/images/photography-hero.webp';
 import { ServiceIntro } from "@/components/services/ServiceIntro";
 import {ServiceIntroData} from '@/lib/services';
 import { AdditionalServices } from "@/components/services/AdditionalServices";

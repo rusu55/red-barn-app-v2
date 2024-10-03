@@ -1,6 +1,6 @@
 import { Hero } from "@/components/ui/Hero";
 import Image from "next/image";
-import aboutImage from "/public/images/about-hero.jpg";
+import aboutImage from "/public/images/about-hero.webp";
 import Img1  from '/public/images/engagement-1.jpeg'
 import Img2 from '/public/images/engagement-2.jpeg'
 import Img3 from '/public/images/engagement-3.jpeg'

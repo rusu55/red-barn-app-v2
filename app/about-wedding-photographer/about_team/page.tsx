@@ -4,7 +4,7 @@ import { AboutTeam } from "@/components/about/AboutTeam";
 import HomeReviews from "@/components/home/HomeReviews";
 import { HomeIcons } from "@/components/home/HomeIcons";
 
-import aboutImage from "/public/images/about-hero.jpg";
+import aboutImage from "/public/images/about-hero.webp";
 import img1 from '/public/images/alexis.jpg'
 
 export const metadata: Metadata = {

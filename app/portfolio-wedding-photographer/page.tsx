@@ -2,7 +2,7 @@ import prisma from "@/prisma/prisma";
 import type { Metadata } from "next";
 import { Hero } from "@/components/ui/Hero";
 import { Gallery } from "@/components/portfolio/Gallery";
-import heroImage from '/public/images/portfolio-hero.jpg'
+import heroImage from '/public/images/portfolio-hero.webp'
 
 import videos from "@/lib/videos";
 

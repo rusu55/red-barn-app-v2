@@ -6,7 +6,7 @@ import { Hero } from "@/components/ui/Hero";
 
 import { HomeIcons } from "@/components/home/HomeIcons";
 
-import aboutImage from "/public/images/about-hero.jpg";
+import aboutImage from "/public/images/about-hero.webp";
 import img1 from '/public/images/reviews/any1.webp'
 import img2 from '/public/images/reviews/any2.webp'
 import img3 from '/public/images/reviews/any3.webp'
