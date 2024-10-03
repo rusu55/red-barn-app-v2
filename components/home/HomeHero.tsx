@@ -10,8 +10,10 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+
 export const HomeHero = () => {
   return (
+    
     <div className="overflow-hidden">
       <Swiper
         spaceBetween={30}

@@ -1,11 +1,10 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import _ from 'lodash';
 import Link from "next/link";
 import Image from "next/image";
-import { format } from "date-fns";
 import { AnimatePresence } from "framer-motion";
 import { motion } from "framer-motion";
 import { fetchBlogs } from "@/app/blog/action";

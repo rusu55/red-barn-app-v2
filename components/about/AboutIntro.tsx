@@ -27,7 +27,7 @@ export const AboutIntro = ({image,...props}: any) => {
             <div className="w-full md:w-1/2 px-4 mt-20">
                 <div className='relative w-full'>
                     <div className='relative pt-4 pb-4 mb-8 max-w-[600px] img'>
-                        <Image className='object-cover object-center h-full w-full duration-500 ease-in-out hover:scale-95'  src={image} alt=""  /> 
+                        <Image className='object-cover object-center h-full w-full duration-500 ease-in-out hover:scale-95'  src={image} alt="Wedding Photography"  /> 
                     </div>
                 </div>
             </div>
