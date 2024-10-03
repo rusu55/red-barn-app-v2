@@ -39,12 +39,14 @@ export const HomeRecentWork = ({ highlights }: any) => {
             <div key={index} className="w-full md:w-1/3 px-4">
               <RevealComponent index={index} variants={fadeBottomTop}>
                 <div className="relative overflow-hidden h-[480px]">
+                <Link href={`/blog/${highlight.id}`}>
                   <Image
                     src={highlight.photos[0]}
                     className="duration-500 ease-in-out hover:scale-110 object-cover"
                     fill
                     alt="Wedding Photography Chicago"
                   />
+                  </Link>
                 </div>
                 <div className="mt-6 flex flex-col gap-y-4">
                   <h5 className="text-center px-6  font-normal text-xl leading-8 duration-300 ease-in-out hover:text-roze">
