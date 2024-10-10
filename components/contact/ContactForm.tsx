@@ -1,7 +1,5 @@
 "use client";
 import React from "react";
-import { ParallaxBanner } from "react-scroll-parallax";
-import bgImage from "@/public/images/img-2.jpg";
 
 export const ContactForm = () => {
   return (    

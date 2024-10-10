@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Icon } from "../ui/Icon";
-import img1 from '/public/images/2.jpg';
+
 
 export const Card = ({service}: any) => {
   return (

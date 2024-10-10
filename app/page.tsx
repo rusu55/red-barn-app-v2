@@ -1,4 +1,3 @@
-import Image from "next/image";
 import prisma from "@/prisma/prisma";
 import { HomeHero } from "@/components/home/HomeHero";
 import { HomeIntroduction } from "@/components/home/HomeIntroduction";
@@ -7,7 +6,6 @@ import HomeReviews from "@/components/home/HomeReviews";
 import { HomeSocialIcons } from "@/components/home/HomeSocialIcons";
 import { HomeIcons } from "@/components/home/HomeIcons";
 import type { Metadata } from "next";
-import { Suspense } from "react";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.redbarnweddingstudio.com'),
@@ -48,14 +46,12 @@ const Home = async () => {
   });
   return (
     <>
-    <Suspense fallback={<div className="h-full w-full bg-cyan-900">Loading......</div>}>
       <HomeHero />
       <HomeIntroduction />
       <HomeRecentWork highlights={highlights} />
       <HomeIcons />
       <HomeReviews />
       <HomeSocialIcons />
-    </Suspense>
     </>
   );
 };
