@@ -6,7 +6,7 @@ import img3 from '/public/images/prices/img-154.webp';
 import img8 from '/public/images/prices/img-1213.webp';
 export const VideoGrid = () => {
   return (
-    <div className='columns-2 gap-1 w-[700px] mx-auto space-y-1 pb-28 rounded-3xl overflow-hidden'>
+    <div className='columns-2 gap-1 max-w-[700px] mx-auto space-y-1 pb-28 rounded-3xl overflow-hidden'>
         <div className='bg-gray-200 break-inside-avoid'>
             <Image src={img1} alt="" />
         </div>

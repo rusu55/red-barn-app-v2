@@ -6,12 +6,12 @@ import { fadeBottomTop } from "@/lib/animation";
 export const PhotoVideo = () => {
   return (
     <RevealComponent index={1} variants={fadeBottomTop}>
-        <div className="max-w-screen-xl mx-auto flex flex-wrap justify-center items-center py-14">
-        <div className="w-full md:w-3/5 px-4">
-                <VideoGrid />
+        <div className="max-w-screen-xl mx-auto flex flex-wrap justify-center items-center ">
+                <div className="w-full order-2 md:order-1 md:w-3/5 px-4">
+                     <VideoGrid />
                 </div>
-                <div className="w-full md:w-2/5 px-4">
-                    <div className="flex flex-col">
+                <div className="w-full md:w-2/5 px-4 order-1 md:order-2">
+                    <div className="flex flex-col md:pt-12">
                         <span className="uppercase text-md tracking-widest  text-roze pb-3">Photography + Cinematography</span>
                         <h2>Celebration Package</h2>
                         <hr className="line line-hr-left" />
