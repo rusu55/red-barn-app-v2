@@ -46,7 +46,7 @@ export const Questions = ({image}: any) => {
             </div>
         </div>   
         <div className="w-full lg:w-1/2 px-4 hidden lg:block max-w-[600px]">
-            <Image src={image} alt="Wedding Photography" className=" rounded-2xl"/>
+            <Image src={image} alt="Wedding Photography" className=" rounded-2xl object-cover object-center"  sizes="(min-width: 768px) 30vw"/>
         </div>
     </div> 
     </RevealComponent>

@@ -7,16 +7,18 @@ export const PicturesGrid = () => {
   return (
     <div className='columns-2 gap-1 max-w-[700px] mx-auto space-y-1 pb-28 rounded-3xl overflow-hidden'>
         <div className='bg-gray-200 break-inside-avoid'>
-            <Image src={img1} alt="" />
+            <Image src={img1} alt="" 
+                sizes="24vw"
+            />
         </div>
         <div className='bg-gray-200 break-inside-avoid'>
-            <Image src={img5} alt="" />
+            <Image src={img5} alt="" sizes="24vw" />
         </div>
         <div className='bg-gray-200 break-inside-avoid'>
-            <Image src={img2} alt="" />
+            <Image src={img2} alt=""  sizes="24vw"/>
         </div>
         <div className='bg-gray-200 break-inside-avoid'>
-            <Image src={img8} alt="" />
+            <Image src={img8} alt="" sizes="24vw" />
         </div>
         
         
