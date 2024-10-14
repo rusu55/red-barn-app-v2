@@ -1,19 +1,17 @@
-"use client";
 import Image from "next/image";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
-import { images } from "@/lib/images";
+
+import { images } from "@/lib/carousel";
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-
-export const HomeHero = () => {
+export const HomeCarousel = () => {
   return (
-    
     <div className="overflow-hidden">
       <Swiper
         spaceBetween={30}
@@ -48,5 +46,5 @@ export const HomeHero = () => {
         ))}
       </Swiper>
     </div>
-  );
-};
+  )
+}
