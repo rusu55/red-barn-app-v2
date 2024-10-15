@@ -42,6 +42,7 @@ export const HomeCarousel = () => {
         className="w-full h-[60vh] md:h-[85vh]"
       >
         {images.map((image, index) => (
+            //sss
           <SwiperSlide key={index}>
             <Image
               // height={600}
