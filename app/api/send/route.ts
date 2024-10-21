@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from "next/server";
-import { Prisma } from "@prisma/client";
 import prisma from "@/prisma/prisma";
 import {format} from 'date-fns'
 import {Resend} from 'resend'
@@ -29,7 +28,7 @@ export const POST = async (request: NextRequest) =>{
        
         try{
             const { data, error } = await resend.emails.send({
-                from: 'Video Questionnaire <office@redbarnweddingstudio.xyz>',
+                from: 'Video Questionnaire <office@redbarnweddingstudio.com>',
                 to: ['rusu55@yahoo.com','redbarnbride@yahoo.com'],
                 subject: `Video Questionnaire - ${body.brideName} , ${body.groomName} - ${body.weddingDate}`,
                 react: EmailTemplate({
