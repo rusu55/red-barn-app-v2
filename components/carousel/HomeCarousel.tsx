@@ -22,7 +22,7 @@ export const HomeCarousel = () => {
             spaceBetween: 0,
           },
           768: {
-            slidesPerView: 2,
+            slidesPerView: 1,
             spaceBetween: 0,
           },
           1024: {

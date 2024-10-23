@@ -1,5 +1,6 @@
 import prisma from "@/prisma/prisma";
-import { HomeHero } from "@/components/home/HomeHero";
+//import { HomeHero } from "@/components/home/HomeHero";
+import { HomeCarousel } from "@/components/carousel/HomeCarousel";
 import { HomeIntroduction } from "@/components/home/HomeIntroduction";
 import { HomeRecentWork } from "@/components/home/HomeRecentWork";
 import HomeReviews from "@/components/home/HomeReviews";
@@ -46,7 +47,7 @@ const Home = async () => {
   });
   return (
     <>
-      <HomeHero />
+      <HomeCarousel/>
       <HomeIntroduction />
       <HomeRecentWork highlights={highlights} />
       <HomeIcons />
