@@ -22,7 +22,7 @@ export const HomeCarousel = () => {
             spaceBetween: 0,
           },
           768: {
-            slidesPerView: 1,
+            slidesPerView: 2,
             spaceBetween: 0,
           },
           1024: {
@@ -42,7 +42,7 @@ export const HomeCarousel = () => {
         className="w-full h-[60vh] md:h-[85vh]"
       >
         {images.map((image, index) => (
-            //sss
+          //sss
           <SwiperSlide key={index}>
             <Image
               // height={600}
@@ -50,7 +50,7 @@ export const HomeCarousel = () => {
               src={image.src}
               alt="Chicago Wedding Photographer"
               fill
-              sizes="(max-width: 600px) 50vw, (max-width: 1920px) 80vw"
+              sizes="(max-width: 600px) 30vw, (max-width: 1920px) 80vw"
               //style={{objectFit: "cover"}}
               className="object-cover object-center"
               //priority={true}

@@ -9,14 +9,15 @@ import eigth from '@/public/images/carousel/carousel-8.webp'
 import nine from '@/public/images/carousel/carousel-9.webp'
 
 export const images = [
-  { src: first, alt: 'Wedding Photography' },
+  { src: seventh, alt: 'Wedding Photographer' }, 
+  
   { src: sixth, alt: 'Wedding Photography' },
   { src: third, alt: 'Photographer Chicago' },
   { src: second, alt: 'Wedding Photography' },
-  
+  { src: first, alt: 'Wedding Photography' },
   { src: fourth, alt: 'Chicago Wedding Photographer' },
   { src: fifth, alt: 'Engagement Photography' },
-  { src: seventh, alt: 'Wedding Photographer' }, 
+ 
   { src: eigth, alt: 'Wedding Photographer' }, 
   { src: nine, alt: 'Wedding Photographer' }, 
 ]
