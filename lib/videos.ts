@@ -5,6 +5,7 @@ const videos = [
     {id: 4, img: "/images/emilly.jpg", src: "https://vimeo.com/747755575"},
     {id: 5, img: "/images/alexis.jpg", src: "https://vimeo.com/763951702"},
     {id: 6, img: "/images/jamie.jpg", src: "https://vimeo.com/902975032"},
+    {id: 6, img: "/images/gina.jpg", src: "https://vimeo.com/1029697388"},
   ];
   
   export default videos;
