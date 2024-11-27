@@ -16,7 +16,7 @@ export const Questions = ({image}: any) => {
                 <div className="pt-4">
                     <h6 className="text-xl">How do we secure our date?</h6>
                     <p>
-                    We require a 25% retainer and a signed contract to secure your date. The remainder balance is du by the Wedding Date.
+                    We require a 25% retainer and a signed contract to secure your date. The remainder balance is due by the Wedding Date.
                     </p>
                 </div>
                 <div className="pt-4">

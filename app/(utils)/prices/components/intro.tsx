@@ -14,7 +14,7 @@ export const Intro = ({image}: any) => {
                 <h1>Red Barn Studio</h1>
                 <hr className="line line-hr-left" />
                 <p>
-                    Our style is 80% documentation and 20% direction. We’ll direct when needed – like during portraits – and capture candid moments as they happen throughout your wedding day. This is how we tell your amazing story. Hiring wedding photographers has always been stressful and difficult. We wanted to change that. We wanted to offer incredible photography and video at a great price that was reliable, consistent and meaningful. We did just that.
+                    Our style is a  mixture of documentary and guided. We’ll step in to provide direction when it’s needed—such as during portraits—but for the rest of your wedding day, we focus on capturing candid, natural moments as they unfold. This allows us to tell your unique story in a way that feels authentic and timeless.<br/><br/> We understand that choosing wedding photographers can feel overwhelming and stressful. That’s why we set out to change the game—offering stunning photography and videography at a great value, while ensuring reliability, consistency, and heartfelt storytelling. And we’re proud to say we’ve done exactly that.
                 </p>
                 <div className="py-6 flex items-center justify-center space-x-3">
                     <Button href="https://redbarnweddingstudio.setmore.com">Online Appointment</Button>

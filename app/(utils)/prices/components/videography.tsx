@@ -15,7 +15,7 @@ export const Videography = () => {
                         <ul>
                            <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />10 Hours of Cinematography</li>
                            <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />ONE Videographer</li>                           
-                           <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />Free USB with all images</li>
+                           <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />Free USB with Highlights and Full Length Video </li>
                            <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />Full Copyright release</li>
                            <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />Complimentary Pre-wedding Consultation</li>                           
                            <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />Free USB with a full length film edit</li>

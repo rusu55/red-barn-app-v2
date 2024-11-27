@@ -33,9 +33,14 @@ export const PhotoVideo = () => {
                         <h2>Glamorous Package</h2>
                         <hr className="line line-hr-left" />
                         <ul>
-                           <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />10 Hours of Photography and Cinematography</li>
-                           <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />ONE Photographer and ONE Videographer</li>
-                           <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />Over 800 Images on your Wedding Day</li>
+                           <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />11 Hours of Photography for Lead Photographer</li>
+                           <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />11 Hours of Cinematography for Lead Videographer</li>
+                           <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />8 Hours of Photography for Second Photographer</li>
+                           <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />8 Hours of Cinematography for Second Videographer</li>
+                           <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />Photo Booth for reception</li>
+                           <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />Engagement Session</li>
+                           <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />Drone Coverage</li>
+                           <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />Over 1200 Images on your Wedding Day</li>
                            <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />Free USB with all images</li>
                            <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />Full Copyright release</li>
                            <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />Complimentary Pre-wedding Consultation</li>
@@ -43,6 +48,7 @@ export const PhotoVideo = () => {
                            <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />Free USB with a full length film edit</li>
                            <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />Highlights video of the Wedding Day</li>
                            <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />RAW Footage Available</li>
+                           
                         </ul>
                         <p className="font-pariss text-roze text-xl font-bold py-4 pl-4">$ 7495</p>
                     </div>
