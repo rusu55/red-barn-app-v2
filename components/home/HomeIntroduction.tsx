@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Button } from "../ui/Button";
 import aboutImage from "/public/images/image-1.webp";
+import Link from "next/link";
 
 export const HomeIntroduction = () => {
   return (
@@ -29,7 +30,7 @@ export const HomeIntroduction = () => {
            We know that it takes much time and energy to plan a dream wedding, and we are determined to do our part to make your special day a success. We cannot wait to meet you and discuss your initial wedding thoughts and vision.
            </p>
             <p className="font-normal font-pariss text-roze text-xl text-center md:text-right">
-              Red Barn Wedding Studio
+              <Link href="/about-wedding-photographer" >Red Barn Wedding Studio </Link>
             </p>
           </div>
         </div>

@@ -35,7 +35,7 @@ const BlogIdPage = async ({ params }: any) => {
     <div className="mx-auto max-w-screen-xl pt-2">
       {blog?.photos && (
         <div className="flex w-full items-center justify-center">
-          <Image src={blog?.photos[0]} alt="" width={1000} height={600} />
+          <Image src={blog?.photos[0]} alt={'Chicago Wedding Photographer - Venue: ' + _.split(blog?.title, "-").pop()} width={1000} height={600} />
         </div>
       )}
       <div className="mx-auto flex max-w-[1000px] flex-wrap items-center justify-start">
@@ -49,23 +49,24 @@ const BlogIdPage = async ({ params }: any) => {
         </div>
         <div className="w-full md:w-1/2">
           <ul className="mx-auto w-[80%] ">
-            <li className="py-2 border-b-2 border-roze flex justify-between items-center">
-              <span className=" uppercase">Photographer:</span>
-              <span className="font-pariss text-lg text-right w-[80%] leading-9">
-                Red Barn Studio
-              </span>
+            <li className="py-2 border-b-2 border-roze flex justify-between items-center">              
+                <span className=" uppercase">Photographer:</span>
+                <h2 className="font-pariss text-lg text-right w-[80%] leading-9">
+                  Red Barn Wedding Studio
+                </h2>
+              
             </li>
             <li className="py-2 border-b-2 border-roze flex justify-between items-center">
               <span className=" uppercase">Cinematographer:</span>
               <span className="font-pariss text-lg text-right w-[80%] leading-9">
-                Red Barn Studio
+                Red Barn Wedding Studio
               </span>
             </li>
             <li className="py-2 border-b-2 border-roze flex justify-between items-center">
               <span className=" uppercase">Venue:</span>
-              <span className="font-pariss text-lg text-right w-[80%] leading-9">
+              <h2 className="font-pariss text-lg text-right w-[80%] leading-9">
                 {_.split(blog?.title, "-").pop()}
-              </span>
+              </h2>
             </li>
           </ul>
         </div>
@@ -74,7 +75,7 @@ const BlogIdPage = async ({ params }: any) => {
         {blog?.photos.map(
           (photo: string, index: number) =>
             index > 0 && (
-              <Image key={index} src={photo} alt="" width={800} height={400} />
+              <Image key={index} src={photo} alt="Red Barn Wedding Photography" width={800} height={400} />
             )
         )}
       </div>
