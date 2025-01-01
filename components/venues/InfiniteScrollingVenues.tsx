@@ -62,7 +62,7 @@ export const InfiniteScrollingVenues = ({ search, initialVenues }: any) => {
             transition={{ duration: 0.3 }}
             className="flex flex-wrap"
           >
-            <div className="w-[30%] pb-5">
+            <div className=" md:w-[30%] pb-5 order-2 md:order-1">
             <div className="relative overflow-hidden place-self-center rounded-lg">
               <Link href={`wedding-venues/${venue.id}`}>
                 <Image
@@ -75,7 +75,7 @@ export const InfiniteScrollingVenues = ({ search, initialVenues }: any) => {
               </Link>
             </div>
             </div>
-            <div className="w-[70%] pl-8">
+            <div className="md:w-[70%] md:pl-8 order-1 md:order-2">
               <span className="mt-6 uppercase text-xs tracking-widest  text-roze">
                 Wedding Photography 
               </span>
@@ -92,7 +92,7 @@ export const InfiniteScrollingVenues = ({ search, initialVenues }: any) => {
                     />
                 
               )}
-              <span className="text-right text-sm text-roze mb-12 pr-14">
+              <span className="text-right text-sm text-roze mb-12 md:pr-14 inline-block py-4">
               <Link href={`wedding-venues/${venue.id}`}>See more deatails and photos from {venue.name}...</Link>
               </span>
             </div>
