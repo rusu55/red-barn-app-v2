@@ -7,11 +7,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { AnimatePresence } from "framer-motion";
 import { motion } from "framer-motion";
-import { fetchBlogs } from "@/app/(pages)/blog/action";
-import { RenderHTML } from "@/lib/render-html"
+import { fetchVenues } from "@/app/(pages)/wedding-venues/action";
+import Truncate from 'react-truncate-html';
 
-export const InfiniteScrollingBlogs = ({ search, initialBlogs }: any) => {
-  const [blogs, setBlogs] = useState(initialBlogs);
+
+export const InfiniteScrollingVenues = ({ search, initialVenues }: any) => {
+  const [venues, setVenues] = useState(initialVenues);
 
   const [page, setPage] = useState(1);
   const [lastPage, setLastPage] = useState(false);
@@ -30,13 +31,13 @@ export const InfiniteScrollingBlogs = ({ search, initialBlogs }: any) => {
   }, []);
   */
 
-  async function loadMoreBlogs() {
+  async function loadMoreVenues() {
     const next = page + 1;
-    const blogs = await fetchBlogs({ search, page: next });
+    const venues = await fetchVenues({ search, page: next });
 
-    if (blogs?.length) {
+    if (venues?.length) {
       setPage(next);
-      setBlogs((prev: any) => [...(prev?.length ? prev : []), ...blogs]);
+      setVenues((prev: any) => [...(prev?.length ? prev : []), ...venues]);
     } else {
       setLastPage(true);
     }
@@ -44,14 +45,14 @@ export const InfiniteScrollingBlogs = ({ search, initialBlogs }: any) => {
 
   useEffect(() => {
     if (inView) {
-      loadMoreBlogs();
+      loadMoreVenues();
     }
   }, [inView]);
 
   return (
     <>
       <AnimatePresence>
-        {blogs?.map((blog: any, index: number) => (
+        {venues?.map((venue: any, index: number) => (
           <motion.div
             key={index}
             layout
@@ -59,31 +60,42 @@ export const InfiniteScrollingBlogs = ({ search, initialBlogs }: any) => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="flex flex-col"
+            className="flex flex-wrap"
           >
-            <div className="relative overflow-hidden place-self-center">
-              <Link href={`blog/${blog.id}`}>
+            <div className="w-[30%] pb-5">
+            <div className="relative overflow-hidden place-self-center rounded-lg">
+              <Link href={`wedding-venues/${venue.id}`}>
                 <Image
-                  src={blog.photos[0]}
-                  width={740}
-                  height={400}
-                  alt=""
-                  className="duration-500 ease-in-out hover:scale-110"
+                  src={venue.hero}
+                  width={7500}
+                  height={250}
+                  alt="Wedding Photography Chicago"                  
+                  className="duration-500 ease-in-out hover:scale-110 h-[250px] object-cover"
                 />
               </Link>
             </div>
-            <span className="mt-6 uppercase text-xs tracking-widest  text-roze">
-              {blog?.postType} Photography
-            </span>
-            <Link href={`blog/${blog.id}`}>
-              <h5 className="text-[1.6rem] mt-2">{blog.title}</h5>
-            </Link>
-            {blog.description !== "" && (
-              <div className="mt-4"><RenderHTML htmlContent= {blog.description} /></div>
-            )}
-            <span className="text-right text-sm text-roze mb-12 pr-14">
-              <Link href="">See more photos...</Link>
-            </span>
+            </div>
+            <div className="w-[70%] pl-8">
+              <span className="mt-6 uppercase text-xs tracking-widest  text-roze">
+                Wedding Photography 
+              </span>
+              <Link href={`wedding-venues/${venue.id}`}>
+                <h5 className="text-[1.6rem] mt-2">{venue.name}</h5>
+              </Link>
+              {venue.description !== "" && (
+                
+                  <Truncate
+                      lines={6}
+                      dangerouslySetInnerHTML={{
+                      __html: venue.description,
+                      }}
+                    />
+                
+              )}
+              <span className="text-right text-sm text-roze mb-12 pr-14">
+              <Link href={`wedding-venues/${venue.id}`}>See more deatails and photos from {venue.name}...</Link>
+              </span>
+            </div>
           </motion.div>
         ))}
       </AnimatePresence>

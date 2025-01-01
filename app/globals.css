@@ -18,7 +18,7 @@ body {
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 36px;
   line-height: 1.3em;
   font-weight: 400;
   font-family: var(--font-old_standard);
@@ -26,13 +26,19 @@ h1 {
 }
 
 h2,
-h3,
 h4,
 h5,
 h6 {
     line-height: 1.3em;
     font-size: 36px;
     font-weight: 400;
+    font-family: var(--font-old_standard);
+    color: #000;
+}
+h3{
+    line-height: 1.3em;
+    font-size: 18px;
+    font-weight: 200;
     font-family: var(--font-old_standard);
     color: #000;
 }

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Metadata, ResolvingMetadata } from "next";
-import axios from 'axios';
+import { RenderHTML } from "@/lib/render-html";
 
 import _ from "lodash";
 import prisma from "@/prisma/prisma";
@@ -45,7 +45,7 @@ const BlogIdPage = async ({ params }: any) => {
           </span>
           <h1 className="w-[80%] text-left text-3xl pt-2">{blog?.title}</h1>
           <hr className="line line-hr-left"></hr>
-          <p>{blog?.description}</p>
+          <div><RenderHTML htmlContent= {blog.description} /></div>
         </div>
         <div className="w-full md:w-1/2">
           <ul className="mx-auto w-[80%] ">

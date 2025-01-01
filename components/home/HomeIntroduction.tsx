@@ -47,8 +47,13 @@ export const HomeIntroduction = () => {
               />
             </div>
           </div>
-          <div className="md:text-right text-center pr-4">
-              <Button href="/reviews-wedding-photographer" className="rounded-xl">Kind Words from our Couples</Button>
+          <div className="flex flex-wrap justify-center space-y-2 lg:space-y-0">
+            <div className="md:text-right text-center pr-4">
+                <Button href="/reviews-wedding-photographer" className="rounded-xl">Kind Words from our Couples...</Button>
+            </div>
+            <div className="md:text-right text-center pr-4">
+                <Button href="/wedding-venues" className="rounded-xl">Venues we love...</Button>
+            </div>
           </div>
         </div>
       </div>

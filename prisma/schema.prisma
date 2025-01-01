@@ -24,6 +24,8 @@ model Blog {
   highlights  Boolean?
   sample Boolean?
   orderBy Int?
+   venueId     String?  @db.ObjectId
+  venue       Venue?   @relation("VenueField", fields: [venueId], references: [id], onDelete: Cascade)
 }
 
 model Portfolio {
@@ -52,4 +54,26 @@ model Video {
   city String?
   state String?
   zipCode String?
+}
+
+model Venue {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  description String
+  name        String
+  hero        String?
+  createAt    DateTime @default(now())
+  blogs       Blog[]   @relation("VenueField")
+  videos VideoPortfolio[] @relation("VideoField")
+}
+
+model VideoPortfolio {
+   id      String   @id @default(auto()) @map("_id") @db.ObjectId
+   title String
+   description String
+   videoUrl     String?  
+   hero String?
+   createAt    DateTime @default(now())
+   venueId String?  @db.ObjectId
+   venue   Venue?   @relation("VideoField", fields: [venueId], references: [id], onDelete: Cascade)
+   orderBy Int?
 }
