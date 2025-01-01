@@ -18,7 +18,7 @@ export async function generateMetadata(
   
   return {
       title: venue.name,
-      description: `Red Barn Wedding Studio brigs to the future Brides and Grooms an new Weding Photography Blog about: ${venue.name}`,
+      description: `Red Barn Wedding Studio brigs to the future Brides and Grooms an new Wedding Venue Photography: ${venue.name}`,
       openGraph:{
         images: [
           {

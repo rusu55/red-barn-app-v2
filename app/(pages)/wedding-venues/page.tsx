@@ -6,9 +6,9 @@ import { InfiniteScrollingVenues } from "@/components/venues/InfiniteScrollingVe
 import { fetchVenues } from "./action";
 
 export const metadata: Metadata = {
-  title: "Best Wedding Photography in Chicago Area  - Red Barn Wedding Studio",
+  title: "Best Wedding Photographers Red Barn Studio  - at Chicago Venues",
   description:
-    "Best Chicago Wedding Photography and Best of Weddings Cinematography. Explore our photography for guidance on making the most of your wedding photography experience.",
+    "Chicago Wedding Photography and Weddings Cinematography. Red Barn Wedding Studio at Chicago Wedding Venues.",
 };
 
 const VenuesPage = async ({
