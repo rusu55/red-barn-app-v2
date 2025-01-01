@@ -75,7 +75,7 @@ export const InfiniteScrollingVenues = ({ search, initialVenues }: any) => {
               </Link>
             </div>
             </div>
-            <div className="md:w-[70%] md:pl-8 order-1 md:order-2">
+            <div className="md:w-[70%]  pt-6 md:pl-8 order-1 md:order-2">
               <span className="mt-6 uppercase text-xs tracking-widest  text-roze">
                 Wedding Photography 
               </span>
@@ -92,7 +92,7 @@ export const InfiniteScrollingVenues = ({ search, initialVenues }: any) => {
                     />
                 
               )}
-              <span className="text-right text-sm text-roze mb-12 md:pr-14 inline-block py-4">
+              <span className="md:text-right text-sm text-roze  md:pr-14 block pb-4 text-center">
               <Link href={`wedding-venues/${venue.id}`}>See more deatails and photos from {venue.name}...</Link>
               </span>
             </div>

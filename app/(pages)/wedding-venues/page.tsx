@@ -26,7 +26,7 @@ const VenuesPage = async ({
   return (
     <div className="pt-20 md:pt-0">
       <Hero image={hero_img} title="Wedding Photographer in Chicago" description="" />
-      <div className="mx-auto max-w-screen-xl py-20 flex flex-wrap justify-center gap-4 ">       
+      <div className="mx-auto max-w-screen-xl py-2 md:py-20 flex flex-wrap justify-center gap-4 ">       
         <div
           className="w-full px-4 "
           key={Math.random()}
