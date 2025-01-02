@@ -31,7 +31,7 @@ export const SearchBarVenue = ({ search }: { search?: string }) => {
       <div className="flex items-center"> 
         <span className="hidden md:inline-block w-[200px] text-md font-bold">Search for venue: </span>
         <div className="rounded-md shadow-sm w-full">
-        <Icon icon="search" stroke={2} className="text-roze absolute ml-2 mt-1" />
+        <Icon icon="search" stroke={2} className="text-roze absolute ml-2 mt-1.5" />
         <input        
           value={text}
           placeholder="         Search venues..."
