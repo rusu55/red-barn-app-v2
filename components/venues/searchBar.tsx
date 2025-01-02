@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useDebounce } from "use-debounce";
+import { Icon } from "../ui/Icon";
 
 export const SearchBarVenue = ({ search }: { search?: string }) => {
   const router = useRouter();
@@ -28,11 +29,12 @@ export const SearchBarVenue = ({ search }: { search?: string }) => {
     <div>
       <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3"></div>  
       <div className="flex items-center"> 
-        <span className="inline-block w-[200px] text-md font-bold">Search for venue: </span>
+        <span className="hidden md:inline-block w-[200px] text-md font-bold">Search for venue: </span>
         <div className="rounded-md shadow-sm w-full">
-        <input
+        <Icon icon="search" stroke={2} className="text-roze absolute ml-2 mt-1" />
+        <input        
           value={text}
-          placeholder="Search venues..."
+          placeholder="         Search venues..."
           onChange={(e) => setText(e.target.value)}
           className="block w-full rounded-md border-0 py-1.5 pl-10 ring-1 ring-inset ring-gray-300 placeholder:text-grey-300 focus:ring-roze focus:ring-inset focus:ring-2 focus:outline-none sm:text-sm sm:leading-6 transition-all duration-300"
         />

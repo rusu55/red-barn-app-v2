@@ -29,7 +29,7 @@ const VenuesPage = async ({
           className="w-full px-4 "
           key={Math.random()}
         >
-          <div className="pb-4 flex items-center justify-between">
+          <div className="pb-4 flex flex-col md:flex-row items-center justify-between">
            <div className="md:w-[68%]">
               <span className="uppercase text-md tracking-widest  text-roze">Red Barn Wedding Studio</span>
               <h1>Chicago Wedding Venues</h1>
