@@ -8,6 +8,7 @@ export const getVenues = async ({
     page?: number
     limit?: number 
     }) =>{
+        
         let result
         try{
             const skip = (page-1) * limit
@@ -25,10 +26,10 @@ export const getVenues = async ({
                     contains: query?.toString(),
                     mode: 'insensitive'
                    }},
-                    {name:{
-                       contains: query?.toString(),
-                       mode: 'insensitive'
-                    }}
+                    //{name:{
+                     //  contains: query?.toString(),
+                    //   mode: 'insensitive'
+                  //  }}
                     ]
                 }             
               
