@@ -56,6 +56,15 @@ model Video {
   zipCode String?
 }
 
+model Bridal {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  name String
+  email String
+  phone String?
+  weddingDate DateTime?
+  details String?
+}
+
 model Venue {
   id          String   @id @default(auto()) @map("_id") @db.ObjectId
   description String
