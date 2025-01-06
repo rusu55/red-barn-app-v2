@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Metadata, ResolvingMetadata } from "next";
-import { Hero } from "@/components/ui/Hero";
+import { Hero } from "@/components/venues/Hero";
 import hero_img from "/public/images/about.jpg";
 import _ from "lodash";
 import { VenueIntro } from "@/components/venues/VenueIntro";
@@ -35,7 +35,7 @@ const VenuePage = async ({params}: any) => {
     console.log(venue)
   return (
     <div className="pt-20 md:pt-0">
-      <Hero image={hero_img} title="Red Barn Wedding Studio" description={""} />
+      <Hero hero={venue.hero} title={venue.name} description={""} />
       <div className="mt-20">
         <VenueIntro image={venue.hero} data={venue} />        
         <RecentGaleries galleries={venue.blogs} />
