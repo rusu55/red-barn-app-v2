@@ -1,7 +1,6 @@
-import Image from "next/image";
+
 import { Metadata, ResolvingMetadata } from "next";
 import { Hero } from "@/components/venues/Hero";
-import hero_img from "/public/images/about.jpg";
 import _ from "lodash";
 import { VenueIntro } from "@/components/venues/VenueIntro";
 import { RecentGaleries } from "@/components/venues/RecentGaleries";
@@ -32,7 +31,7 @@ export async function generateMetadata(
 const VenuePage = async ({params}: any) => {
     const id = params.venueId
     const venue = await fetch(`http://localhost:3000/api/venue/${id}`).then((res) => res.json())
-    console.log(venue)
+    
   return (
     <div className="pt-20 md:pt-0">
       <Hero hero={venue.hero} title={venue.name} description={""} />

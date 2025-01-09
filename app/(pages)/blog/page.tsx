@@ -38,7 +38,7 @@ const BlogPage = async ({
         </div>
         {/** Right Section */}
         <div className="w-full px-4 lg:w-[38%] flex flex-col gap-y-6 order-1 lg:order-2">
-          <SearchBar />
+          <SearchBar search={search} />
           <RecentBlogs recentBlogs={recentBlogs} />
           <TagsComponent />
         </div>

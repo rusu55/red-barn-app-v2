@@ -32,11 +32,16 @@ export const InfiniteScrollingBlogs = ({ search, initialBlogs }: any) => {
 
   async function loadMoreBlogs() {
     const next = page + 1;
-    const blogs = await fetchBlogs({ search, page: next });
+    const newBlogs = await fetchBlogs({ search, page: next });
 
-    if (blogs?.length) {
+    if (newBlogs?.length) {
+      
+      const idBlogs = new Set(blogs.map((blog: any) => blog.id));
+      
+      const filteredBlogs = newBlogs.filter((blog: any) => !idBlogs.has(blog.id))
+     
       setPage(next);
-      setBlogs((prev: any) => [...(prev?.length ? prev : []), ...blogs]);
+      setBlogs((prev: any) => [...(prev?.length ? prev : []), ...filteredBlogs]);
     } else {
       setLastPage(true);
     }
