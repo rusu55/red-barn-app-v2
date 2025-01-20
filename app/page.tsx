@@ -71,6 +71,9 @@ const Home = async () => {
   });
   return (
     <>
+     <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <HomeCarousel/>
       <HomeIntroduction />
       <HomeRecentWork highlights={highlights} />
