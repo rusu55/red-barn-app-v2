@@ -97,7 +97,7 @@ const PhotoboothPage = () => {
           </div>          
         </div>
         <div className="w-full pt-10 flex justify-center">
-            <Button href="/contact">Contact Us</Button>
+            <Button href="/contact-wedding-photographer">Contact Us</Button>
         </div>
         {/* Slider */}
         <StripsSlider />
