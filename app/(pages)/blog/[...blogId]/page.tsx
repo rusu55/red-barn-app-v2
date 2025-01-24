@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Metadata, ResolvingMetadata } from "next";
 import { RenderHTML } from "@/lib/render-html";
+import Head from "next/head";
 
 import _ from "lodash";
 import prisma from "@/prisma/prisma";
@@ -14,6 +15,8 @@ export async function generateMetadata(
 const id = params.blogId
 const blog = await fetch(`http://localhost:3000/api/blog/${id}`).then((res) => res.json())
 
+
+
 return {
     title: blog.title,
     description: `Red Barn Wedding Studio brigs to the future Brides and Grooms an new Weding Photography Blog about: ${blog.title}`,
@@ -23,15 +26,33 @@ return {
           url: blog.photos[0]
         }
       ]
-    }
+    },
+   // other: {
+    // 'script:ld_json': JSON.stringify(structuredData)
+   // },
   };
 }
 
 const BlogIdPage = async ({ params }: any) => {
   const id = params.blogId
   const blog = await fetch(`http://localhost:3000/api/blog/${id}`).then((res) => res.json())
-
+  const structuredData: any = {
+    
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: blog.title,
+    description: `Red Barn Wedding Studio brigs to the future Brides and Grooms an new Weding Photography Blog about: ${blog.title}`,
+    image: blog.photos[0],
+    datePublished: blog.createdAt,
+    
+  }
   return (
+    <>
+    <script type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(structuredData)
+      }} />
+
     <div className="mx-auto max-w-screen-xl pt-2">
       {blog?.photos && (
         <div className="flex w-full items-center justify-center">
@@ -80,6 +101,7 @@ const BlogIdPage = async ({ params }: any) => {
         )}
       </div>
     </div>
+    </>
   );
 };
 

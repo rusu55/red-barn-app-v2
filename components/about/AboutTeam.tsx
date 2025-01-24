@@ -1,10 +1,8 @@
 import Image from "next/image";
-import Link from "next/link";
 import { RevealComponent } from "../ui/RevealComponent";
+import { fadeBottomTop } from "@/lib/animation";
 
-import { fadeTopBottom } from "@/lib/animation";
-import Maks from "/public/images/Maks.jpg"
-
+import { managers, employees, editors, photobooth } from "@/lib/team";
 export const AboutTeam = ({image,...props}: any) => {
     return (
         <>
@@ -32,44 +30,89 @@ export const AboutTeam = ({image,...props}: any) => {
                 </div>
             </div>
             <div className="w-full bg-neutral-100/75 py-10 md:py-20">
-                <div className="max-w-screen-xl mx-auto grid gap-y-8 sm:gap-6 lg:grid-cols-3 lg:gap-12 2xl:gap-12">
-                       <div className="flex flex-col gap-y-4">
-                            <div>
-                                <Image className='object-cover object-center h-full w-full duration-500 ease-in-out hover:scale-95'  src={Maks} alt=""  />
-                            </div>
-                            <div>
-                                <h3 className=" text-2xl">Maks</h3>
-                                <span className="uppercase text-md tracking-widest  text-roze">Photographer</span>
-                                <p>Maks is one of our main photographers. He loves photographing weddings, street photography, and landscapes.</p>
-                                <p>In his free time, he enjoys a nice ride in the world as well as some delicious food.</p>
-                            </div>
-                       </div> 
-
-                       <div className="flex flex-col gap-y-4">
-                            <div>
-                                <Image className='object-cover object-center h-full w-full duration-500 ease-in-out hover:scale-95'  src={Maks} alt=""  />
-                            </div>
-                            <div>
-                                <h3 className=" text-2xl">Maks</h3>
-                                <span className="uppercase text-md tracking-widest  text-roze">Photographer</span>
-                                <p>Maks is one of our main photographers. He loves photographing weddings, street photography, and landscapes.</p>
-                                <p>In his free time, he enjoys a nice ride in the world as well as some delicious food.</p>
-                            </div>
-                       </div> 
-
-                       <div className="flex flex-col gap-y-4">
-                            <div>
-                                <Image className='object-cover object-center h-full w-full duration-500 ease-in-out hover:scale-95'  src={Maks} alt=""  />
-                            </div>
-                            <div>
-                                <h3 className=" text-2xl">Maks</h3>
-                                <span className="uppercase text-md tracking-widest  text-roze">Photographer</span>
-                                <p>Maks is one of our main photographers. He loves photographing weddings, street photography, and landscapes.</p>
-                                <p>In his free time, he enjoys a nice ride in the world as well as some delicious food.</p>
-                            </div>
-                       </div> 
-                </div>
+                            {managers.map((manager, index) =>{
+                                return(
+                                    <RevealComponent index={index} variants={fadeBottomTop}>
+                                    <div key={index} className="max-w-screen-xl mx-auto flex flex-wrap  px-2 md:px-6 md:items-center justify-center pb-10">
+                                        
+                                            <div className="md:w-1/5 md:px-4">                       
+                                                <div className="rounded-full overflow-hidden h-[180px] aspect-square">
+                                                    <Image className='object-cover  h-[240px] w-[240px] duration-500 ease-in-out hover:scale-110'  src={manager.photo} alt="wedding photographer" width={280} height={280} />
+                                                </div>
+                                            </div>
+                                            <div className="px-4 text-center md:text-left md:pl-10 w-full md:w-4/5">
+                                                    <h3 className=" text-2xl pb-6 pt-4 md:pt-0">{manager.name}  <span className="text-md  font-thin text-roze">- {manager.title}</span></h3>
+                                                    {manager.details.map((paragraph, index) => (
+                                                        <p key={index}> {paragraph }</p>
+                                                    ))}                                
+                                            </div>
+                                                             
+                                    </div>
+                                    </RevealComponent>
+                                )
+                            })}                
             </div>
+            <div className="w-full bg-white py-10 md:py-10 ">  
+                {employees.map((employee, index) =>(
+                             <RevealComponent index={index} variants={fadeBottomTop}>
+                            <div key={index} className="max-w-screen-xl mx-auto flex flex-wrap justify-center px-2 md:px-6 items-center pt-10 ">
+                                <div className="w-full md:w-1/5 px-4">                       
+                                    <div className="rounded-full overflow-hidden h-[180px] aspect-square">
+                                        <Image className='object-cover  h-[220px] w-[220px] duration-500 ease-in-out hover:scale-110'  src={employee.photo} alt="photo and video" width={280} height={280}  />
+                                    </div>
+                                </div>
+                                <div className="pl-10 w-full md:w-4/5">
+                                        <h3 className=" text-2xl pb-6">{employee.name} <span className="text-md  font-thin text-roze">-  {employee.title}</span></h3>
+                                        
+                                        {employee.details.map((paragraph, index) => (
+                                                        <p key={index}> {paragraph }</p>
+                                                    ))} 
+                                </div>    
+                            </div> 
+                            </RevealComponent>
+                ))}
+             </div>                  
+                            
+            <div className="w-full bg-neutral-100/75 py-10 md:py-20 mt-10 ">
+                {editors.map((editor, index) =>(
+                     <RevealComponent index={index} variants={fadeBottomTop}>
+                        <div key={index} className="max-w-screen-xl mx-auto flex flex-wrap justify-center px-2 md:px-6 items-center pt-10 ">
+                                <div className="w-full md:w-1/5 px-4">                       
+                                <div className="rounded-full overflow-hidden h-[180px] aspect-square">
+                                    <Image className='object-cover  h-[220px] w-[220px] duration-500 ease-in-out hover:scale-110'  src={editor.photo} alt="editor"  width={280} height={280} />
+                                </div>
+                            </div>
+                            <div className="pl-10 w-full md:w-4/5">
+                                    <h3 className=" text-2xl pb-6">{editor.name}  <span className="text-md  font-thin text-roze">-  Editor</span></h3>
+                                    {editor.details.map((paragraph, index) => (
+                                        <p key={index}> {paragraph}</p>
+                                    ))}
+                                    
+                            </div>    
+                         </div>
+                         </RevealComponent>
+                ))}                   
+            </div>          
+            <div className="w-full bg-white py-10 md:py-10 ">  
+                {photobooth.map((employee, index) =>(
+                    <RevealComponent index={index} variants={fadeBottomTop}>
+                            <div key={index} className="max-w-screen-xl mx-auto flex flex-wrap justify-center px-2 md:px-6 items-center pt-10 ">
+                                <div className="w-full md:w-1/5 px-4">                       
+                                    <div className="rounded-full overflow-hidden h-[180px] aspect-square">
+                                        <Image className='object-cover  h-[220px] w-[220px] duration-500 ease-in-out hover:scale-110'  src={employee.photo} alt="photo and video" width={280} height={280}  />
+                                    </div>
+                                </div>
+                                <div className="pl-10 w-full md:w-4/5">
+                                        <h3 className=" text-2xl pb-6">{employee.name} <span className="text-md  font-thin text-roze">-  {employee.title}</span></h3>
+                                        
+                                        {employee.details.map((paragraph, index) => (
+                                                        <p key={index}> {paragraph }</p>
+                                                    ))} 
+                                </div>    
+                            </div> 
+                    </RevealComponent>
+                ))}
+             </div>       
         </>
     )
 }
