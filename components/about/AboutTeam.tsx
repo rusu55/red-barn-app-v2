@@ -30,9 +30,9 @@ export const AboutTeam = ({image,...props}: any) => {
                 </div>
             </div>
             <div className="w-full bg-neutral-100/75 py-10 md:py-20">
-                            {managers.map((manager, index) =>{
+                            {managers.map((manager, index: number) =>{
                                 return(
-                                    <RevealComponent index={index} variants={fadeBottomTop}>
+                                    <RevealComponent key={index} index={index} variants={fadeBottomTop}>
                                     <div key={index} className="max-w-screen-xl mx-auto flex flex-wrap  px-2 md:px-6 md:items-center justify-center pb-10">
                                         
                                             <div className="md:w-1/5 md:px-4">                       
@@ -53,8 +53,8 @@ export const AboutTeam = ({image,...props}: any) => {
                             })}                
             </div>
             <div className="w-full bg-white py-10 md:py-10 ">  
-                {employees.map((employee, index) =>(
-                             <RevealComponent index={index} variants={fadeBottomTop}>
+                {employees.map((employee, index: number) =>(
+                             <RevealComponent  key={index} index={index} variants={fadeBottomTop}>
                             <div key={index} className="max-w-screen-xl mx-auto flex flex-wrap justify-center px-2 md:px-6 items-center pt-10 ">
                                 <div className="w-full md:w-1/5 px-4">                       
                                     <div className="rounded-full overflow-hidden h-[180px] aspect-square">
@@ -75,7 +75,7 @@ export const AboutTeam = ({image,...props}: any) => {
                             
             <div className="w-full bg-neutral-100/75 py-10 md:py-20 mt-10 ">
                 {editors.map((editor, index) =>(
-                     <RevealComponent index={index} variants={fadeBottomTop}>
+                     <RevealComponent  key={index} index={index} variants={fadeBottomTop}>
                         <div key={index} className="max-w-screen-xl mx-auto flex flex-wrap justify-center px-2 md:px-6 items-center pt-10 ">
                                 <div className="w-full md:w-1/5 px-4">                       
                                 <div className="rounded-full overflow-hidden h-[180px] aspect-square">
@@ -95,7 +95,7 @@ export const AboutTeam = ({image,...props}: any) => {
             </div>          
             <div className="w-full bg-white py-10 md:py-10 ">  
                 {photobooth.map((employee, index) =>(
-                    <RevealComponent index={index} variants={fadeBottomTop}>
+                    <RevealComponent  key={index} index={index} variants={fadeBottomTop}>
                             <div key={index} className="max-w-screen-xl mx-auto flex flex-wrap justify-center px-2 md:px-6 items-center pt-10 ">
                                 <div className="w-full md:w-1/5 px-4">                       
                                     <div className="rounded-full overflow-hidden h-[180px] aspect-square">
