@@ -31,11 +31,13 @@ export const AboutIntro = ({image,...props}: any) => {
                         <Image className='object-cover object-center h-full w-full duration-500 ease-in-out hover:scale-95'  src={image} alt="Wedding Photography"  /> 
                     </div>
                 </div>
+                {/* Button 
                 <div className="flex justify-left space-y-2 lg:space-y-0">
                             <div className="md:text-right text-center pr-4">
                                 <Button href="/about-wedding-photographer/about_team" className="rounded-xl">Meet our Red Barn Team...</Button>
                             </div>
-                          </div>
+                </div>
+                */}
             </div>
         </div>
         <div className="w-full bg-neutral-100/75 py-10 md:py-20">
