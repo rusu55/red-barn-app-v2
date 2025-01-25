@@ -24,8 +24,10 @@ model Blog {
   highlights  Boolean?
   sample Boolean?
   orderBy Int?
-   venueId     String?  @db.ObjectId
+  venueId     String?  @db.ObjectId
   venue       Venue?   @relation("VenueField", fields: [venueId], references: [id], onDelete: Cascade)
+  employeeId  String?  @db.ObjectId
+  employee    Employee? @relation("EmployeePhotoField", fields: [employeeId], references: [id], onDelete: Cascade)
 }
 
 model Portfolio {
@@ -85,4 +87,20 @@ model VideoPortfolio {
    venueId String?  @db.ObjectId
    venue   Venue?   @relation("VideoField", fields: [venueId], references: [id], onDelete: Cascade)
    orderBy Int?
+    employeeId  String?  @db.ObjectId
+    employee    Employee? @relation("EmployeeVideoField", fields: [employeeId], references: [id], onDelete: Cascade)
 }
+
+model Employee {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  name        String
+  email       String?
+  phone       String?
+  title    String
+  description String?
+  photo       String?
+  createAt    DateTime @default(now())
+  photography    Blog[] @relation("EmployeePhotoField") 
+  videography    VideoPortfolio[] @relation("EmployeeVideoField")
+}
+

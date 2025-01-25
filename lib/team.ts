@@ -14,7 +14,7 @@ export const managers = [
     photo: '/images/team/bogdan.jpg',
     title: 'Photo Manager / Photographer & Videographer',
     details: [
-        'Bogdan is the creative heartbeat of Red Bank Studio, bringing a keen eye and unmatched expertise to every wedding he touches. As Photo Manager, he oversees the editing process with precision and care, ensuring each image reflects the magic of your special day. A talented photographer himself, Bogdan loves capturing heartfelt moments and turning them into timeless memories for couples to treasure forever.',
+        'Bogdan is the creative heartbeat of Red Barn Wedding Studio, bringing a keen eye and unmatched expertise to every wedding he touches. As Photo Manager, he oversees the editing process with precision and care, ensuring each image reflects the magic of your special day. A talented photographer himself, Bogdan loves capturing heartfelt moments and turning them into timeless memories for couples to treasure forever.',
         'Beyond his work behind the lens and in the studio, Bogdan finds inspiration at home with his daughter, who brings joy and creativity into his everyday life. His deep understanding of family and connection translates into the way he photographs weddings—intimately, authentically, and with a personal touch.',
         '“Photography is more than a job to me; it`s a way to freeze moments in time and tell stories that couples and their families will cherish for generations.”'
     ]
@@ -24,9 +24,9 @@ export const managers = [
     photo: '/images/team/fanuel.jpg',
     title: 'Cinematography Manager / Photographer & Videographer',
     details: [
-        ' Fanuel is the creative visionary behind Red Bank Studio`s stunning wedding films. As Video Manager, he ensures every couple`s love story is brought to life with cinematic artistry and heartfelt storytelling. With an eye for detail and a passion for capturing the magic of the moment, Fanuel oversees every aspect of the videography process—from planning and shooting to editing and final delivery.',
+        ' Fanuel is the creative visionary behind Red Barn Wedding Studio`s stunning wedding films. As Video Manager, he ensures every couple`s love story is brought to life with cinematic artistry and heartfelt storytelling. With an eye for detail and a passion for capturing the magic of the moment, Fanuel oversees every aspect of the videography process—from planning and shooting to editing and final delivery.',
         'Fanuel`s technical expertise and creative flair blend seamlessly, resulting in timeless videos that couples cherish for a lifetime. Whether it`s capturing the joy of your first dance or the tearful moments of your vows, Fanuel`s dedication ensures that every second is beautifully preserved.',
-        'Outside the studio, Fanuel finds inspiration in exploring new filmmaking techniques, ensuring Red Bank Studio remains at the forefront of wedding videography trends.'
+        'Outside the studio, Fanuel finds inspiration in exploring new filmmaking techniques, ensuring Red Barn Wedding Studio remains at the forefront of wedding videography trends.'
     ]
 },
 {
@@ -46,9 +46,9 @@ export const employees = [
         photo: '/images/team/florin.jpg',
         title: 'Photographer & Videographer',
         details: [
-            'Shan is a storyteller at heart, using his camera to capture the emotions, details, and joy that make each wedding unique. As one of Red Barn Studio`s talented photographers, he combines technical expertise with a creative flair, ensuring every couple`s special day is documented beautifully.',
-            'With a passion for traveling, Shan draws inspiration from the places he`s explored and the cultures he`s encountered. This love for adventure brings a fresh perspective to his work, allowing him to see beauty in every moment and setting. Whether it`s an intimate ceremony or a grand celebration, Shan`s goal is to create photographs that resonate deeply with each couple.',
-            '“Every wedding is its own adventure, and I love capturing the moments that make it unforgettable.”'
+            'Johnny- Florian is a dynamic and passionate photographer who brings energy and creativity to every wedding he captures. With the ability to see beyond the surface, and a love for storytelling, he specializes in turning the candid moments of your big day into breathtaking memories you`ll treasure forever.',
+            'Beyond the camera, Johnny is an adventurer at heart... His passion for outdoor activities brings a unique vibrancy to his work. Whether he`s capturing a quiet glance or the liveliest dance floor moves, Johnny enthusiasm shines through in every shot.',
+            
         ]
     },
     {
@@ -56,13 +56,13 @@ export const employees = [
         photo: '/images/team/maks.jpg',
         title: 'Photographer',
         details: [
-            'Maks is a dynamic and passionate photographer who brings energy and creativity to every wedding he captures. With an eye for detail and a love for storytelling, he specializes in turning the candid moments of your big day into breathtaking memories you`ll treasure forever.',
-            'Beyond the camera, James is an adventurer at heart. His passion for traveling fuels his inspiration, while his appreciation for great food and love of dance bring a unique vibrancy to his work. Whether he`s capturing a quiet glance or the liveliest dance floor moves, Maks enthusiasm shines through in every shot.',
-            '“Every wedding is a celebration of love, joy, and connection—and I aim to capture it all with authenticity and flair.”'
+            'Maks is a professional journalistic wedding photographer that started practicing photography over 15 years ago. Maks loves capturing unique and special moments between his couples in the most amazing scenery possible. He always loves to push his craft to create images that his clients will cherish forever. Maks thrives on the challenge and commitment that comes with photo shooting a wedding or event, as you`re fashioning someone`s lifetime dream into a day. He has a natural empathy with each of his clients and they feel confident in his ability to deliver their dreams. People that know him, say that his charm and charisma makes them feel special and that he knows exactly what each couple is looking for…',
+            
+            'In his spare time, Maks enjoys computers and the gaming field, and everything related to the new world of AI. He`s sharing some of these passions with his daughter, creating 3D objects and figurines, presenting art in a new and unique way. '
         ]
     },
     {
-        name: 'Tony N.',
+        name: 'Anton B.',
         photo: '/images/team/florin.jpg',
         title: 'Videographer',
         details: [
@@ -91,6 +91,16 @@ export const employees = [
             '“Every couple has a unique story, and I strive to capture it with artistry and precision—turning your most cherished moments into timeless films.”'
         ]
     },
+    {
+        name: 'Tony F.',
+        photo: '/images/team/florin.jpg',
+        title: 'Videographer',
+        details: [
+            'Shan is a storyteller at heart, using his camera to capture the emotions, details, and joy that make each wedding unique. As one of Red Barn Studio`s talented photographers, he combines technical expertise with a creative flair, ensuring every couple`s special day is documented beautifully.',
+            'With a passion for traveling, Shan draws inspiration from the places he`s explored and the cultures he`s encountered. This love for adventure brings a fresh perspective to his work, allowing him to see beauty in every moment and setting. Whether it`s an intimate ceremony or a grand celebration, Shan`s goal is to create photographs that resonate deeply with each couple.',
+            '“Every wedding is its own adventure, and I love capturing the moments that make it unforgettable.”'
+        ]
+    },
 ]
 
 export const editors = [
@@ -109,7 +119,7 @@ export const editors = [
         title: 'Editor',
         photo: '/images/team/cosmin.jpg',
         details: [
-            ' Cosmin is the visionary behind the stunning wedding films crafted at Red Bank Studio. With a keen eye for detail and a passion for storytelling, he transforms raw footage into cinematic masterpieces that capture the emotion and beauty of your special day.',
+            ' Cosmin is the visionary behind the stunning wedding films crafted at Red Barn Wedding Studio. With a keen eye for detail and a passion for storytelling, he transforms raw footage into cinematic masterpieces that capture the emotion and beauty of your special day.',
             '  When he`s not in the editing suite, you`ll find Cosmin planning his next adventure, camera in hand, ready to document life`s extraordinary moments—just as he does for every couple who entrusts him with their memories.',
             '“Every wedding is a journey, and my goal is to create a film that takes couples back to those cherished moments, time and time again.”',
         ]
@@ -122,7 +132,7 @@ export const photobooth = [
         title: 'Photo Booth Attendant',
         photo: '/images/team/andreea.jpg',
         details: [
-            'Cosmin is the visionary behind the stunning wedding films crafted at Red Bank Studio. With a keen eye for detail and a passion for storytelling, he transforms raw footage into cinematic masterpieces that capture the emotion and beauty of your special day.',
+            'Cosmin is the visionary behind the stunning wedding films crafted at Red Barn Wedding Studio. With a keen eye for detail and a passion for storytelling, he transforms raw footage into cinematic masterpieces that capture the emotion and beauty of your special day.',
             ' When he`s not in the editing suite, you`ll find Cosmin planning his next adventure, camera in hand, ready to document life`s extraordinary moments—just as he does for every couple who entrusts him with their memories.',
             '“Every wedding is a journey, and my goal is to create a film that takes couples back to those cherished moments, time and time again.”',
         ]
@@ -132,7 +142,7 @@ export const photobooth = [
         title: 'Photo Booth Attendant',
         photo: '/images/team/johnny.jpg',
         details: [
-            'Cosmin is the visionary behind the stunning wedding films crafted at Red Bank Studio. With a keen eye for detail and a passion for storytelling, he transforms raw footage into cinematic masterpieces that capture the emotion and beauty of your special day.',
+            'Cosmin is the visionary behind the stunning wedding films crafted at Red Barn Wedding Studio. With a keen eye for detail and a passion for storytelling, he transforms raw footage into cinematic masterpieces that capture the emotion and beauty of your special day.',
             ' When he`s not in the editing suite, you`ll find Cosmin planning his next adventure, camera in hand, ready to document life`s extraordinary moments—just as he does for every couple who entrusts him with their memories.',
             '“Every wedding is a journey, and my goal is to create a film that takes couples back to those cherished moments, time and time again.”',
         ] 
