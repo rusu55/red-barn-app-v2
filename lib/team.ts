@@ -34,9 +34,8 @@ export const managers = [
     photo: '/images/team/elena.jpg',
     title: 'Office Manager / Photographer & Event Planner',
     details: [
-        ' Fanuel is the creative visionary behind Red Bank Studio`s stunning wedding films. As Video Manager, he ensures every couple`s love story is brought to life with cinematic artistry and heartfelt storytelling. With an eye for detail and a passion for capturing the magic of the moment, Fanuel oversees every aspect of the videography process—from planning and shooting to editing and final delivery.',
-        'Fanuel`s technical expertise and creative flair blend seamlessly, resulting in timeless videos that couples cherish for a lifetime. Whether it`s capturing the joy of your first dance or the tearful moments of your vows, Fanuel`s dedication ensures that every second is beautifully preserved.',
-        'Outside the studio, Fanuel finds inspiration in exploring new filmmaking techniques, ensuring Red Bank Studio remains at the forefront of wedding videography trends.'
+        'Elena is a very talented photographer shooting for 10 years now, with an eye for detail and elegance... With many years of customer service experience, she brings her expertise in advising and attending our clientele. Our brides would describe her as customer service oriented, knowledgeable and very detailed in explaining the packages and our company`s workflow, responsive to all our couple`s requests and questions, outgoing, caring, and friendly. ',
+        'Elena really enjoys traveling and seeing the world at its best, feeling the vibe of different countries, cities and cultures... Some of the spots she really enjoys and recommends them with an open heart are Cartagena, Lisbon, Dublin & London. '
     ]
 },
 ]
