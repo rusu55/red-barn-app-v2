@@ -1,7 +1,8 @@
 import React from 'react'
 
-export const PhotographerPortfolio = () => {
+const PhotographerPortfolio = () => {
   return (
     <div>page</div>
   )
 }
+export default PhotographerPortfolio
