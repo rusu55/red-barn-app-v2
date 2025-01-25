@@ -2,8 +2,9 @@ import Image from "next/image";
 
 import { RevealComponent } from "../ui/RevealComponent";
 import { fadeBottomTop } from "@/lib/animation";
-
-import { managers, employees, editors, photobooth } from "@/lib/team";
+import img1 from '/public/images/team/img1.webp';
+import img2 from '/public/images/team/img2.webp';
+import img3 from '/public/images/team/img3.webp';
 import Link from "next/link";
 export const AboutTeam = ({image, team}: any) => {
     const managers = team.filter((team: any)=> team.role === 'manager')
@@ -14,7 +15,7 @@ export const AboutTeam = ({image, team}: any) => {
 
     return (
         <>
-            <div className='max-w-screen-xl mx-auto flex flex-wrap justify-center px-2 md:px-6'>
+            <div className='max-w-screen-xl mx-auto flex flex-wrap justify-center px-2 md:px-6 py-10'>
                  {/* Block Text*/}
                  <div className="w-full md:w-1/2 px-4">
                     <div className="flex flex-col px-4 pb-8">                    
@@ -30,11 +31,19 @@ export const AboutTeam = ({image, team}: any) => {
                 </div>
                  {/* Block Image*/}
                 <div className="w-full md:w-1/2 px-4 mt-20">
-                    <div className='relative w-full'>
-                        <div className='relative pt-4 pb-4 mb-8 max-w-[600px] img'>
-                            <Image className='object-cover object-center h-full w-full duration-500 ease-in-out hover:scale-95'  src={image} alt=""  /> 
-                        </div>
+                <div className='w-full'>
+                    <div className='grid grid-rows-2 grid-flow-col gap-2 items-center'>
+                      <div className="row-span-2">
+                        <Image className='object-cover rounded-lg md:h-[508px] duration-500 ease-in-out hover:scale-95'  src={img3} alt=""  /> 
+                      </div>
+                      <div>
+                        <Image className='object-cover rounded-lg md:h-[255px] duration-500 ease-in-out hover:scale-95'  src={img2} alt=""  /> 
+                      </div>
+                      <div>
+                        <Image className='object-cover rounded-lg md:h-[255px] duration-500 ease-in-out hover:scale-95'  src={img1} alt=""  /> 
+                      </div>                       
                     </div>
+                </div>
                 </div>
             </div>
             <div className="w-full bg-neutral-100/75 py-10 md:py-20">
@@ -52,8 +61,15 @@ export const AboutTeam = ({image, team}: any) => {
                                                     <h3 className=" text-2xl pb-6 pt-4 md:pt-0">{manager.name}  <span className="text-md  font-thin text-roze">- {manager.title}</span></h3>
                                                     {manager.details?.map((paragraph: string, index: number) => (
                                                         <p key={index}> {paragraph }</p>
-                                                    ))}  
-                                                   <Link href={`/about-wedding-photographer/about_team/${manager.id}`} className="block text-base text-roze underline text-right -mt-4 pr-12">Check Portfolio...</Link>                              
+                                                    ))} 
+                                                    <span className=" font-pariss text-lg font-bold ">Check Portfolio: </span>
+                                                    {manager.photography.length > 0 ? (
+                                                        manager.photography.map((portfolio: any, index: number) => (
+                                                            <Link key={index} href={`/blog/${portfolio.id}`} className="block text-base text-roze underline ">{portfolio.title} ...</Link>
+                                                        ))
+                                                        
+                                                    ) : (<p className="text-base text-roze underline">Portfolio comming soon!</p>)} 
+                                                                                 
                                             </div>                                           
                                                 
                                                       
@@ -77,6 +93,13 @@ export const AboutTeam = ({image, team}: any) => {
                                         {shooter.details.map((paragraph: string, index: number) => (
                                                         <p key={index}> {paragraph }</p>
                                                     ))} 
+                                         <span className=" font-pariss text-lg font-bold ">Check Portfolio: </span>
+                                                    {shooter.photography.length > 0 ? (
+                                                        shooter.photography.map((portfolio: any, index: number) => (
+                                                            <Link key={index} href={`/blog/${portfolio.id}`} className="block text-base text-roze underline ">{portfolio.title} ...</Link>
+                                                        ))
+                                                        
+                                                    ) : (<p className="text-base text-roze underline">Portfolio comming soon!</p>)} 
                                 </div>    
                             </div> 
                             </RevealComponent>

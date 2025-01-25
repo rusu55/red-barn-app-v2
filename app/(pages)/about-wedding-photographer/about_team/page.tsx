@@ -14,12 +14,16 @@ export const metadata: Metadata = {
 
 const OurTeamPage = async () => {
   const team = await prisma.employee.findMany({ 
+    include:{
+      photography: true,
+      videography: true,
+    },
     orderBy: [{ orderBy: "asc" }],
   }); 
-
+console.log(team);
   return (
     <div className="pt-20 md:pt-0">
-      <Hero image={aboutImage} title={""} description={""} />
+      <Hero image={aboutImage} title={"Best Photographers & Videographers"} description={"Best Photographers & Videographers"} />
       <AboutTeam  image={img1} team={team}/>
       <HomeReviews/>
       <HomeIcons />
