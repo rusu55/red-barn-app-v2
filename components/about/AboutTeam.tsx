@@ -1,9 +1,17 @@
 import Image from "next/image";
+
 import { RevealComponent } from "../ui/RevealComponent";
 import { fadeBottomTop } from "@/lib/animation";
 
 import { managers, employees, editors, photobooth } from "@/lib/team";
-export const AboutTeam = ({image,...props}: any) => {
+import Link from "next/link";
+export const AboutTeam = ({image, team}: any) => {
+    const managers = team.filter((team: any)=> team.role === 'manager')
+    const shooters = team.filter((team: any) => team.role ==="shooter")
+    const editors = team.filter((team: any) => team.role === "editor")
+    const photobooth = team.filter((team: any) => team.role === "photobooth")
+    //console.log(manager)
+
     return (
         <>
             <div className='max-w-screen-xl mx-auto flex flex-wrap justify-center px-2 md:px-6'>
@@ -30,10 +38,10 @@ export const AboutTeam = ({image,...props}: any) => {
                 </div>
             </div>
             <div className="w-full bg-neutral-100/75 py-10 md:py-20">
-                            {managers.map((manager, index: number) =>{
+                            {managers.map((manager:any, index: number) =>{
                                 return(
                                     <RevealComponent key={index} index={index} variants={fadeBottomTop}>
-                                    <div key={index} className="max-w-screen-xl mx-auto flex flex-wrap  px-2 md:px-6 md:items-center justify-center pb-10">
+                                    <div key={index} className="max-w-screen-xl mx-auto flex flex-wrap  px-2 md:px-6 md:items-center justify-center pb-12">
                                         
                                             <div className="md:w-1/5 md:px-4">                       
                                                 <div className="rounded-full overflow-hidden h-[180px] aspect-square">
@@ -42,29 +50,31 @@ export const AboutTeam = ({image,...props}: any) => {
                                             </div>
                                             <div className="px-4 text-center md:text-left md:pl-10 w-full md:w-4/5">
                                                     <h3 className=" text-2xl pb-6 pt-4 md:pt-0">{manager.name}  <span className="text-md  font-thin text-roze">- {manager.title}</span></h3>
-                                                    {manager.details.map((paragraph, index) => (
+                                                    {manager.details?.map((paragraph: string, index: number) => (
                                                         <p key={index}> {paragraph }</p>
-                                                    ))}                                
-                                            </div>
-                                                             
+                                                    ))}  
+                                                   <Link href={`/about-wedding-photographer/about_team/${manager.id}`} className="block text-base text-roze underline text-right -mt-4 pr-12">Check Portfolio...</Link>                              
+                                            </div>                                           
+                                                
+                                                      
                                     </div>
                                     </RevealComponent>
                                 )
                             })}                
             </div>
             <div className="w-full bg-white py-10 md:py-10 ">  
-                {employees.map((employee, index: number) =>(
+                {shooters.map((shooter: any, index: number) =>(
                              <RevealComponent  key={index} index={index} variants={fadeBottomTop}>
                             <div key={index} className="max-w-screen-xl mx-auto flex flex-wrap justify-center px-2 md:px-6 items-center pt-10 ">
                                 <div className="w-full md:w-1/5 px-4">                       
                                     <div className="rounded-full overflow-hidden h-[180px] aspect-square">
-                                        <Image className='object-cover  h-[220px] w-[220px] duration-500 ease-in-out hover:scale-110'  src={employee.photo} alt="photo and video" width={280} height={280}  />
+                                        <Image className='object-cover  h-[220px] w-[220px] duration-500 ease-in-out hover:scale-110'  src={shooter.photo} alt="photo and video" width={280} height={280}  />
                                     </div>
                                 </div>
                                 <div className="pl-10 w-full md:w-4/5">
-                                        <h3 className=" text-2xl pb-6">{employee.name} <span className="text-md  font-thin text-roze">-  {employee.title}</span></h3>
+                                        <h3 className=" text-2xl pb-6">{shooter.name} <span className="text-md  font-thin text-roze">-  {shooter.title}</span></h3>
                                         
-                                        {employee.details.map((paragraph, index) => (
+                                        {shooter.details.map((paragraph: string, index: number) => (
                                                         <p key={index}> {paragraph }</p>
                                                     ))} 
                                 </div>    
@@ -74,7 +84,7 @@ export const AboutTeam = ({image,...props}: any) => {
              </div>                  
                             
             <div className="w-full bg-neutral-100/75 py-10 md:py-20 mt-10 ">
-                {editors.map((editor, index) =>(
+                {editors.map((editor: any, index: number) =>(
                      <RevealComponent  key={index} index={index} variants={fadeBottomTop}>
                         <div key={index} className="max-w-screen-xl mx-auto flex flex-wrap justify-center px-2 md:px-6 items-center pt-10 ">
                                 <div className="w-full md:w-1/5 px-4">                       
@@ -84,7 +94,7 @@ export const AboutTeam = ({image,...props}: any) => {
                             </div>
                             <div className="pl-10 w-full md:w-4/5">
                                     <h3 className=" text-2xl pb-6">{editor.name}  <span className="text-md  font-thin text-roze">-  Editor</span></h3>
-                                    {editor.details.map((paragraph, index) => (
+                                    {editor.details.map((paragraph: string, index: number) => (
                                         <p key={index}> {paragraph}</p>
                                     ))}
                                     
@@ -94,7 +104,7 @@ export const AboutTeam = ({image,...props}: any) => {
                 ))}                   
             </div>          
             <div className="w-full bg-white py-10 md:py-10 ">  
-                {photobooth.map((employee, index) =>(
+                {photobooth.map((employee: any, index: number) =>(
                     <RevealComponent  key={index} index={index} variants={fadeBottomTop}>
                             <div key={index} className="max-w-screen-xl mx-auto flex flex-wrap justify-center px-2 md:px-6 items-center pt-10 ">
                                 <div className="w-full md:w-1/5 px-4">                       
@@ -105,7 +115,7 @@ export const AboutTeam = ({image,...props}: any) => {
                                 <div className="pl-10 w-full md:w-4/5">
                                         <h3 className=" text-2xl pb-6">{employee.name} <span className="text-md  font-thin text-roze">-  {employee.title}</span></h3>
                                         
-                                        {employee.details.map((paragraph, index) => (
+                                        {employee.details.map((paragraph: string, index: number) => (
                                                         <p key={index}> {paragraph }</p>
                                                     ))} 
                                 </div>    

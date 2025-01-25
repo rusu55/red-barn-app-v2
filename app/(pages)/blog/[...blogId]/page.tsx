@@ -1,10 +1,8 @@
 import Image from "next/image";
 import { Metadata, ResolvingMetadata } from "next";
 import { RenderHTML } from "@/lib/render-html";
-import Head from "next/head";
-
 import _ from "lodash";
-import prisma from "@/prisma/prisma";
+
 
 
 export async function generateMetadata(
