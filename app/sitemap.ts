@@ -22,6 +22,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap>{
             url: `${process.env.BASE_URL}/about-wedding-photographer`
         },
         {
+            url: `${process.env.BASE_URL}/about-wedding-photographer/about_team`
+        },
+        {
             url: `${process.env.BASE_URL}/chicago-wedding-photographer`
         },
         {

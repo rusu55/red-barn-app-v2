@@ -50,22 +50,26 @@ export const AboutTeam = ({image, team}: any) => {
                             {managers.map((manager:any, index: number) =>{
                                 return(
                                     <RevealComponent key={index} index={index} variants={fadeBottomTop}>
-                                    <div key={index} className="max-w-screen-xl mx-auto flex flex-wrap  px-2 md:px-6 md:items-center justify-center pb-12">
+                                    <div key={index} className="max-w-screen-xl mx-auto flex flex-wrap  px-2 md:px-6 md:items-center justify-center md:space-y-16 space-y-8">
                                         
                                             <div className="md:w-1/5 md:px-4">                       
                                                 <div className="rounded-full overflow-hidden h-[180px] aspect-square">
                                                     <Image className='object-cover  h-[240px] w-[240px] duration-500 ease-in-out hover:scale-110'  src={manager.photo} alt="wedding photographer" width={280} height={280} />
                                                 </div>
                                             </div>
-                                            <div className="px-4 text-center md:text-left md:pl-10 w-full md:w-4/5">
+                                            <div className="pb-6 px-4 text-center md:text-left md:pl-10 w-full md:w-4/5">
                                                     <h3 className=" text-2xl pb-6 pt-4 md:pt-0">{manager.name}  <span className="text-md  font-thin text-roze">- {manager.title}</span></h3>
                                                     {manager.details?.map((paragraph: string, index: number) => (
                                                         <p key={index}> {paragraph }</p>
                                                     ))} 
                                                     <span className=" font-pariss text-lg font-bold ">Check Portfolio: </span>
+                                                    
                                                     {manager.photography.length > 0 ? (
-                                                        manager.photography.map((portfolio: any, index: number) => (
-                                                            <Link key={index} href={`/blog/${portfolio.id}`} className="block text-base text-roze underline ">{portfolio.title} ...</Link>
+                                                                                                                
+                                                        manager.photography
+                                                        .sort((a: any, b:any) => Number(a.portfolioNo) - Number(b.portfolioNo))
+                                                        .map((portfolio: any, index: number) => (
+                                                            <Link key={index} href={`/blog/${portfolio.id}`} className="block leading-relaxed text-base text-roze underline ">{portfolio.title} ...</Link>
                                                         ))
                                                         
                                                     ) : (<p className="text-base text-roze underline">Portfolio comming soon!</p>)} 
@@ -81,13 +85,13 @@ export const AboutTeam = ({image, team}: any) => {
             <div className="w-full bg-white py-10 md:py-10 ">  
                 {shooters.map((shooter: any, index: number) =>(
                              <RevealComponent  key={index} index={index} variants={fadeBottomTop}>
-                            <div key={index} className="max-w-screen-xl mx-auto flex flex-wrap justify-center px-2 md:px-6 items-center pt-10 ">
-                                <div className="w-full md:w-1/5 px-4">                       
+                            <div key={index} className="max-w-screen-xl mx-auto flex flex-wrap justify-center px-2 md:px-6 md:items-center  md:space-y-16 space-y-8">
+                                <div className=" md:w-1/5 px-4">                       
                                     <div className="rounded-full overflow-hidden h-[180px] aspect-square">
                                         <Image className='object-cover  h-[220px] w-[220px] duration-500 ease-in-out hover:scale-110'  src={shooter.photo} alt="photo and video" width={280} height={280}  />
                                     </div>
                                 </div>
-                                <div className="pl-10 w-full md:w-4/5">
+                                <div className="pb-6 px-4 text-center md:text-left md:pl-10 w-full md:w-4/5">
                                         <h3 className=" text-2xl pb-6">{shooter.name} <span className="text-md  font-thin text-roze">-  {shooter.title}</span></h3>
                                         
                                         {shooter.details.map((paragraph: string, index: number) => (
@@ -95,8 +99,10 @@ export const AboutTeam = ({image, team}: any) => {
                                                     ))} 
                                          <span className=" font-pariss text-lg font-bold ">Check Portfolio: </span>
                                                     {shooter.photography.length > 0 ? (
-                                                        shooter.photography.map((portfolio: any, index: number) => (
-                                                            <Link key={index} href={`/blog/${portfolio.id}`} className="block text-base text-roze underline ">{portfolio.title} ...</Link>
+                                                        shooter.photography
+                                                        .sort((a: any, b:any) => Number(a.portfolioNo) - Number(b.portfolioNo))
+                                                        .map((portfolio: any, index: number) => (
+                                                            <Link key={index} href={`/blog/${portfolio.id}`} className="block text-base leading-relaxed text-roze underline ">{portfolio.title} ...</Link>
                                                         ))
                                                         
                                                     ) : (<p className="text-base text-roze underline">Portfolio comming soon!</p>)} 
@@ -109,14 +115,14 @@ export const AboutTeam = ({image, team}: any) => {
             <div className="w-full bg-neutral-100/75 py-10 md:py-20 mt-10 ">
                 {editors.map((editor: any, index: number) =>(
                      <RevealComponent  key={index} index={index} variants={fadeBottomTop}>
-                        <div key={index} className="max-w-screen-xl mx-auto flex flex-wrap justify-center px-2 md:px-6 items-center pt-10 ">
-                                <div className="w-full md:w-1/5 px-4">                       
+                        <div key={index} className="max-w-screen-xl mx-auto flex flex-wrap justify-center px-2 md:px-6 items-center md:space-y-16 space-y-8 ">
+                                <div className="md:w-1/5 px-4">                       
                                 <div className="rounded-full overflow-hidden h-[180px] aspect-square">
                                     <Image className='object-cover  h-[220px] w-[220px] duration-500 ease-in-out hover:scale-110'  src={editor.photo} alt="editor"  width={280} height={280} />
                                 </div>
                             </div>
-                            <div className="pl-10 w-full md:w-4/5">
-                                    <h3 className=" text-2xl pb-6">{editor.name}  <span className="text-md  font-thin text-roze">-  Editor</span></h3>
+                            <div className="pb-6 pl-10 w-full md:w-4/5">
+                                    <h3 className="pb-6 px-4 text-center md:text-left md:pl-10 w-full md:w-4/5">{editor.name}  <span className="text-md  font-thin text-roze">-  Editor</span></h3>
                                     {editor.details.map((paragraph: string, index: number) => (
                                         <p key={index}> {paragraph}</p>
                                     ))}
@@ -129,14 +135,14 @@ export const AboutTeam = ({image, team}: any) => {
             <div className="w-full bg-white py-10 md:py-10 ">  
                 {photobooth.map((employee: any, index: number) =>(
                     <RevealComponent  key={index} index={index} variants={fadeBottomTop}>
-                            <div key={index} className="max-w-screen-xl mx-auto flex flex-wrap justify-center px-2 md:px-6 items-center pt-10 ">
-                                <div className="w-full md:w-1/5 px-4">                       
+                            <div key={index} className="max-w-screen-xl mx-auto flex flex-wrap justify-center px-2 md:px-6 items-center  md:space-y-16 space-y-8 ">
+                                <div className=" md:w-1/5 px-4">                       
                                     <div className="rounded-full overflow-hidden h-[180px] aspect-square">
                                         <Image className='object-cover  h-[220px] w-[220px] duration-500 ease-in-out hover:scale-110'  src={employee.photo} alt="photo and video" width={280} height={280}  />
                                     </div>
                                 </div>
-                                <div className="pl-10 w-full md:w-4/5">
-                                        <h3 className=" text-2xl pb-6">{employee.name} <span className="text-md  font-thin text-roze">-  {employee.title}</span></h3>
+                                <div className="pb-6 pl-10 w-full md:w-4/5">
+                                        <h3 className="pb-6 px-4 text-center md:text-left md:pl-10 w-full md:w-4/5">{employee.name} <span className="text-md  font-thin text-roze">-  {employee.title}</span></h3>
                                         
                                         {employee.details.map((paragraph: string, index: number) => (
                                                         <p key={index}> {paragraph }</p>

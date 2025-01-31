@@ -24,6 +24,7 @@ model Blog {
   highlights  Boolean?
   sample Boolean?
   orderBy Int?
+  portfolioNo Int?
   venueId     String?  @db.ObjectId
   venue       Venue?   @relation("VenueField", fields: [venueId], references: [id], onDelete: Cascade)
   employeeId  String?  @db.ObjectId
