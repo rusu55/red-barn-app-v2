@@ -28,7 +28,7 @@ interface TeamMember {
 }
 
 export const TeamCard = ({ member }: { member: TeamMember }) => {
-  const videoUrl=`https://redbarnbucket.blob.core.windows.net/redbarncontainer/30044b19-609f-4e31-ba5a-3add4db86660.mp4`;
+ 
   return (
     
     <RevealComponent variants={fadeBottomTop}>
