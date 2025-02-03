@@ -1,12 +1,13 @@
 "use client";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
-import LightGallery from "lightgallery/react";
-import lgZoom from "lightgallery/plugins/zoom";
-import lgVideo from "lightgallery/plugins/video";
+const LightGallery = dynamic(() => import("lightgallery/react"), { ssr: false });
 import "lightgallery/css/lightgallery.css";
 import "lightgallery/css/lg-zoom.css";
 import "lightgallery/css/lg-video.css";
+import lgZoom from "lightgallery/plugins/zoom";
+import lgVideo from "lightgallery/plugins/video";
 import { RevealComponent } from "../ui/RevealComponent";
 import { fadeBottomTop } from "@/lib/animation";
 
@@ -27,7 +28,9 @@ interface TeamMember {
 }
 
 export const TeamCard = ({ member }: { member: TeamMember }) => {
+  const videoUrl=`https://redbarnbucket.blob.core.windows.net/redbarncontainer/30044b19-609f-4e31-ba5a-3add4db86660.mp4`;
   return (
+    
     <RevealComponent variants={fadeBottomTop}>
       <div className="max-w-screen-xl mx-auto flex flex-wrap justify-center px-2 md:px-6 md:items-center space-y-8 md:space-y-16">
         <div className="md:w-1/5 px-4">
@@ -48,14 +51,16 @@ export const TeamCard = ({ member }: { member: TeamMember }) => {
               - {member.title}
             </span>
           </h3>
+          
           {member.details.map((paragraph, index) => (
             <p key={index}>{paragraph}</p>
           ))}
-          {member.photography && member.photography.length > 0 && (
-            <>
-              <span className="font-pariss text-lg font-bold">
+          <span className="font-pariss text-lg font-bold">
                 Check Portfolio:{" "}
               </span>
+          {member.photography && member.photography.length > 0 && (
+            <>
+              
               {member.photography
                 .sort((a, b) => Number(a.portfolioNo) - Number(b.portfolioNo))
                 .map((portfolio, index) => (
@@ -71,25 +76,38 @@ export const TeamCard = ({ member }: { member: TeamMember }) => {
           )}
           {member.videography && member.videography.length > 0 && (
             <>
-              <span className="font-pariss text-lg font-bold">
-                Check Portfolio:{" "}
-              </span>
+              
               <LightGallery
-                elementClassNames="w-full md:w-[50%] grid gap-y-8 sm:gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-4 2xl:gap-5 px-4"
+                
                 plugins={[lgVideo, lgZoom]}
                 download={false}
+                 elementClassNames="w-full flex flex-col "
               >
                 {member.videography
                   .sort((a, b) => Number(a.portfolioNo) - Number(b.portfolioNo))
-                  .map((portfolio, index) => (
-                    <Link
-                      key={index}
-                      href={"#"}
+                  .map((video, index) => {
+                    
+                    return(
+                    <div
+                      key={index}                     
                       className="block text-base leading-relaxed text-roze underline"
+                      data-lg-size="1920-1080"
+                      data-video={JSON.stringify({
+                        source: [{ src: `https://redbarnbucket.blob.core.windows.net/redbarncontainer/${video.videoName}`, type: "video/mp4" }],
+                        attributes: { 
+                          preload: false, 
+                          controls: true,
+                          controlsList: "nodownload",
+                          autoplay: true,
+                         
+                        }
+                      })}
+                      
                     >
-                      {portfolio.title} ...
-                    </Link>
-                  ))}
+                     {video.title}
+                    </div>
+                    )
+              })}
               </LightGallery>
             </>
           )}

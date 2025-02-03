@@ -82,12 +82,13 @@ model VideoPortfolio {
    id      String   @id @default(auto()) @map("_id") @db.ObjectId
    title String
    description String
-   videoUrl     String?  
+   videoName     String  
    hero String?
    createAt    DateTime @default(now())
    venueId String?  @db.ObjectId
    venue   Venue?   @relation("VideoField", fields: [venueId], references: [id], onDelete: Cascade)
    orderBy Int?
+   portfolioNo Int?
     employeeId  String?  @db.ObjectId
     employee    Employee? @relation("EmployeeVideoField", fields: [employeeId], references: [id], onDelete: Cascade)
 }
