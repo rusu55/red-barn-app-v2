@@ -15,6 +15,7 @@ interface Portfolio {
   id: string;
   title: string;
   portfolioNo: number;
+  videoName: string;
 }
 
 interface TeamMember {
@@ -86,7 +87,7 @@ export const TeamCard = ({ member }: { member: TeamMember }) => {
                 {member.videography
                   .sort((a, b) => Number(a.portfolioNo) - Number(b.portfolioNo))
                   .map((video, index) => {
-                    
+                    console.log(video)
                     return(
                     <div
                       key={index}                     
