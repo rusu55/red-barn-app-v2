@@ -56,9 +56,12 @@ export const TeamCard = ({ member }: { member: TeamMember }) => {
           {member.details.map((paragraph, index) => (
             <p key={index}>{paragraph}</p>
           ))}
-          <span className="font-pariss text-lg font-bold">
-                Check Portfolio:{" "}
-              </span>
+          {member.role === 'manager' || member.role === 'shooter'  ? (
+            <span className="font-pariss text-lg font-bold">
+            Check Portfolio:{" "}
+          </span>
+          ): ('')}
+          
           {member.photography && member.photography.length > 0 && (
             <>
               
