@@ -57,7 +57,7 @@ export const TeamCard = ({ member }: { member: TeamMember }) => {
             <p key={index}>{paragraph}</p>
           ))}
           {member.role === 'manager' || member.role === 'shooter'  ? (
-            <span className="font-pariss text-lg font-bold">
+            <span className="block font-pariss text-lg font-bold pb-3">
             Check Portfolio:{" "}
           </span>
           ): ('')}
@@ -73,13 +73,13 @@ export const TeamCard = ({ member }: { member: TeamMember }) => {
                     href={`/blog/${portfolio.id}`}
                     className="block text-base leading-relaxed text-roze underline"
                   >
-                    {portfolio.title} ...
+                    {portfolio.title} 
                   </Link>
                 ))}
             </>
           )}
           {member.videography && member.videography.length > 0 && (
-            <>
+            <div className={member.photography && member.photography.length > 0? ('pt-4') : ('pt-0')}>
               
               <LightGallery
                 
@@ -113,7 +113,7 @@ export const TeamCard = ({ member }: { member: TeamMember }) => {
                     )
               })}
               </LightGallery>
-            </>
+            </div>
           )}
         </div>
       </div>
