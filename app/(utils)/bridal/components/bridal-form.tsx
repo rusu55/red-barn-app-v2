@@ -1,10 +1,10 @@
 "use client";
 
-import { useMemo } from "react";
+import { Button } from "@/components/ui/Button";
 import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { Field, Fieldset, Label, Legend, Button } from "@headlessui/react";
+import { Field, Fieldset, Label, Legend } from "@headlessui/react";
 
 import { InputDefault } from "./inputDefault";
 import { TextAreaDefault } from "./textAreaDefault";
@@ -50,11 +50,11 @@ const BridalForm = ({ onSubmit, disabled }: Props) => {
   };
   
   return (
-    <div className="w-full max-w-screen-lg mx-auto md:-mt-24 ">
+    <div className="w-full max-w-screen-lg mx-auto md:mt-6">
       <form onSubmit={handleSubmit(formSubmit)}>
         <Fieldset className="space-y-6 rounded-xl bg-neutral-50 p-6 sm:p-10">
           <Legend className="text-base/7 font-semibold">Copule Info:</Legend>
-          <div className="flex flex-col md:flex-row w-full items-start justify-between gap-3 md:space-y-0">
+          <div className="flex flex-col md:flex-row w-full items-center justify-between gap-3 md:space-y-0">
             <Field className="w-full">
               <Label className="text-sm/4 font-medium ">Bride & Groom Name</Label>
               <Controller
@@ -138,12 +138,14 @@ const BridalForm = ({ onSubmit, disabled }: Props) => {
             
             
           </div>
-          <Button
-            className="inline-flex items-center gap-2 rounded-md bg-gray-700 py-1.5 px-3 text-sm/6 font-semibold text-white shadow-inner shadow-white/10 focus:outline-none data-[hover]:bg-gray-600 data-[open]:bg-gray-700 data-[focus]:outline-1 data-[focus]:outline-white"
-            type="submit" disabled={disabled}
-          >
-            Send Form
-          </Button>
+          <div className="w-full flex justify-center" >
+            <Button
+              className="rounded-xl mt-8 w-[200px]" disabled={disabled}
+            >
+              Send Form
+            </Button>
+          </div>
+          
         </Fieldset>
       </form>
     </div>
