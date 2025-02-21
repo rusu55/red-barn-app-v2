@@ -28,23 +28,7 @@ export const Videography = () => {
          </div>
 
          <div className="w-full md:w-1/2 px-4">
-         <div className="flex flex-col">
-                        <span className="uppercase text-md tracking-widest  text-roze pb-3">Photo-Booth</span>
-                        <h2>Photo Booth Package</h2>
-                        <hr className="line line-hr-left" />
-                        <ul>
-                           <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />Coverage during the Reception time</li>
-                           <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />Unlimited Prints</li>
-                           <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />Variety of Props</li>
-                           <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />Choice of the Backdrop</li>
-                           <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />Customized Logo for strips</li>
-                           <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />Scrapbook with a copy of every single strip</li>
-                           <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />Attendant for the duration of the coverage</li>
-                           <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />Online gallery</li>
-
-                        </ul>
-                        <p className="font-pariss text-roze text-xl font-bold py-4 pl-4">$ 995</p>
-                    </div>
+                      
          </div>
     </div>
     </RevealComponent>

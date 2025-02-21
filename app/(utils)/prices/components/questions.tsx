@@ -4,7 +4,7 @@ import { fadeBottomTop } from "@/lib/animation";
 
 export const Questions = ({image}: any) => {
   return (
-    <div className="bg-neutral-100/75"> 
+    
     <RevealComponent index={1} variants={fadeBottomTop}>
     <div className="max-w-screen-xl mx-auto flex flex-wrap justify-center items-center py-4">
         <div className="w-full lg:w-1/2 px-4 py-4 lg:py-0">
@@ -50,6 +50,6 @@ export const Questions = ({image}: any) => {
         </div>
     </div> 
     </RevealComponent>
-</div>
+
   )
 }

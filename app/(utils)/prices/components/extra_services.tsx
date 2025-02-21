@@ -3,6 +3,7 @@ import { RevealComponent } from "@/components/ui/RevealComponent";
 import { fadeBottomTop } from "@/lib/animation";
 export const ExtraServices = () => {
   return (
+    <div className="bg-neutral-100/75"> 
     <RevealComponent index={1} variants={fadeBottomTop}>
         <div className="max-w-screen-xl mx-auto flex flex-wrap justify-center py-14">
                 <div className="w-full md:w-1/2 px-4">
@@ -26,16 +27,21 @@ export const ExtraServices = () => {
                                 <h2>Extra Services</h2>
                                 <hr className="line line-hr-left" />
                                 <div className="w-full lg:w-[90%]">
-                                    <h5 className='text-lg  pt-4 text-left  border-b border-dashed border-slate-200'>Event Photography (min 4 hours)<span className="text-roze float-right text-sm">$275 / hour</span></h5>
-                                    <h5 className='text-lg  pt-4 text-left  border-b border-dashed border-slate-200'>Additional Coverage <span className="text-roze float-right text-sm">$200 / hour (per professional)</span></h5>
                                     <h5 className='text-lg  pt-4 text-left  border-b border-dashed border-slate-200'>Second Photographer<span className="text-roze float-right text-sm">$1000 (10 hours)</span></h5>
                                     <h5 className='text-lg  pt-4 text-left  border-b border-dashed border-slate-200'>Second Videographer<span className="text-roze float-right text-sm">$1000 (10 hours)</span></h5>
-                                    <h5 className='text-lg  pt-4 text-left  border-b border-dashed border-slate-200'>Engagement or Family Session<span className="text-roze float-right text-sm">$375 (45 minutes)</span></h5>
+                                    <h5 className='text-lg  pt-4 text-left  border-b border-dashed border-slate-200'>Engagement Session<span className="text-roze float-right text-sm">$375 (60 minutes)</span></h5>
+                                    <h5 className='text-lg  pt-4 text-left  border-b border-dashed border-slate-200'>Family Session<span className="text-roze float-right text-sm">$375 (60 minutes)</span></h5>
+                                    <h5 className='text-lg  pt-4 text-left  border-b border-dashed border-slate-200'>Proposal Session<span className="text-roze float-right text-sm">$375 (60 minutes)</span></h5>
+                                    <h5 className='text-lg  pt-4 text-left  border-b border-dashed border-slate-200'>Event Photography (min 4 hours)<span className="text-roze float-right text-sm">$275 / hour</span><br /><span className="text-sm">(Corporate, vows renewal or private parties)</span></h5>
+                                    <h5 className='text-lg  pt-4 text-left  border-b border-dashed border-slate-200'>Additional Coverage <span className="text-roze float-right text-sm">$200 / hour (per professional)</span><br /><span className="text-sm">(for booked events)</span></h5>
+                                    
+                                    
                                     <h5 className='text-lg  pt-4 text-left  border-b border-dashed border-slate-200'>Drone Coverage<span className="text-roze float-right text-sm">$400</span></h5>
                                 </div>
                             </div>                            
                 </div>
         </div>
     </RevealComponent>
+    </div>
   )
 }

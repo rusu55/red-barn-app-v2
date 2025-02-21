@@ -18,7 +18,6 @@ const PricePage = () => {
         <Intro image={img1} />
         <Photography  />
         <PhotoVideo />
-        <Videography />
         <ExtraServices />
         <Questions image={img2} />
         <HomeIcons />

@@ -11,8 +11,37 @@ export const Photography = () => {
         <div className="max-w-screen-xl mx-auto flex flex-wrap justify-center items-center pt-12">           
                 
                 <div className="w-full md:w-2/5 px-4">
+                <div className="flex flex-col pt-10">  
+                         <span className="uppercase text-md tracking-widest  text-roze pb-3">Photography Package</span>                      
+                        <h2>Basic Package</h2>
+                        <hr className="line line-hr-left" />
+                        <ul>
+                           <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />8 Hours of Photography by Lead Photographer</li>                           
+                           <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />Over 500 Images on your Wedding Day</li>
+                           <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />Free USB with all images</li>
+                           <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />Full Copyright release</li>
+                           <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />Complimentary Pre-wedding Consultation</li>
+                           <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />Web Gallery to share with your Friends</li>                        
+                        </ul>
+                        <p className="font-pariss text-roze text-xl font-bold py-4 pl-4">$ 1995</p>
+                    </div>
+                    <div className="flex flex-col">                        
+                        <h2>Love Package</h2>
+                        <hr className="line line-hr-left" />
+                        <ul>
+                           <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />10 Hours of Photography by Lead Photographer</li>                           
+                           <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />Over 800 Images on your Wedding Day</li>
+                           <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />Free USB with all images</li>
+                           <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />Full Copyright release</li>
+                           <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />Complimentary Pre-wedding Consultation</li>
+                           <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />Web Gallery to share with your Friends</li>
+                           <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />10x10 Wedding Album (Leather Cover, 30 pages)</li>
+                           
+                        </ul>
+                        <p className="font-pariss text-roze text-xl font-bold py-4 pl-4">$ 2395</p>
+                    </div>
                     <div className="flex flex-col">
-                        <span className="uppercase text-md tracking-widest  text-roze pb-3">Photography Package</span>
+                        
                         <h2>Everlasting Package</h2>
                         <hr className="line line-hr-left" />
                         <ul>
@@ -23,25 +52,9 @@ export const Photography = () => {
                            <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />Full Copyright release</li>
                            <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />Complimentary Pre-wedding Consultation</li>
                            <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />Web Gallery to share with your Friends</li>
-                           <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />Engagement Session</li>
+                           <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />10x10 Wedding Album (Leather Cover, 30 pages)</li>
                         </ul>
-                       <p className="font-pariss text-roze text-xl font-bold py-4 pl-4">$ 3295</p>
-                    </div>
-                    <div className="flex flex-col pt-10">
-                        
-                        <h2>Love Package</h2>
-                        <hr className="line line-hr-left" />
-                        <ul>
-                           <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />10 Hours of Photography by Lead Photographer</li>
-                           
-                           <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />Over 800 Images on your Wedding Day</li>
-                           <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />Free USB with all images</li>
-                           <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />Full Copyright release</li>
-                           <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />Complimentary Pre-wedding Consultation</li>
-                           <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />Web Gallery to share with your Friends</li>
-                           
-                        </ul>
-                        <p className="font-pariss text-roze text-xl font-bold py-4 pl-4">$ 2295</p>
+                       <p className="font-pariss text-roze text-xl font-bold py-4 pl-4">$ 3395</p>
                     </div>
                     <div className="flex flex-col pt-10">
                         <p>Your photos will be delivered between 60-70 days after your wedding via online gallery, they will be high resolution, all edited for color and exposure and without any watermarks. You&apos;ll have full Copyright to all your photos.</p>
