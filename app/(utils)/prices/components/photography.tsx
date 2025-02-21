@@ -16,7 +16,7 @@ export const Photography = () => {
                         <h2>Basic Package</h2>
                         <hr className="line line-hr-left" />
                         <ul>
-                           <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />8 Hours of Photography by Lead Photographer</li>                           
+                           <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />8 Hours of Photography by ONE Photographer</li>                           
                            <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />Over 500 Images on your Wedding Day</li>
                            <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />Free USB with all images</li>
                            <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />Full Copyright release</li>
@@ -29,7 +29,7 @@ export const Photography = () => {
                         <h2>Love Package</h2>
                         <hr className="line line-hr-left" />
                         <ul>
-                           <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />10 Hours of Photography by Lead Photographer</li>                           
+                           <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />10 Hours of Photography by ONE Photographer</li>                           
                            <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />Over 800 Images on your Wedding Day</li>
                            <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />Free USB with all images</li>
                            <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />Full Copyright release</li>
@@ -46,13 +46,13 @@ export const Photography = () => {
                         <hr className="line line-hr-left" />
                         <ul>
                            <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />10 Hours of Photography by Lead Photographer</li>
-                           <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />8 Hours of Photography by Second Photographer</li>
+                           <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />9 Hours of Photography by Second Photographer</li>
                            <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />Over 1100 Images on your Wedding Day</li>
                            <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />Free USB with all images</li>
                            <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />Full Copyright release</li>
                            <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />Complimentary Pre-wedding Consultation</li>
                            <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />Web Gallery to share with your Friends</li>
-                           <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />10x10 Wedding Album (Leather Cover, 30 pages)</li>
+                           <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />14x11 Wedding Album (Leather Cover, 30 pages)</li>
                         </ul>
                        <p className="font-pariss text-roze text-xl font-bold py-4 pl-4">$ 3395</p>
                     </div>

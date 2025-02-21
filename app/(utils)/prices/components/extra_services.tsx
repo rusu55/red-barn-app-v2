@@ -32,8 +32,8 @@ export const ExtraServices = () => {
                                     <h5 className='text-lg  pt-4 text-left  border-b border-dashed border-slate-200'>Engagement Session<span className="text-roze float-right text-sm">$375 (60 minutes)</span></h5>
                                     <h5 className='text-lg  pt-4 text-left  border-b border-dashed border-slate-200'>Family Session<span className="text-roze float-right text-sm">$375 (60 minutes)</span></h5>
                                     <h5 className='text-lg  pt-4 text-left  border-b border-dashed border-slate-200'>Proposal Session<span className="text-roze float-right text-sm">$375 (60 minutes)</span></h5>
-                                    <h5 className='text-lg  pt-4 text-left  border-b border-dashed border-slate-200'>Event Photography (min 4 hours)<span className="text-roze float-right text-sm">$275 / hour</span><br /><span className="text-sm">(Corporate, vows renewal or private parties)</span></h5>
-                                    <h5 className='text-lg  pt-4 text-left  border-b border-dashed border-slate-200'>Additional Coverage <span className="text-roze float-right text-sm">$200 / hour (per professional)</span><br /><span className="text-sm">(for booked events)</span></h5>
+                                    <h5 className='text-lg  pt-4 text-left  border-b border-dashed border-slate-200'>Event Photography (min 4 hours)<span className="text-roze float-right text-sm">$275 / hour</span><br /><span className="text-sm">(Corporate, vow renewals or private parties)</span></h5>
+                                    <h5 className='text-lg  pt-4 text-left  border-b border-dashed border-slate-200'>Additional Coverage <span className="text-roze float-right text-sm">$200 / hour (per professional)</span><br /><span className="text-sm">(applied to already booked packages)</span></h5>
                                     
                                     
                                     <h5 className='text-lg  pt-4 text-left  border-b border-dashed border-slate-200'>Drone Coverage<span className="text-roze float-right text-sm">$400</span></h5>
