@@ -31,7 +31,7 @@ export const PhotoVideo = () => {
                            <li className="flex items-center gap-1"><Icon icon="check" stroke={1} className="text-roze" />RAW Footage Available</li>
                            
                         </ul>
-                        <p className="font-pariss text-roze text-xl font-bold py-4 pl-4">$ 4495</p>
+                        <p className="font-pariss text-roze text-xl font-bold py-4 pl-4">$ 4395</p>
                     </div>
                     <div className="flex flex-col pt-10">
                         <p>The best part about this bundle is that our photo and video teams work together all the time. So you&apos;ll get a better wedding day experience and peace of mind knowing you hired the best team possible for your wedding. </p>
