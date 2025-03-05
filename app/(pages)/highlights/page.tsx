@@ -25,8 +25,15 @@ const HighlightsPage = () => {
 
     const onSubmit = (values: any) => {
         isLoading(true);
+        /** 
+          axios
+          .post("/api/bridal", values)
+          .then((response) => {
+            toast.success("Form was successful sent!");
+          }) 
+        */
         axios
-        .post("/api/bridal", values)
+        .post("https://admin.redbarnweddingstudio.com/?fluentcrm=1&route=contact&hash=f6992b9f-02be-4a30-948c-dee55eb0f8ab", values)
         .then((response) => {
           toast.success("Form was successful sent!");
         })
@@ -36,7 +43,7 @@ const HighlightsPage = () => {
         .finally(() => {
           isLoading(false);
           setSend(true);
-          router.push("/");
+          //router.push("/");
         });
     }
   return (

@@ -9,14 +9,16 @@ import { Field, Fieldset, Label, Legend } from "@headlessui/react";
 import { InputDefault } from "./inputDefault";
 import { TextAreaDefault } from "./textAreaDefault";
 import { DatePickerDefault } from "./datePickerDefault";
-
+import { SelectDefault } from "./selectDefault";
 
 const formSchema = z.object({
-  name: z.string().min(4),
+  first_name: z.string().min(4),
+  last_name: z.string().min(4),
  phone: z.string().optional(),
   email: z.string().email("Email address not valid!"),
-  weddingDate: z.date().optional(),  
+  wedding_date: z.date().optional(),  
   details: z.string(),
+  source: z.any(),
 });
 
 
@@ -29,11 +31,13 @@ type Props = {
 
 const BridalForm = ({ onSubmit, disabled, source }: Props) => {
   const defaultValues: Partial<FormValues> = {
-    name: '',
+    first_name: '',
+    last_name: '',
     phone: '',
     email:'',
-    weddingDate: new Date(),
+    wedding_date: new Date(),
     details: '',
+    source: '',
   };
 
 
@@ -57,29 +61,29 @@ const BridalForm = ({ onSubmit, disabled, source }: Props) => {
           <Legend className="text-base/7 font-semibold">Copule Info:</Legend>
           <div className="flex flex-col md:flex-row w-full items-center justify-between gap-3 md:space-y-0">
             <Field className="w-full">
-              <Label className="text-sm/4 font-medium ">Bride & Groom Name</Label>
+              <Label className="text-sm/4 font-medium ">First Name</Label>
               <Controller
-                name="name"
+                name="first_name"
                 control={control}
                 render={({ field }) => (
                   <InputDefault
                     field={{ ...field }}
-                    placeholder="e.g. Monica Hunt"
-                    error={errors.name?.message}
+                    
+                    error={errors.first_name?.message}
                   />
                 )}
               />
             </Field>
             <Field className="w-full">
-              <Label className="text-sm/4 font-medium ">Phone no.</Label>
+              <Label className="text-sm/4 font-medium ">Last Name</Label>
               <Controller
-                name="phone"
+                name="last_name"
                 control={control}
                 render={({ field }) => (
                   <InputDefault
                     field={{ ...field }}
-                    placeholder="e.g. John Boo"
-                    error={errors.phone?.message}
+                    
+                    error={errors.last_name?.message}
                   />
                 )}
               />
@@ -103,16 +107,45 @@ const BridalForm = ({ onSubmit, disabled, source }: Props) => {
             <Field className="w-full">
               <Label className="text-sm/4 font-medium ">Wedding Date:</Label>
               <Controller
-                name="weddingDate"
+                name="wedding_date"
                 control={control}
                 render={({ field }) => {
                   return (
                     <DatePickerDefault
                       onChange={field.onChange}
-                      error={errors.weddingDate?.message}
+                      error={errors.wedding_date?.message}
                     />
                   );
                 }}
+              />
+            </Field>
+          </div>
+          <div className="flex flex-col md:flex-row w-full items-center justify-between gap-3 md:space-y-0">
+            <Field className="w-full">
+              <Label className="text-sm/4 font-medium ">Phone no. (Optional)</Label>
+              <Controller
+                name="phone"
+                control={control}
+                render={({ field }) => (
+                  <InputDefault
+                    field={{ ...field }}
+                    placeholder="e.g. (312) 111 2233"
+                    error={errors.phone?.message}
+                  />
+                )}
+              />
+            </Field>
+            <Field className="w-full">
+              <Label className="text-sm/4 font-medium ">Where did you hear about us?</Label>
+              <Controller
+                name="source"
+                control={control}
+                render={({ field }) => (
+                  <SelectDefault
+                    field={{ ...field }}                    
+                    error={errors.last_name?.message}
+                  />
+                )}
               />
             </Field>
           </div>
